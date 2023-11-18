@@ -8,4 +8,7 @@ add_executable(PROJET
         testmain.cpp
         point.h
         point.cpp
-        testpoint.cpp)
+        testpoint.cpp
+        GameElement.cpp
+        GameElement.h
+        GameElement.h)
