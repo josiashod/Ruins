@@ -73,6 +73,12 @@ build CMakeFiles/PROJET.dir/GameElement.cpp.obj: CXX_COMPILER__PROJET_unscanned_
   OBJECT_DIR = CMakeFiles\PROJET.dir
   OBJECT_FILE_DIR = CMakeFiles\PROJET.dir
 
+build CMakeFiles/PROJET.dir/testGameELement.cpp.obj: CXX_COMPILER__PROJET_unscanned_Debug C$:/Users/User/OneDrive/Desktop/Universite/L3/S1/QUALITER$ DE$ PROGRAMMATION/PROJET/testGameELement.cpp || cmake_object_order_depends_target_PROJET
+  DEP_FILE = CMakeFiles\PROJET.dir\testGameELement.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\PROJET.dir
+  OBJECT_FILE_DIR = CMakeFiles\PROJET.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target PROJET
@@ -81,7 +87,7 @@ build CMakeFiles/PROJET.dir/GameElement.cpp.obj: CXX_COMPILER__PROJET_unscanned_
 #############################################
 # Link the executable PROJET.exe
 
-build PROJET.exe: CXX_EXECUTABLE_LINKER__PROJET_Debug CMakeFiles/PROJET.dir/testmain.cpp.obj CMakeFiles/PROJET.dir/point.cpp.obj CMakeFiles/PROJET.dir/testpoint.cpp.obj CMakeFiles/PROJET.dir/GameElement.cpp.obj
+build PROJET.exe: CXX_EXECUTABLE_LINKER__PROJET_Debug CMakeFiles/PROJET.dir/testmain.cpp.obj CMakeFiles/PROJET.dir/point.cpp.obj CMakeFiles/PROJET.dir/testpoint.cpp.obj CMakeFiles/PROJET.dir/GameElement.cpp.obj CMakeFiles/PROJET.dir/testGameELement.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\PROJET.dir

@@ -11,4 +11,5 @@ add_executable(PROJET
         testpoint.cpp
         GameElement.cpp
         GameElement.h
-        GameElement.h)
+        GameElement.h
+        testGameELement.cpp)
