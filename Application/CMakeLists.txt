@@ -15,6 +15,7 @@ add_executable(Application
         components/src/character.cpp
         components/src/GameElement.cpp
         components/src/monster.cpp
+        components/src/notBlindMonster.h
         components/src/point.cpp
 
         tests/testGameELement.cpp
