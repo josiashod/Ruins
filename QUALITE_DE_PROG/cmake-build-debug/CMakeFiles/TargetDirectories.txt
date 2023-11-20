@@ -1,0 +1,3 @@
+/Users/daav/Downloads/QUALITE_DE_PROG/cmake-build-debug/CMakeFiles/QUALITE_DE_PROG.dir
+/Users/daav/Downloads/QUALITE_DE_PROG/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/daav/Downloads/QUALITE_DE_PROG/cmake-build-debug/CMakeFiles/rebuild_cache.dir
