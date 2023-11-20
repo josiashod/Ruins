@@ -5,9 +5,9 @@
 #include <cstdlib>
 #include "monster.h"
 
-monster::monster() : character{}, d_habilityPercentage{50} {}
+monster::monster(char c, const std::string &nature) : character{c, nature}, d_habilityPercentage{50} {}
 
-monster::monster(int habilityPercentage) : character{}, d_habilityPercentage{habilityPercentage} {}
+monster::monster(char c, const std::string &nature, int habilityPercentage) : character{c, nature}, d_habilityPercentage{habilityPercentage} {}
 
 int monster::habilityPercentage() const {
     // Renvoi du pourcentage d'habilité

@@ -17,13 +17,13 @@ public:
     /**
       * @brief Constructeur par défaut
       */
-    monster();
+    monster(char c, const std::string &nature);
 
     /**
      * Constrcteur de monstre à partir d'un pourcentage d'habilité
      * @param habilityPercentage - Pourcentage d'habilité du monstre
      */
-    monster(int habilityPercentage);
+    monster(char c, const std::string &nature, int habilityPercentage);
 
     /**
       * @brief Fonction renvoyant le pourcentage d'habilité

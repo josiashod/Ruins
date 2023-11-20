@@ -4,14 +4,11 @@
 
 #include "notBlindMonster.h"
 
-notBlindMonster::notBlindMonster() : monster{} {}
+notBlindMonster::notBlindMonster() : monster{'V', "Monstre Voyant"} {}
 
 bool notBlindMonster::isClose(character &c) const {
     int distance = d_position.distance(c.point());
-    if(distance < 8) {
-
-    }
-    else {
-
-    }
+    if(distance < 8)
+        return true;
+    return false;
 }

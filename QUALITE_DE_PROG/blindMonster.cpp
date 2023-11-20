@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include "blindMonster.h"
 
-blindMonster::blindMonster() : monster{} {}
+blindMonster::blindMonster() : monster{'B', "Monstre Aveugle"} {}
 
 void blindMonster::move() {
     // Déclaration des variables de coordonnées
