@@ -41,7 +41,7 @@ public:
      * @brief Méthode virtuelle permettant à un personnage d'en attaquer un autre
      * @param[in] c - Le personnage à attaquer
      */
-    virtual void attack(character &c) const = 0;
+    virtual void attack(character &c) = 0;
     /**
      * @brief Méthode virtuelle permettant de gérer la réception d'une attaque sur un personnage
      * @param[in] attackStrengthPoints - Points de force de l'attaque

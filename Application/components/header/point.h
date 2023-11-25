@@ -10,6 +10,10 @@ class point
 {
 public:
     /**
+ * @brief Constructeur par défaut initialisant le point à l'origine (0,0).
+ */
+    point();
+    /**
      * @brief Constructeur avec coordonnées entières.
      * @param x L'abscisse du point.
      * @param y L'ordonnée du point.
@@ -17,21 +21,21 @@ public:
     point(int x, int y);
 
     /**
-     * @brief Constructeur par défaut initialisant le point à l'origine (0,0).
-     */
-    point();
-
-    /**
      * @brief Renvoie l'abscisse du point.
      * @return L'abscisse du point.
      */
     int x() const;
-
     /**
      * @brief Renvoie l'ordonnée du point.
      * @return L'ordonnée du point.
      */
     int y() const;
+    /**
+     * @brief Renvoie la distance entre le point courant et un autre point p.
+     * @param p2 Le point avec lequel calculer la distance.
+     * @return La distance entre les deux points.
+     */
+    double distance(const point &p2) const;
 
     /**
      * @brief Déplace le point vers de nouvelles coordonnées (x, y).
@@ -39,20 +43,12 @@ public:
      * @param y La nouvelle ordonnée.
      */
     void moveOn(int x, int y);
-
     /**
      * @brief Déplace le point de (deltax, deltay) par rapport à ses coordonnées actuelles.
      * @param deltax Le déplacement en abscisse.
      * @param deltay Le déplacement en ordonnée.
      */
     void moveOff(int deltax, int deltay);
-
-    /**
-     * @brief Renvoie la distance entre le point courant et un autre point p.
-     * @param p2 Le point avec lequel calculer la distance.
-     * @return La distance entre les deux points.
-     */
-    double distance(const point &p2) const;
 
     /**
      * @brief Surcharge de l'opérateur d'égalité.
@@ -74,20 +70,18 @@ public:
      * @return Une référence vers le point résultant de l'addition.
      */
     point &operator+=(const point &p2);
-
-    /**
-     * @brief Surcharge de l'opérateur d'affectation.
-     * @param p2 Le point à copier.
-     * @return Une référence vers le point courant après l'affectation.
-     */
-    point &operator=(const point &p2);
-
     /**
      * @brief Surcharge de l'opérateur de soustraction composée.
      * @param p2 Le point à soustraire.
      * @return Une référence vers le point résultant de la soustraction.
      */
     point &operator-=(const point &p2);
+    /**
+     * @brief Surcharge de l'opérateur d'affectation.
+     * @param p2 Le point à copier.
+     * @return Une référence vers le point courant après l'affectation.
+     */
+    point &operator=(const point &p2);
 
 private:
     /// Coordonnées entières du point.

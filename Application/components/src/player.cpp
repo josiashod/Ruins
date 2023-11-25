@@ -7,16 +7,21 @@
 
 using std::cout, std::cin;
 
-player::player() : character{'A', "Aventurier"}, d_coins{1}, d_sword{}, d_armor{} {}
+player::player() : character{'A', "Aventurier"}, d_coins{1}, d_sword{10}, d_armor{50}{
+}
+
+player::player(int swordAttack, int armorResistance) : character{'A', "Aventurier"},
+    d_coins{1}, d_sword{swordAttack}, d_armor{armorResistance}{
+}
 
 int player::coins() const {
     // Renvoi du nombre de pièces
     return d_coins;
 }
 
-void player::attack(character &c) const {
+void player::attack(character &c) {
     // Initialisation de la force d'attaque
-    int attackStrength = d_strengthPoints + d_sword.solidityPoints();
+    int attackStrength = d_strengthPoints + d_sword.solidity();
 
     // Génération d'un nombre aléatoire entre 0 et 99 et vérification de l'infériorité de ce nombre à 80
     if ((rand() % 100) < 80)
@@ -27,7 +32,7 @@ void player::attack(character &c) const {
     c.getAttacked(attackStrength);
 
     // Réduction des points de solidité de l'épée
-    d_sword.reduceSolidity();
+    d_sword.reduce(10);
 }
 
 void player::getAttacked(int attackStrengthPoints) {
@@ -35,22 +40,21 @@ void player::getAttacked(int attackStrengthPoints) {
     int armorDamage = static_cast<int>(attackStrengthPoints * 0.75);
 
     // Vérification de la possitibilité d'infliger tout les dégâts
-    if(d_armor.solidityPoints() < armorDamage)
+    if(d_armor.solidity() < armorDamage)
         // Ajustement du nombre de dégâts
-        armorDamage = d_armor.solidityPoints();
+        armorDamage = d_armor.solidity();
     // Initialisation des dégâts reçus par l'aventurier
     int playerDamage = attackStrengthPoints - armorDamage;
 
     // Réception des dégâts par l'armure
-    d_armor.getDamaged(armorDamage);
+    d_armor.reduce(armorDamage);
     // Réception des dégâts par l'aventurier
     getDamaged(playerDamage);
 }
 
-int moveChoice() {
+int player::moveChoice() {
     int choice {-1};
-    do
-    {
+    do {
         cout<<"Déplacement souhaité :\n";
         cout<<"(1) ↑ \n";
         cout<<"(2) ↓ \n";
@@ -69,21 +73,21 @@ int moveChoice() {
 void player::move() {
    int moveC = moveChoice();
     switch (moveC) {
-        case 1 : MoveElement(GameElement::getX(), getY() + 1);
+        case 1 : MoveElement(getX(), getY() + 1);
             break;
-        case 2 : d_position.moveOn(d_position.x(), d_position.y() - 1);
+        case 2 : MoveElement(getX(), getY() - 1);
             break;
-        case 3 : d_position.moveOn(d_position.x() + 1, d_position.y());
+        case 3 : MoveElement(getX() + 1, getY());
             break;
-        case 4 : d_position.moveOn(d_position.x() - 1, d_position.y());
+        case 4 : MoveElement(getX() - 1, getY());
             break;
-        case 5 : d_position.moveOn(d_position.x() - 1, d_position.y() + 1);
+        case 5 : MoveElement(getX() - 1, getY() + 1);
             break;
-        case 6 : d_position.moveOn(d_position.x() + 1, d_position.y() + 1);
+        case 6 : MoveElement(getX() + 1, getY() + 1);
             break;
-        case 7 : d_position.moveOn(d_position.x() - 1, d_position.y() - 1);
+        case 7 : MoveElement(getX() - 1, getY() - 1);
             break;
-        case 8 : d_position.moveOn(d_position.x() + 1, d_position.y() - 1);
+        case 8 : MoveElement(getX() + 1, getY() - 1);
             break;
     }
 }

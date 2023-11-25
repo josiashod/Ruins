@@ -12,7 +12,7 @@ blindMonster::blindMonster(int habilityPercentage) : monster{'B', "Monstre Aveug
 }
 
 blindMonster::blindMonster(int healthPoints, int strenghtPoints, int habilityPercentage)
-    :monster{'B', "Monstre Aveugle", healthPoints, habilityPercentage, habilityPercentage}{
+    :monster{'B', "Monstre Aveugle", healthPoints, strenghtPoints, habilityPercentage}{
 }
 
 void blindMonster::move() {

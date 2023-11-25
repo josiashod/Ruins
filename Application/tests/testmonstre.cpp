@@ -3,7 +3,9 @@
 //
 #include "doctest.h"
 #include "../components/header/point.h"
+#include "../components/header/player.h"
 #include "../components/header/blindMonster.h"
+#include "../components/header/notBlindMonster.h"
 
 TEST_SUITE("Vérification de la class blindMonster"){
     SCENARIO("Vérification de la class character") {
@@ -29,7 +31,6 @@ TEST_SUITE("Vérification de la class blindMonster"){
                 }
             }
         }
-
         SCENARIO("Test du constructeur par valeurs"){
             GIVEN("Initialisation d'un blindMonster"){
                 int healthPoints = 240, strenghtPoints = 132, hability = 55;
@@ -58,7 +59,6 @@ TEST_SUITE("Vérification de la class blindMonster"){
                 }
             }
         }
-
         SCENARIO("Test de la fonction attack"){
             GIVEN("Initialisation de deux monsters"){
                 blindMonster m1{}, m2{};
@@ -72,7 +72,6 @@ TEST_SUITE("Vérification de la class blindMonster"){
                 }
             }
         }
-
         SCENARIO("Test de la fonction die"){
             GIVEN("Initialisation de deux monsters"){
                 blindMonster m1{100, 120, 90}, m2{100,20, 30};
@@ -97,7 +96,6 @@ TEST_SUITE("Vérification de la class blindMonster"){
                 }
             }
         }
-
         SCENARIO("Vérifcation du déplacement"){
             GIVEN("Calcul d'un déplacement et initialisation d'un blindMonster"){
                 int x{rand() % 3 - 1}, y{rand() % 3 - 1};
@@ -107,6 +105,200 @@ TEST_SUITE("Vérification de la class blindMonster"){
                     THEN("Vérification des coordonnées"){
                         REQUIRE_EQ(bm.getX(), x);
                         REQUIRE_EQ(bm.getY(), y);
+                    }
+                }
+            }
+        }
+    }
+}
+
+TEST_SUITE("Test de notBlindMonster"){
+    TEST_SUITE("Vérification des constructeurs"){
+        SCENARIO("Test du constructeur par défaut"){
+            GIVEN("Initialisation d'un notBlindMonster"){
+                player *p{new player{}};
+                notBlindMonster m{p};
+                THEN("Test des données de base"){
+                    REQUIRE_EQ(m.getSymbol(), 'V');
+                    REQUIRE_EQ(m.getNature(), "Monstre Voyant");
+                    REQUIRE_EQ(m.healthPoints(), 100);
+                    REQUIRE_EQ(m.strengthPoints(), 10);
+                    REQUIRE_EQ(m.habilityPercentage(), 90);
+                    REQUIRE_EQ(m.getPlayer(), p);
+                    delete p;
+                }
+            }
+        }
+        SCENARIO("Test du constructeur par valeurs 1"){
+            GIVEN("Initialisation d'un notBlindMonster"){
+                player *p{new player{}};
+                int hability = 50;
+                notBlindMonster m{hability, p};
+                THEN("Test des données de base"){
+                    REQUIRE_EQ(m.getSymbol(), 'V');
+                    REQUIRE_EQ(m.getNature(), "Monstre Voyant");
+                    REQUIRE_EQ(m.healthPoints(), 100);
+                    REQUIRE_EQ(m.strengthPoints(), 10);
+                    REQUIRE_EQ(m.habilityPercentage(), hability);
+                    REQUIRE_EQ(m.getPlayer(), p);
+                    delete p;
+                }
+            }
+        }
+        SCENARIO("Test du constructeur par valeurs 2"){
+            GIVEN("Initialisation d'un notBlindMonster"){
+                player *p{new player{}};
+                int health = 240;
+                int strenght = 130;
+                int hability = 50;
+                notBlindMonster m{health, strenght, hability, p};
+                THEN("Test des données de base"){
+                    REQUIRE_EQ(m.getSymbol(), 'V');
+                    REQUIRE_EQ(m.getNature(), "Monstre Voyant");
+                    REQUIRE_EQ(m.healthPoints(), health);
+                    REQUIRE_EQ(m.strengthPoints(), strenght);
+                    REQUIRE_EQ(m.habilityPercentage(), hability);
+                    REQUIRE_EQ(m.getPlayer(), p);
+                    delete p;
+                }
+            }
+        }
+    }
+
+    TEST_SUITE("Test de détection du joueur"){
+        SCENARIO("Test de validation de la méthode isClose"){
+            GIVEN("Initialisation d'un notBlindMonster"){
+                player *p{new player{}};
+                p->MoveElement(1,1);
+                notBlindMonster m{p};
+                THEN("Player positionné"){
+                    REQUIRE_EQ(m.isClose(*p), true);
+                    delete p;
+                }
+            }
+        }
+        SCENARIO("Test de non validation de la méthode isClose"){
+            GIVEN("Initialisation d'un notBlindMonster"){
+                player *p{new player{}};
+                p->MoveElement(12,13);
+                notBlindMonster m{p};
+                THEN("Player positionné") {
+                    REQUIRE_EQ(m.isClose(*p), false);
+                    delete p;
+                }
+            }
+        }
+    }
+
+    TEST_SUITE("Test de déplacement vers le joueur"){
+        SCENARIO("Vérification de la méthode direction 1"){
+            GIVEN("Initialisation d'un notBlindMonster"){
+                player *p{new player{}};
+                p->MoveElement(1,0);
+                WHEN("Player positionné"){
+                    notBlindMonster m{p};
+                    m.MoveElement(1,1);
+                    THEN("Monstre positionné"){
+                        REQUIRE_EQ(m.direction(*p), 1);
+                        delete p;
+                    }
+                }
+            }
+        }
+        SCENARIO("Vérification de la méthode direction 2"){
+            GIVEN("Initialisation d'un notBlindMonster"){
+                player *p{new player{}};
+                p->MoveElement(1,2);
+                WHEN("Player positionné"){
+                    notBlindMonster m{p};
+                    m.MoveElement(1,1);
+                    THEN("Monstre positionné"){
+                        REQUIRE_EQ(m.direction(*p), 2);
+                        delete p;
+                    }
+                }
+            }
+        }
+        SCENARIO("Vérification de la méthode direction 3"){
+            GIVEN("Initialisation d'un notBlindMonster"){
+                player *p{new player{}};
+                p->MoveElement(2,1);
+                WHEN("Player positionné"){
+                    notBlindMonster m{p};
+                    m.MoveElement(1,1);
+                    THEN("Monstre positionné"){
+                        REQUIRE_EQ(m.direction(*p), 3);
+                        delete p;
+                    }
+                }
+            }
+        }
+        SCENARIO("Vérification de la méthode direction 4"){
+            GIVEN("Initialisation d'un notBlindMonster"){
+                player *p{new player{}};
+                p->MoveElement(0,1);
+                WHEN("Player positionné"){
+                    notBlindMonster m{p};
+                    m.MoveElement(1,1);
+                    THEN("Monstre positionné"){
+                        REQUIRE_EQ(m.direction(*p), 4);
+                        delete p;
+                    }
+                }
+            }
+        }
+        SCENARIO("Vérification de la méthode direction 5"){
+            GIVEN("Initialisation d'un notBlindMonster"){
+                player *p{new player{}};
+                p->MoveElement(0,0);
+                WHEN("Player positionné"){
+                    notBlindMonster m{p};
+                    m.MoveElement(1,1);
+                    THEN("Monstre positionné"){
+                        REQUIRE_EQ(m.direction(*p), 5);
+                        delete p;
+                    }
+                }
+            }
+        }
+        SCENARIO("Vérification de la méthode direction 6"){
+            GIVEN("Initialisation d'un notBlindMonster"){
+                player *p{new player{}};
+                p->MoveElement(2,0);
+                WHEN("Player positionné"){
+                    notBlindMonster m{p};
+                    m.MoveElement(1,1);
+                    THEN("Monstre positionné"){
+                        REQUIRE_EQ(m.direction(*p), 6);
+                        delete p;
+                    }
+                }
+            }
+        }
+        SCENARIO("Vérification de la méthode direction 7"){
+            GIVEN("Initialisation d'un notBlindMonster"){
+                player *p{new player{}};
+                p->MoveElement(0,2);
+                WHEN("Player positionné"){
+                    notBlindMonster m{p};
+                    m.MoveElement(1,1);
+                    THEN("Monstre positionné"){
+                        REQUIRE_EQ(m.direction(*p), 7);
+                        delete p;
+                    }
+                }
+            }
+        }
+        SCENARIO("Vérification de la méthode direction 8"){
+            GIVEN("Initialisation d'un notBlindMonster"){
+                player *p{new player{}};
+                p->MoveElement(2,2);
+                WHEN("Player positionné"){
+                    notBlindMonster m{p};
+                    m.MoveElement(1,1);
+                    THEN("Monstre positionné"){
+                        REQUIRE_EQ(m.direction(*p), 8);
+                        delete p;
                     }
                 }
             }

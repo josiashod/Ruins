@@ -13,7 +13,7 @@ monster::monster(char c, const std::string &nature, int habilityPercentage)
 }
 
 monster::monster(char c, const std::string &nature, int healthPoints, int strenghtPoints, int habilityPercentage)
-    : character{c, nature, strenghtPoints, habilityPercentage}, d_habilityPercentage{habilityPercentage}{
+    : character{c, nature, healthPoints, strenghtPoints}, d_habilityPercentage{habilityPercentage}{
 }
 
 int monster::habilityPercentage() const {
@@ -21,7 +21,7 @@ int monster::habilityPercentage() const {
     return d_habilityPercentage;
 }
 
-void monster::attack(character &c) const {
+void monster::attack(character &c) {
     // Initialisation de la force d'attaque
     int attackStrength = d_strengthPoints;
     // Génération d'un nombre aléatoire entre 0 et 99 et vérification de l'infériorité de ce nombre à 80

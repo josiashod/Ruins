@@ -5,8 +5,11 @@
 #define QUALITE_DE_PROG_PLAYER_H
 
 #include "character.h"
-class sword;
-class armor;
+#include "sword.h"
+#include "armor.h"
+#include <string>
+
+using std::string;
 
 class player : public character {
 public:
@@ -14,6 +17,12 @@ public:
       * @brief Constructeur par défaut
       */
     player();
+    /**
+     * @brief Constructeur par valeurs
+     * @param swordAttack
+     * @param armorResistance
+     */
+    player(int swordAttack, int armorResistance);
 
     /**
       * @brief Fonction renvoyant le nombre de pièces
@@ -25,7 +34,7 @@ public:
       * @brief Réecriture de la méthode virtuelle permettant ainsi à un aventurier d'attaquer un personnage
       * @param[in] c - Le personnage à attaquer
       */
-    void attack(character &c) const override;
+    void attack(character &c) override;
     /**
       * @brief Réecriture de la méthode virtuelle permettant de gérer la réception d'une attaque par un aventurier
       * @param[in] attackStrengthPoints - Points de force de l'attaque

@@ -46,7 +46,7 @@ public :
       * @brief Réecriture de la méthode virtuelle permettant ainsi à un monstre d'attaquer un personnage
       * @param[in] c - Le personnage à attaquer
       */
-    void attack(character &c) const override;
+    void attack(character &c) override;
     /**
       * @brief Réecriture de la méthode virtuelle permettant de gérer la réception d'une attaque par un monstre
       * @param[in] attackStrengthPoints - Points de force de l'attaque
