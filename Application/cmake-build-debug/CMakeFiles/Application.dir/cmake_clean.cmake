@@ -11,8 +11,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Application.dir/components/src/character.cpp.o.d"
   "CMakeFiles/Application.dir/components/src/coin.cpp.o"
   "CMakeFiles/Application.dir/components/src/coin.cpp.o.d"
-  "CMakeFiles/Application.dir/components/src/emptyCase.cpp.o"
-  "CMakeFiles/Application.dir/components/src/emptyCase.cpp.o.d"
   "CMakeFiles/Application.dir/components/src/monster.cpp.o"
   "CMakeFiles/Application.dir/components/src/monster.cpp.o.d"
   "CMakeFiles/Application.dir/components/src/notBlindMonster.cpp.o"
@@ -25,8 +23,14 @@ file(REMOVE_RECURSE
   "CMakeFiles/Application.dir/components/src/point.cpp.o.d"
   "CMakeFiles/Application.dir/components/src/sword.cpp.o"
   "CMakeFiles/Application.dir/components/src/sword.cpp.o.d"
+  "CMakeFiles/Application.dir/components/src/wall.cpp.o"
+  "CMakeFiles/Application.dir/components/src/wall.cpp.o.d"
+  "CMakeFiles/Application.dir/tests/dkendkel.cpp.o"
+  "CMakeFiles/Application.dir/tests/dkendkel.cpp.o.d"
   "CMakeFiles/Application.dir/tests/testGameELement.cpp.o"
   "CMakeFiles/Application.dir/tests/testGameELement.cpp.o.d"
+  "CMakeFiles/Application.dir/tests/testcoin.cpp.o"
+  "CMakeFiles/Application.dir/tests/testcoin.cpp.o.d"
   "CMakeFiles/Application.dir/tests/testing.cpp.o"
   "CMakeFiles/Application.dir/tests/testing.cpp.o.d"
   "CMakeFiles/Application.dir/tests/testmonstre.cpp.o"
@@ -35,8 +39,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Application.dir/tests/testobject.cpp.o.d"
   "CMakeFiles/Application.dir/tests/testpoint.cpp.o"
   "CMakeFiles/Application.dir/tests/testpoint.cpp.o.d"
-  "CMakeFiles/Application.dir/tests/wall.cpp.o"
-  "CMakeFiles/Application.dir/tests/wall.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

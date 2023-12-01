@@ -90,7 +90,7 @@
 		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/character.h">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/emptyCase.h">
+		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/coin.h">
 			<Option target="Application"/>
 		</Unit>
 		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/monster.h">
@@ -108,6 +108,9 @@
 		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/sword.h">
 			<Option target="Application"/>
 		</Unit>
+		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/wall.h">
+			<Option target="Application"/>
+		</Unit>
 		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/GameElement.cpp">
 			<Option target="Application"/>
 		</Unit>
@@ -121,12 +124,6 @@
 			<Option target="Application"/>
 		</Unit>
 		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/coin.cpp">
-			<Option target="Application"/>
-		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/coin.h">
-			<Option target="Application"/>
-		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/emptyCase.cpp">
 			<Option target="Application"/>
 		</Unit>
 		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/monster.cpp">
@@ -147,13 +144,19 @@
 		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/sword.cpp">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/wall.h">
+		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/wall.cpp">
+			<Option target="Application"/>
+		</Unit>
+		<Unit filename="/Users/daav/Desktop/Ruins/Application/tests/dkendkel.cpp">
 			<Option target="Application"/>
 		</Unit>
 		<Unit filename="/Users/daav/Desktop/Ruins/Application/tests/doctest.h">
 			<Option target="Application"/>
 		</Unit>
 		<Unit filename="/Users/daav/Desktop/Ruins/Application/tests/testGameELement.cpp">
+			<Option target="Application"/>
+		</Unit>
+		<Unit filename="/Users/daav/Desktop/Ruins/Application/tests/testcoin.cpp">
 			<Option target="Application"/>
 		</Unit>
 		<Unit filename="/Users/daav/Desktop/Ruins/Application/tests/testing.cpp">
@@ -166,9 +169,6 @@
 			<Option target="Application"/>
 		</Unit>
 		<Unit filename="/Users/daav/Desktop/Ruins/Application/tests/testpoint.cpp">
-			<Option target="Application"/>
-		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/tests/wall.cpp">
 			<Option target="Application"/>
 		</Unit>
 		<Unit filename="/Users/daav/Desktop/Ruins/Application/CMakeLists.txt">

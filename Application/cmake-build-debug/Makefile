@@ -249,30 +249,6 @@ components/src/coin.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/coin.cpp.s
 .PHONY : components/src/coin.cpp.s
 
-components/src/emptyCase.o: components/src/emptyCase.cpp.o
-.PHONY : components/src/emptyCase.o
-
-# target to build an object file
-components/src/emptyCase.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/emptyCase.cpp.o
-.PHONY : components/src/emptyCase.cpp.o
-
-components/src/emptyCase.i: components/src/emptyCase.cpp.i
-.PHONY : components/src/emptyCase.i
-
-# target to preprocess a source file
-components/src/emptyCase.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/emptyCase.cpp.i
-.PHONY : components/src/emptyCase.cpp.i
-
-components/src/emptyCase.s: components/src/emptyCase.cpp.s
-.PHONY : components/src/emptyCase.s
-
-# target to generate assembly for a file
-components/src/emptyCase.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/emptyCase.cpp.s
-.PHONY : components/src/emptyCase.cpp.s
-
 components/src/monster.o: components/src/monster.cpp.o
 .PHONY : components/src/monster.o
 
@@ -417,6 +393,54 @@ components/src/sword.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/sword.cpp.s
 .PHONY : components/src/sword.cpp.s
 
+components/src/wall.o: components/src/wall.cpp.o
+.PHONY : components/src/wall.o
+
+# target to build an object file
+components/src/wall.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/wall.cpp.o
+.PHONY : components/src/wall.cpp.o
+
+components/src/wall.i: components/src/wall.cpp.i
+.PHONY : components/src/wall.i
+
+# target to preprocess a source file
+components/src/wall.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/wall.cpp.i
+.PHONY : components/src/wall.cpp.i
+
+components/src/wall.s: components/src/wall.cpp.s
+.PHONY : components/src/wall.s
+
+# target to generate assembly for a file
+components/src/wall.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/wall.cpp.s
+.PHONY : components/src/wall.cpp.s
+
+tests/dkendkel.o: tests/dkendkel.cpp.o
+.PHONY : tests/dkendkel.o
+
+# target to build an object file
+tests/dkendkel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/dkendkel.cpp.o
+.PHONY : tests/dkendkel.cpp.o
+
+tests/dkendkel.i: tests/dkendkel.cpp.i
+.PHONY : tests/dkendkel.i
+
+# target to preprocess a source file
+tests/dkendkel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/dkendkel.cpp.i
+.PHONY : tests/dkendkel.cpp.i
+
+tests/dkendkel.s: tests/dkendkel.cpp.s
+.PHONY : tests/dkendkel.s
+
+# target to generate assembly for a file
+tests/dkendkel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/dkendkel.cpp.s
+.PHONY : tests/dkendkel.cpp.s
+
 tests/testGameELement.o: tests/testGameELement.cpp.o
 .PHONY : tests/testGameELement.o
 
@@ -440,6 +464,30 @@ tests/testGameELement.s: tests/testGameELement.cpp.s
 tests/testGameELement.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/testGameELement.cpp.s
 .PHONY : tests/testGameELement.cpp.s
+
+tests/testcoin.o: tests/testcoin.cpp.o
+.PHONY : tests/testcoin.o
+
+# target to build an object file
+tests/testcoin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/testcoin.cpp.o
+.PHONY : tests/testcoin.cpp.o
+
+tests/testcoin.i: tests/testcoin.cpp.i
+.PHONY : tests/testcoin.i
+
+# target to preprocess a source file
+tests/testcoin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/testcoin.cpp.i
+.PHONY : tests/testcoin.cpp.i
+
+tests/testcoin.s: tests/testcoin.cpp.s
+.PHONY : tests/testcoin.s
+
+# target to generate assembly for a file
+tests/testcoin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/testcoin.cpp.s
+.PHONY : tests/testcoin.cpp.s
 
 tests/testing.o: tests/testing.cpp.o
 .PHONY : tests/testing.o
@@ -537,30 +585,6 @@ tests/testpoint.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/testpoint.cpp.s
 .PHONY : tests/testpoint.cpp.s
 
-tests/wall.o: tests/wall.cpp.o
-.PHONY : tests/wall.o
-
-# target to build an object file
-tests/wall.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/wall.cpp.o
-.PHONY : tests/wall.cpp.o
-
-tests/wall.i: tests/wall.cpp.i
-.PHONY : tests/wall.i
-
-# target to preprocess a source file
-tests/wall.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/wall.cpp.i
-.PHONY : tests/wall.cpp.i
-
-tests/wall.s: tests/wall.cpp.s
-.PHONY : tests/wall.s
-
-# target to generate assembly for a file
-tests/wall.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/wall.cpp.s
-.PHONY : tests/wall.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -585,9 +609,6 @@ help:
 	@echo "... components/src/coin.o"
 	@echo "... components/src/coin.i"
 	@echo "... components/src/coin.s"
-	@echo "... components/src/emptyCase.o"
-	@echo "... components/src/emptyCase.i"
-	@echo "... components/src/emptyCase.s"
 	@echo "... components/src/monster.o"
 	@echo "... components/src/monster.i"
 	@echo "... components/src/monster.s"
@@ -606,9 +627,18 @@ help:
 	@echo "... components/src/sword.o"
 	@echo "... components/src/sword.i"
 	@echo "... components/src/sword.s"
+	@echo "... components/src/wall.o"
+	@echo "... components/src/wall.i"
+	@echo "... components/src/wall.s"
+	@echo "... tests/dkendkel.o"
+	@echo "... tests/dkendkel.i"
+	@echo "... tests/dkendkel.s"
 	@echo "... tests/testGameELement.o"
 	@echo "... tests/testGameELement.i"
 	@echo "... tests/testGameELement.s"
+	@echo "... tests/testcoin.o"
+	@echo "... tests/testcoin.i"
+	@echo "... tests/testcoin.s"
 	@echo "... tests/testing.o"
 	@echo "... tests/testing.i"
 	@echo "... tests/testing.s"
@@ -621,9 +651,6 @@ help:
 	@echo "... tests/testpoint.o"
 	@echo "... tests/testpoint.i"
 	@echo "... tests/testpoint.s"
-	@echo "... tests/wall.o"
-	@echo "... tests/wall.i"
-	@echo "... tests/wall.s"
 .PHONY : help
 
 

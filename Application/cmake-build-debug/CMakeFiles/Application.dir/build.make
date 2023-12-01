@@ -279,38 +279,24 @@ CMakeFiles/Application.dir/tests/testobject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Application.dir/tests/testobject.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/daav/Desktop/Ruins/Application/tests/testobject.cpp -o CMakeFiles/Application.dir/tests/testobject.cpp.s
 
-CMakeFiles/Application.dir/components/src/emptyCase.cpp.o: CMakeFiles/Application.dir/flags.make
-CMakeFiles/Application.dir/components/src/emptyCase.cpp.o: /Users/daav/Desktop/Ruins/Application/components/src/emptyCase.cpp
-CMakeFiles/Application.dir/components/src/emptyCase.cpp.o: CMakeFiles/Application.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/daav/Desktop/Ruins/Application/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Application.dir/components/src/emptyCase.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Application.dir/components/src/emptyCase.cpp.o -MF CMakeFiles/Application.dir/components/src/emptyCase.cpp.o.d -o CMakeFiles/Application.dir/components/src/emptyCase.cpp.o -c /Users/daav/Desktop/Ruins/Application/components/src/emptyCase.cpp
+CMakeFiles/Application.dir/components/src/wall.cpp.o: CMakeFiles/Application.dir/flags.make
+CMakeFiles/Application.dir/components/src/wall.cpp.o: /Users/daav/Desktop/Ruins/Application/components/src/wall.cpp
+CMakeFiles/Application.dir/components/src/wall.cpp.o: CMakeFiles/Application.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/daav/Desktop/Ruins/Application/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Application.dir/components/src/wall.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Application.dir/components/src/wall.cpp.o -MF CMakeFiles/Application.dir/components/src/wall.cpp.o.d -o CMakeFiles/Application.dir/components/src/wall.cpp.o -c /Users/daav/Desktop/Ruins/Application/components/src/wall.cpp
 
-CMakeFiles/Application.dir/components/src/emptyCase.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Application.dir/components/src/emptyCase.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/daav/Desktop/Ruins/Application/components/src/emptyCase.cpp > CMakeFiles/Application.dir/components/src/emptyCase.cpp.i
+CMakeFiles/Application.dir/components/src/wall.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Application.dir/components/src/wall.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/daav/Desktop/Ruins/Application/components/src/wall.cpp > CMakeFiles/Application.dir/components/src/wall.cpp.i
 
-CMakeFiles/Application.dir/components/src/emptyCase.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Application.dir/components/src/emptyCase.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/daav/Desktop/Ruins/Application/components/src/emptyCase.cpp -o CMakeFiles/Application.dir/components/src/emptyCase.cpp.s
-
-CMakeFiles/Application.dir/tests/wall.cpp.o: CMakeFiles/Application.dir/flags.make
-CMakeFiles/Application.dir/tests/wall.cpp.o: /Users/daav/Desktop/Ruins/Application/tests/wall.cpp
-CMakeFiles/Application.dir/tests/wall.cpp.o: CMakeFiles/Application.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/daav/Desktop/Ruins/Application/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Application.dir/tests/wall.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Application.dir/tests/wall.cpp.o -MF CMakeFiles/Application.dir/tests/wall.cpp.o.d -o CMakeFiles/Application.dir/tests/wall.cpp.o -c /Users/daav/Desktop/Ruins/Application/tests/wall.cpp
-
-CMakeFiles/Application.dir/tests/wall.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Application.dir/tests/wall.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/daav/Desktop/Ruins/Application/tests/wall.cpp > CMakeFiles/Application.dir/tests/wall.cpp.i
-
-CMakeFiles/Application.dir/tests/wall.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Application.dir/tests/wall.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/daav/Desktop/Ruins/Application/tests/wall.cpp -o CMakeFiles/Application.dir/tests/wall.cpp.s
+CMakeFiles/Application.dir/components/src/wall.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Application.dir/components/src/wall.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/daav/Desktop/Ruins/Application/components/src/wall.cpp -o CMakeFiles/Application.dir/components/src/wall.cpp.s
 
 CMakeFiles/Application.dir/components/src/coin.cpp.o: CMakeFiles/Application.dir/flags.make
 CMakeFiles/Application.dir/components/src/coin.cpp.o: /Users/daav/Desktop/Ruins/Application/components/src/coin.cpp
 CMakeFiles/Application.dir/components/src/coin.cpp.o: CMakeFiles/Application.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/daav/Desktop/Ruins/Application/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Application.dir/components/src/coin.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/daav/Desktop/Ruins/Application/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Application.dir/components/src/coin.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Application.dir/components/src/coin.cpp.o -MF CMakeFiles/Application.dir/components/src/coin.cpp.o.d -o CMakeFiles/Application.dir/components/src/coin.cpp.o -c /Users/daav/Desktop/Ruins/Application/components/src/coin.cpp
 
 CMakeFiles/Application.dir/components/src/coin.cpp.i: cmake_force
@@ -320,6 +306,34 @@ CMakeFiles/Application.dir/components/src/coin.cpp.i: cmake_force
 CMakeFiles/Application.dir/components/src/coin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Application.dir/components/src/coin.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/daav/Desktop/Ruins/Application/components/src/coin.cpp -o CMakeFiles/Application.dir/components/src/coin.cpp.s
+
+CMakeFiles/Application.dir/tests/testcoin.cpp.o: CMakeFiles/Application.dir/flags.make
+CMakeFiles/Application.dir/tests/testcoin.cpp.o: /Users/daav/Desktop/Ruins/Application/tests/testcoin.cpp
+CMakeFiles/Application.dir/tests/testcoin.cpp.o: CMakeFiles/Application.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/daav/Desktop/Ruins/Application/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Application.dir/tests/testcoin.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Application.dir/tests/testcoin.cpp.o -MF CMakeFiles/Application.dir/tests/testcoin.cpp.o.d -o CMakeFiles/Application.dir/tests/testcoin.cpp.o -c /Users/daav/Desktop/Ruins/Application/tests/testcoin.cpp
+
+CMakeFiles/Application.dir/tests/testcoin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Application.dir/tests/testcoin.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/daav/Desktop/Ruins/Application/tests/testcoin.cpp > CMakeFiles/Application.dir/tests/testcoin.cpp.i
+
+CMakeFiles/Application.dir/tests/testcoin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Application.dir/tests/testcoin.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/daav/Desktop/Ruins/Application/tests/testcoin.cpp -o CMakeFiles/Application.dir/tests/testcoin.cpp.s
+
+CMakeFiles/Application.dir/tests/dkendkel.cpp.o: CMakeFiles/Application.dir/flags.make
+CMakeFiles/Application.dir/tests/dkendkel.cpp.o: /Users/daav/Desktop/Ruins/Application/tests/dkendkel.cpp
+CMakeFiles/Application.dir/tests/dkendkel.cpp.o: CMakeFiles/Application.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/daav/Desktop/Ruins/Application/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Application.dir/tests/dkendkel.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Application.dir/tests/dkendkel.cpp.o -MF CMakeFiles/Application.dir/tests/dkendkel.cpp.o.d -o CMakeFiles/Application.dir/tests/dkendkel.cpp.o -c /Users/daav/Desktop/Ruins/Application/tests/dkendkel.cpp
+
+CMakeFiles/Application.dir/tests/dkendkel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Application.dir/tests/dkendkel.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/daav/Desktop/Ruins/Application/tests/dkendkel.cpp > CMakeFiles/Application.dir/tests/dkendkel.cpp.i
+
+CMakeFiles/Application.dir/tests/dkendkel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Application.dir/tests/dkendkel.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/daav/Desktop/Ruins/Application/tests/dkendkel.cpp -o CMakeFiles/Application.dir/tests/dkendkel.cpp.s
 
 # Object files for target Application
 Application_OBJECTS = \
@@ -338,9 +352,10 @@ Application_OBJECTS = \
 "CMakeFiles/Application.dir/tests/testGameELement.cpp.o" \
 "CMakeFiles/Application.dir/tests/testmonstre.cpp.o" \
 "CMakeFiles/Application.dir/tests/testobject.cpp.o" \
-"CMakeFiles/Application.dir/components/src/emptyCase.cpp.o" \
-"CMakeFiles/Application.dir/tests/wall.cpp.o" \
-"CMakeFiles/Application.dir/components/src/coin.cpp.o"
+"CMakeFiles/Application.dir/components/src/wall.cpp.o" \
+"CMakeFiles/Application.dir/components/src/coin.cpp.o" \
+"CMakeFiles/Application.dir/tests/testcoin.cpp.o" \
+"CMakeFiles/Application.dir/tests/dkendkel.cpp.o"
 
 # External object files for target Application
 Application_EXTERNAL_OBJECTS =
@@ -360,12 +375,13 @@ Application: CMakeFiles/Application.dir/tests/testpoint.cpp.o
 Application: CMakeFiles/Application.dir/tests/testGameELement.cpp.o
 Application: CMakeFiles/Application.dir/tests/testmonstre.cpp.o
 Application: CMakeFiles/Application.dir/tests/testobject.cpp.o
-Application: CMakeFiles/Application.dir/components/src/emptyCase.cpp.o
-Application: CMakeFiles/Application.dir/tests/wall.cpp.o
+Application: CMakeFiles/Application.dir/components/src/wall.cpp.o
 Application: CMakeFiles/Application.dir/components/src/coin.cpp.o
+Application: CMakeFiles/Application.dir/tests/testcoin.cpp.o
+Application: CMakeFiles/Application.dir/tests/dkendkel.cpp.o
 Application: CMakeFiles/Application.dir/build.make
 Application: CMakeFiles/Application.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/daav/Desktop/Ruins/Application/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable Application"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/daav/Desktop/Ruins/Application/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable Application"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Application.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -14,9 +14,12 @@ GameElement::GameElement(char symbol, const point &p, const std::string &dNature
  * @brief Renvoie le symbole de l'élément de jeu.
  * @return Le symbole de l'élément de jeu.
  */
-char GameElement::getSymbol() const
-{
+char GameElement::getSymbol() const {
     return d_symbol;
+}
+
+void GameElement::changeSymbol(const char &symbol) {
+    d_symbol = symbol;
 }
 
 /**
@@ -26,6 +29,10 @@ char GameElement::getSymbol() const
 std::string GameElement::getNature() const
 {
     return d_natureElement;
+}
+
+void GameElement::changeNature(const std::string &nature) {
+    d_natureElement = nature;
 }
 
 /**

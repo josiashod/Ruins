@@ -13,19 +13,20 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/daav/Desktop/Ruins/Application/components/src/blindMonster.cpp" "CMakeFiles/Application.dir/components/src/blindMonster.cpp.o" "gcc" "CMakeFiles/Application.dir/components/src/blindMonster.cpp.o.d"
   "/Users/daav/Desktop/Ruins/Application/components/src/character.cpp" "CMakeFiles/Application.dir/components/src/character.cpp.o" "gcc" "CMakeFiles/Application.dir/components/src/character.cpp.o.d"
   "/Users/daav/Desktop/Ruins/Application/components/src/coin.cpp" "CMakeFiles/Application.dir/components/src/coin.cpp.o" "gcc" "CMakeFiles/Application.dir/components/src/coin.cpp.o.d"
-  "/Users/daav/Desktop/Ruins/Application/components/src/emptyCase.cpp" "CMakeFiles/Application.dir/components/src/emptyCase.cpp.o" "gcc" "CMakeFiles/Application.dir/components/src/emptyCase.cpp.o.d"
   "/Users/daav/Desktop/Ruins/Application/components/src/monster.cpp" "CMakeFiles/Application.dir/components/src/monster.cpp.o" "gcc" "CMakeFiles/Application.dir/components/src/monster.cpp.o.d"
   "/Users/daav/Desktop/Ruins/Application/components/src/notBlindMonster.cpp" "CMakeFiles/Application.dir/components/src/notBlindMonster.cpp.o" "gcc" "CMakeFiles/Application.dir/components/src/notBlindMonster.cpp.o.d"
   "/Users/daav/Desktop/Ruins/Application/components/src/object.cpp" "CMakeFiles/Application.dir/components/src/object.cpp.o" "gcc" "CMakeFiles/Application.dir/components/src/object.cpp.o.d"
   "/Users/daav/Desktop/Ruins/Application/components/src/player.cpp" "CMakeFiles/Application.dir/components/src/player.cpp.o" "gcc" "CMakeFiles/Application.dir/components/src/player.cpp.o.d"
   "/Users/daav/Desktop/Ruins/Application/components/src/point.cpp" "CMakeFiles/Application.dir/components/src/point.cpp.o" "gcc" "CMakeFiles/Application.dir/components/src/point.cpp.o.d"
   "/Users/daav/Desktop/Ruins/Application/components/src/sword.cpp" "CMakeFiles/Application.dir/components/src/sword.cpp.o" "gcc" "CMakeFiles/Application.dir/components/src/sword.cpp.o.d"
+  "/Users/daav/Desktop/Ruins/Application/components/src/wall.cpp" "CMakeFiles/Application.dir/components/src/wall.cpp.o" "gcc" "CMakeFiles/Application.dir/components/src/wall.cpp.o.d"
+  "/Users/daav/Desktop/Ruins/Application/tests/dkendkel.cpp" "CMakeFiles/Application.dir/tests/dkendkel.cpp.o" "gcc" "CMakeFiles/Application.dir/tests/dkendkel.cpp.o.d"
   "/Users/daav/Desktop/Ruins/Application/tests/testGameELement.cpp" "CMakeFiles/Application.dir/tests/testGameELement.cpp.o" "gcc" "CMakeFiles/Application.dir/tests/testGameELement.cpp.o.d"
+  "/Users/daav/Desktop/Ruins/Application/tests/testcoin.cpp" "CMakeFiles/Application.dir/tests/testcoin.cpp.o" "gcc" "CMakeFiles/Application.dir/tests/testcoin.cpp.o.d"
   "/Users/daav/Desktop/Ruins/Application/tests/testing.cpp" "CMakeFiles/Application.dir/tests/testing.cpp.o" "gcc" "CMakeFiles/Application.dir/tests/testing.cpp.o.d"
   "/Users/daav/Desktop/Ruins/Application/tests/testmonstre.cpp" "CMakeFiles/Application.dir/tests/testmonstre.cpp.o" "gcc" "CMakeFiles/Application.dir/tests/testmonstre.cpp.o.d"
   "/Users/daav/Desktop/Ruins/Application/tests/testobject.cpp" "CMakeFiles/Application.dir/tests/testobject.cpp.o" "gcc" "CMakeFiles/Application.dir/tests/testobject.cpp.o.d"
   "/Users/daav/Desktop/Ruins/Application/tests/testpoint.cpp" "CMakeFiles/Application.dir/tests/testpoint.cpp.o" "gcc" "CMakeFiles/Application.dir/tests/testpoint.cpp.o.d"
-  "/Users/daav/Desktop/Ruins/Application/tests/wall.cpp" "CMakeFiles/Application.dir/tests/wall.cpp.o" "gcc" "CMakeFiles/Application.dir/tests/wall.cpp.o.d"
   )
 
 # Targets to which this target links.

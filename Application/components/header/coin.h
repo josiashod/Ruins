@@ -5,18 +5,16 @@
 #ifndef APPLICATION_COIN_H
 #define APPLICATION_COIN_H
 
-#include "emptyCase.h"
 #include "player.h"
 
-class coin : public emptyCase {
+class coin : public GameElement {
 public:
-    coin(player *p, int amount);
+    coin(int amount, int x, int y);
     int amount() const;
     void changeAmount(int amount);
-    void isTaken();
+    bool isTaken(const player &p) const;
 private:
     int d_amount;
-    player *d_player;
 };
 
 

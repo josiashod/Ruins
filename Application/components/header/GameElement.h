@@ -22,6 +22,7 @@ public:
      * @return Le symbole de l'élément de jeu.
      */
     char getSymbol() const;
+
     /**
      * @brief Renvoie la coordonnée x de la position de l'élément de jeu.
      * @return La coordonnée x de la position de l'élément de jeu.
@@ -62,5 +63,17 @@ private:
     point d_position;
     /// La nature de l'élément de jeu.
     std::string d_natureElement;
+
+    /**
+      * @brief Permet de changer la nature de l'élement de jeu
+      * @param La nouvelle nature de l'élément
+      */
+    void changeSymbol(const char &symbol);
+
+    /**
+      * @brief Permet de changer la nature de l'élement de jeu
+      * @param La nouvelle nature de l'élément
+      */
+    void changeNature(const std::string &nature);
 };
 #endif //PROJET_GAMEELEMENT_H

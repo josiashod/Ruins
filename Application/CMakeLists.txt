@@ -30,4 +30,4 @@ add_executable(Application tests/testing.cpp
         tests/testGameELement.cpp
         tests/testmonstre.cpp
         tests/testobject.cpp
-        components/src/emptyCase.cpp components/header/emptyCase.h components/src/wall.cpp components/header/wall.h components/src/coin.cpp components/header/coin.h)
+        components/src/wall.cpp components/header/wall.h components/src/coin.cpp components/header/coin.h tests/testcoin.cpp)

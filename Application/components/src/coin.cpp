@@ -4,7 +4,7 @@
 
 #include "../header/coin.h"
 
-coin::coin(player *p, int amount) : emptyCase('C', "Pièce"), d_player{p}, d_amount{amount} {}
+coin::coin(int amount, int x, int y) : GameElement('P', {x,y}, "Pièce"), d_amount{amount} {}
 
 int coin::amount() const {
     return d_amount;
@@ -14,7 +14,6 @@ void coin::changeAmount(int amount) {
     d_amount = amount;
 }
 
-void coin::isTaken() {
-    if(d_player->GetPosition() == GetPosition())
-        switchBeAccessible();
+bool coin::isTaken(const player &p) const {
+    return p.GetPosition() == GetPosition();
 }
