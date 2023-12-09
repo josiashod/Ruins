@@ -1,5 +1,5 @@
 CMakeFiles/Application.dir/components/src/monster.cpp.o: \
-  /Users/daav/Desktop/Ruins/Application/components/src/monster.cpp \
+  /Users/daav/Desktop/PROG/NouveauP/Application/components/src/monster.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cstdlib \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \
@@ -71,10 +71,9 @@ CMakeFiles/Application.dir/components/src/monster.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/malloc/_malloc.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_dev_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_mode_t.h \
-  /Users/daav/Desktop/Ruins/Application/components/src/../header/monster.h \
-  /Users/daav/Desktop/Ruins/Application/components/src/../header/character.h \
-  /Users/daav/Desktop/Ruins/Application/components/src/../header/GameElement.h \
-  /Users/daav/Desktop/Ruins/Application/components/src/../header/point.h \
+  /Users/daav/Desktop/PROG/NouveauP/Application/components/src/../header/monster.h \
+  /Users/daav/Desktop/PROG/NouveauP/Application/components/src/../header/character.h \
+  /Users/daav/Desktop/PROG/NouveauP/Application/components/src/../header/coord.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/ios \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__locale \

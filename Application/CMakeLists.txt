@@ -4,30 +4,27 @@ project(Application)
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(Application tests/testing.cpp
-        components/header/point.h
-        components/header/GameElement.h
+        components/header/coord.h
         components/header/character.h
+        components/header/adventurer.h
         components/header/monster.h
         components/header/blindMonster.h
-        components/header/notBlindMonster.h
-        components/header/object.h
+        components/header/equipment.h
         components/header/sword.h
         components/header/armor.h
+        components/header/case.h
 
-        components/src/point.cpp
-        components/src/GameElement.cpp
+        components/src/coord.cpp
         components/src/character.cpp
-        components/src/player.cpp
+        components/src/adventurer.cpp
         components/src/monster.cpp
         components/src/blindMonster.cpp
-        components/src/notBlindMonster.cpp
-        components/src/object.cpp
+        components/src/equipment.cpp
         components/src/sword.cpp
         components/src/armor.cpp
+        components/src/case.cpp
 
         tests/doctest.h
         tests/testpoint.cpp
-        tests/testGameELement.cpp
         tests/testmonstre.cpp
-        tests/testobject.cpp
-        components/src/wall.cpp components/header/wall.h components/src/coin.cpp components/header/coin.h tests/testcoin.cpp)
+        tests/testobject.cpp components/src/case.cpp components/header/case.h)

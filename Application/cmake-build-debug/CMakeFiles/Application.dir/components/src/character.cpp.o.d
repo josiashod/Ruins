@@ -1,8 +1,7 @@
 CMakeFiles/Application.dir/components/src/character.cpp.o: \
-  /Users/daav/Desktop/Ruins/Application/components/src/character.cpp \
-  /Users/daav/Desktop/Ruins/Application/components/src/../header/character.h \
-  /Users/daav/Desktop/Ruins/Application/components/src/../header/GameElement.h \
-  /Users/daav/Desktop/Ruins/Application/components/src/../header/point.h \
+  /Users/daav/Desktop/PROG/NouveauP/Application/components/src/character.cpp \
+  /Users/daav/Desktop/PROG/NouveauP/Application/components/src/../header/character.h \
+  /Users/daav/Desktop/PROG/NouveauP/Application/components/src/../header/coord.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \

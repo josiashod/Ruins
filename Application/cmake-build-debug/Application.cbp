@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/daav/Desktop/Ruins/Application/cmake-build-debug"/>
+				<Option working_dir="/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Application">
-				<Option output="/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Application" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/daav/Desktop/Ruins/Application/cmake-build-debug"/>
+				<Option output="/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Application" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -31,15 +31,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 Application"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 Application"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Application/fast">
-				<Option output="/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Application" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/daav/Desktop/Ruins/Application/cmake-build-debug"/>
+				<Option output="/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Application" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -51,127 +51,103 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 Application/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 Application/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/daav/Desktop/Ruins/Application/cmake-build-debug"/>
+				<Option working_dir="/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/daav/Desktop/Ruins/Application/cmake-build-debug"/>
+				<Option working_dir="/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/Ruins/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/GameElement.h">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/header/adventurer.h">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/armor.h">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/header/armor.h">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/blindMonster.h">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/header/blindMonster.h">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/character.h">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/header/case.h">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/coin.h">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/header/character.h">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/monster.h">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/header/coord.h">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/notBlindMonster.h">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/header/equipment.h">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/object.h">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/header/monster.h">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/point.h">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/header/sword.h">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/sword.h">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/src/adventurer.cpp">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/header/wall.h">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/src/armor.cpp">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/GameElement.cpp">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/src/blindMonster.cpp">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/armor.cpp">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/src/case.cpp">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/blindMonster.cpp">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/src/character.cpp">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/character.cpp">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/src/coord.cpp">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/coin.cpp">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/src/equipment.cpp">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/monster.cpp">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/src/monster.cpp">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/notBlindMonster.cpp">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/components/src/sword.cpp">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/object.cpp">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/tests/doctest.h">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/player.cpp">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/tests/testing.cpp">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/point.cpp">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/tests/testmonstre.cpp">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/sword.cpp">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/tests/testobject.cpp">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/components/src/wall.cpp">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/tests/testpoint.cpp">
 			<Option target="Application"/>
 		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/tests/dkendkel.cpp">
-			<Option target="Application"/>
-		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/tests/doctest.h">
-			<Option target="Application"/>
-		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/tests/testGameELement.cpp">
-			<Option target="Application"/>
-		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/tests/testcoin.cpp">
-			<Option target="Application"/>
-		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/tests/testing.cpp">
-			<Option target="Application"/>
-		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/tests/testmonstre.cpp">
-			<Option target="Application"/>
-		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/tests/testobject.cpp">
-			<Option target="Application"/>
-		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/tests/testpoint.cpp">
-			<Option target="Application"/>
-		</Unit>
-		<Unit filename="/Users/daav/Desktop/Ruins/Application/CMakeLists.txt">
+		<Unit filename="/Users/daav/Desktop/PROG/NouveauP/Application/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

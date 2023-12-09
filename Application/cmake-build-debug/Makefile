@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/daav/Desktop/Ruins/Application
+CMAKE_SOURCE_DIR = /Users/daav/Desktop/PROG/NouveauP/Application
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/daav/Desktop/Ruins/Application/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/daav/Desktop/Ruins/Application/cmake-build-debug/CMakeFiles /Users/daav/Desktop/Ruins/Application/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/CMakeFiles /Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/daav/Desktop/Ruins/Application/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/daav/Desktop/PROG/NouveauP/Application/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,29 +129,29 @@ Application/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/build
 .PHONY : Application/fast
 
-components/src/GameElement.o: components/src/GameElement.cpp.o
-.PHONY : components/src/GameElement.o
+components/src/adventurer.o: components/src/adventurer.cpp.o
+.PHONY : components/src/adventurer.o
 
 # target to build an object file
-components/src/GameElement.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/GameElement.cpp.o
-.PHONY : components/src/GameElement.cpp.o
+components/src/adventurer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/adventurer.cpp.o
+.PHONY : components/src/adventurer.cpp.o
 
-components/src/GameElement.i: components/src/GameElement.cpp.i
-.PHONY : components/src/GameElement.i
+components/src/adventurer.i: components/src/adventurer.cpp.i
+.PHONY : components/src/adventurer.i
 
 # target to preprocess a source file
-components/src/GameElement.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/GameElement.cpp.i
-.PHONY : components/src/GameElement.cpp.i
+components/src/adventurer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/adventurer.cpp.i
+.PHONY : components/src/adventurer.cpp.i
 
-components/src/GameElement.s: components/src/GameElement.cpp.s
-.PHONY : components/src/GameElement.s
+components/src/adventurer.s: components/src/adventurer.cpp.s
+.PHONY : components/src/adventurer.s
 
 # target to generate assembly for a file
-components/src/GameElement.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/GameElement.cpp.s
-.PHONY : components/src/GameElement.cpp.s
+components/src/adventurer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/adventurer.cpp.s
+.PHONY : components/src/adventurer.cpp.s
 
 components/src/armor.o: components/src/armor.cpp.o
 .PHONY : components/src/armor.o
@@ -201,6 +201,30 @@ components/src/blindMonster.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/blindMonster.cpp.s
 .PHONY : components/src/blindMonster.cpp.s
 
+components/src/case.o: components/src/case.cpp.o
+.PHONY : components/src/case.o
+
+# target to build an object file
+components/src/case.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/case.cpp.o
+.PHONY : components/src/case.cpp.o
+
+components/src/case.i: components/src/case.cpp.i
+.PHONY : components/src/case.i
+
+# target to preprocess a source file
+components/src/case.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/case.cpp.i
+.PHONY : components/src/case.cpp.i
+
+components/src/case.s: components/src/case.cpp.s
+.PHONY : components/src/case.s
+
+# target to generate assembly for a file
+components/src/case.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/case.cpp.s
+.PHONY : components/src/case.cpp.s
+
 components/src/character.o: components/src/character.cpp.o
 .PHONY : components/src/character.o
 
@@ -225,29 +249,53 @@ components/src/character.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/character.cpp.s
 .PHONY : components/src/character.cpp.s
 
-components/src/coin.o: components/src/coin.cpp.o
-.PHONY : components/src/coin.o
+components/src/coord.o: components/src/coord.cpp.o
+.PHONY : components/src/coord.o
 
 # target to build an object file
-components/src/coin.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/coin.cpp.o
-.PHONY : components/src/coin.cpp.o
+components/src/coord.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/coord.cpp.o
+.PHONY : components/src/coord.cpp.o
 
-components/src/coin.i: components/src/coin.cpp.i
-.PHONY : components/src/coin.i
+components/src/coord.i: components/src/coord.cpp.i
+.PHONY : components/src/coord.i
 
 # target to preprocess a source file
-components/src/coin.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/coin.cpp.i
-.PHONY : components/src/coin.cpp.i
+components/src/coord.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/coord.cpp.i
+.PHONY : components/src/coord.cpp.i
 
-components/src/coin.s: components/src/coin.cpp.s
-.PHONY : components/src/coin.s
+components/src/coord.s: components/src/coord.cpp.s
+.PHONY : components/src/coord.s
 
 # target to generate assembly for a file
-components/src/coin.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/coin.cpp.s
-.PHONY : components/src/coin.cpp.s
+components/src/coord.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/coord.cpp.s
+.PHONY : components/src/coord.cpp.s
+
+components/src/equipment.o: components/src/equipment.cpp.o
+.PHONY : components/src/equipment.o
+
+# target to build an object file
+components/src/equipment.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/equipment.cpp.o
+.PHONY : components/src/equipment.cpp.o
+
+components/src/equipment.i: components/src/equipment.cpp.i
+.PHONY : components/src/equipment.i
+
+# target to preprocess a source file
+components/src/equipment.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/equipment.cpp.i
+.PHONY : components/src/equipment.cpp.i
+
+components/src/equipment.s: components/src/equipment.cpp.s
+.PHONY : components/src/equipment.s
+
+# target to generate assembly for a file
+components/src/equipment.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/equipment.cpp.s
+.PHONY : components/src/equipment.cpp.s
 
 components/src/monster.o: components/src/monster.cpp.o
 .PHONY : components/src/monster.o
@@ -273,102 +321,6 @@ components/src/monster.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/monster.cpp.s
 .PHONY : components/src/monster.cpp.s
 
-components/src/notBlindMonster.o: components/src/notBlindMonster.cpp.o
-.PHONY : components/src/notBlindMonster.o
-
-# target to build an object file
-components/src/notBlindMonster.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/notBlindMonster.cpp.o
-.PHONY : components/src/notBlindMonster.cpp.o
-
-components/src/notBlindMonster.i: components/src/notBlindMonster.cpp.i
-.PHONY : components/src/notBlindMonster.i
-
-# target to preprocess a source file
-components/src/notBlindMonster.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/notBlindMonster.cpp.i
-.PHONY : components/src/notBlindMonster.cpp.i
-
-components/src/notBlindMonster.s: components/src/notBlindMonster.cpp.s
-.PHONY : components/src/notBlindMonster.s
-
-# target to generate assembly for a file
-components/src/notBlindMonster.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/notBlindMonster.cpp.s
-.PHONY : components/src/notBlindMonster.cpp.s
-
-components/src/object.o: components/src/object.cpp.o
-.PHONY : components/src/object.o
-
-# target to build an object file
-components/src/object.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/object.cpp.o
-.PHONY : components/src/object.cpp.o
-
-components/src/object.i: components/src/object.cpp.i
-.PHONY : components/src/object.i
-
-# target to preprocess a source file
-components/src/object.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/object.cpp.i
-.PHONY : components/src/object.cpp.i
-
-components/src/object.s: components/src/object.cpp.s
-.PHONY : components/src/object.s
-
-# target to generate assembly for a file
-components/src/object.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/object.cpp.s
-.PHONY : components/src/object.cpp.s
-
-components/src/player.o: components/src/player.cpp.o
-.PHONY : components/src/player.o
-
-# target to build an object file
-components/src/player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/player.cpp.o
-.PHONY : components/src/player.cpp.o
-
-components/src/player.i: components/src/player.cpp.i
-.PHONY : components/src/player.i
-
-# target to preprocess a source file
-components/src/player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/player.cpp.i
-.PHONY : components/src/player.cpp.i
-
-components/src/player.s: components/src/player.cpp.s
-.PHONY : components/src/player.s
-
-# target to generate assembly for a file
-components/src/player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/player.cpp.s
-.PHONY : components/src/player.cpp.s
-
-components/src/point.o: components/src/point.cpp.o
-.PHONY : components/src/point.o
-
-# target to build an object file
-components/src/point.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/point.cpp.o
-.PHONY : components/src/point.cpp.o
-
-components/src/point.i: components/src/point.cpp.i
-.PHONY : components/src/point.i
-
-# target to preprocess a source file
-components/src/point.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/point.cpp.i
-.PHONY : components/src/point.cpp.i
-
-components/src/point.s: components/src/point.cpp.s
-.PHONY : components/src/point.s
-
-# target to generate assembly for a file
-components/src/point.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/point.cpp.s
-.PHONY : components/src/point.cpp.s
-
 components/src/sword.o: components/src/sword.cpp.o
 .PHONY : components/src/sword.o
 
@@ -392,102 +344,6 @@ components/src/sword.s: components/src/sword.cpp.s
 components/src/sword.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/sword.cpp.s
 .PHONY : components/src/sword.cpp.s
-
-components/src/wall.o: components/src/wall.cpp.o
-.PHONY : components/src/wall.o
-
-# target to build an object file
-components/src/wall.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/wall.cpp.o
-.PHONY : components/src/wall.cpp.o
-
-components/src/wall.i: components/src/wall.cpp.i
-.PHONY : components/src/wall.i
-
-# target to preprocess a source file
-components/src/wall.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/wall.cpp.i
-.PHONY : components/src/wall.cpp.i
-
-components/src/wall.s: components/src/wall.cpp.s
-.PHONY : components/src/wall.s
-
-# target to generate assembly for a file
-components/src/wall.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/components/src/wall.cpp.s
-.PHONY : components/src/wall.cpp.s
-
-tests/dkendkel.o: tests/dkendkel.cpp.o
-.PHONY : tests/dkendkel.o
-
-# target to build an object file
-tests/dkendkel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/dkendkel.cpp.o
-.PHONY : tests/dkendkel.cpp.o
-
-tests/dkendkel.i: tests/dkendkel.cpp.i
-.PHONY : tests/dkendkel.i
-
-# target to preprocess a source file
-tests/dkendkel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/dkendkel.cpp.i
-.PHONY : tests/dkendkel.cpp.i
-
-tests/dkendkel.s: tests/dkendkel.cpp.s
-.PHONY : tests/dkendkel.s
-
-# target to generate assembly for a file
-tests/dkendkel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/dkendkel.cpp.s
-.PHONY : tests/dkendkel.cpp.s
-
-tests/testGameELement.o: tests/testGameELement.cpp.o
-.PHONY : tests/testGameELement.o
-
-# target to build an object file
-tests/testGameELement.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/testGameELement.cpp.o
-.PHONY : tests/testGameELement.cpp.o
-
-tests/testGameELement.i: tests/testGameELement.cpp.i
-.PHONY : tests/testGameELement.i
-
-# target to preprocess a source file
-tests/testGameELement.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/testGameELement.cpp.i
-.PHONY : tests/testGameELement.cpp.i
-
-tests/testGameELement.s: tests/testGameELement.cpp.s
-.PHONY : tests/testGameELement.s
-
-# target to generate assembly for a file
-tests/testGameELement.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/testGameELement.cpp.s
-.PHONY : tests/testGameELement.cpp.s
-
-tests/testcoin.o: tests/testcoin.cpp.o
-.PHONY : tests/testcoin.o
-
-# target to build an object file
-tests/testcoin.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/testcoin.cpp.o
-.PHONY : tests/testcoin.cpp.o
-
-tests/testcoin.i: tests/testcoin.cpp.i
-.PHONY : tests/testcoin.i
-
-# target to preprocess a source file
-tests/testcoin.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/testcoin.cpp.i
-.PHONY : tests/testcoin.cpp.i
-
-tests/testcoin.s: tests/testcoin.cpp.s
-.PHONY : tests/testcoin.s
-
-# target to generate assembly for a file
-tests/testcoin.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Application.dir/build.make CMakeFiles/Application.dir/tests/testcoin.cpp.s
-.PHONY : tests/testcoin.cpp.s
 
 tests/testing.o: tests/testing.cpp.o
 .PHONY : tests/testing.o
@@ -594,51 +450,33 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Application"
-	@echo "... components/src/GameElement.o"
-	@echo "... components/src/GameElement.i"
-	@echo "... components/src/GameElement.s"
+	@echo "... components/src/adventurer.o"
+	@echo "... components/src/adventurer.i"
+	@echo "... components/src/adventurer.s"
 	@echo "... components/src/armor.o"
 	@echo "... components/src/armor.i"
 	@echo "... components/src/armor.s"
 	@echo "... components/src/blindMonster.o"
 	@echo "... components/src/blindMonster.i"
 	@echo "... components/src/blindMonster.s"
+	@echo "... components/src/case.o"
+	@echo "... components/src/case.i"
+	@echo "... components/src/case.s"
 	@echo "... components/src/character.o"
 	@echo "... components/src/character.i"
 	@echo "... components/src/character.s"
-	@echo "... components/src/coin.o"
-	@echo "... components/src/coin.i"
-	@echo "... components/src/coin.s"
+	@echo "... components/src/coord.o"
+	@echo "... components/src/coord.i"
+	@echo "... components/src/coord.s"
+	@echo "... components/src/equipment.o"
+	@echo "... components/src/equipment.i"
+	@echo "... components/src/equipment.s"
 	@echo "... components/src/monster.o"
 	@echo "... components/src/monster.i"
 	@echo "... components/src/monster.s"
-	@echo "... components/src/notBlindMonster.o"
-	@echo "... components/src/notBlindMonster.i"
-	@echo "... components/src/notBlindMonster.s"
-	@echo "... components/src/object.o"
-	@echo "... components/src/object.i"
-	@echo "... components/src/object.s"
-	@echo "... components/src/player.o"
-	@echo "... components/src/player.i"
-	@echo "... components/src/player.s"
-	@echo "... components/src/point.o"
-	@echo "... components/src/point.i"
-	@echo "... components/src/point.s"
 	@echo "... components/src/sword.o"
 	@echo "... components/src/sword.i"
 	@echo "... components/src/sword.s"
-	@echo "... components/src/wall.o"
-	@echo "... components/src/wall.i"
-	@echo "... components/src/wall.s"
-	@echo "... tests/dkendkel.o"
-	@echo "... tests/dkendkel.i"
-	@echo "... tests/dkendkel.s"
-	@echo "... tests/testGameELement.o"
-	@echo "... tests/testGameELement.i"
-	@echo "... tests/testGameELement.s"
-	@echo "... tests/testcoin.o"
-	@echo "... tests/testcoin.i"
-	@echo "... tests/testcoin.s"
 	@echo "... tests/testing.o"
 	@echo "... tests/testing.i"
 	@echo "... tests/testing.s"
