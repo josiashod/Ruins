@@ -5,15 +5,8 @@
 #include <cstdlib>
 #include "../header/blindMonster.h"
 
-blindMonster::blindMonster() : monster{'B', "Monstre Aveugle"}{
-}
-
-blindMonster::blindMonster(int habilityPercentage) : monster{'B', "Monstre Aveugle", habilityPercentage}{
-}
-
-blindMonster::blindMonster(int healthPoints, int strenghtPoints, int habilityPercentage)
-    :monster{'B', "Monstre Aveugle", healthPoints, habilityPercentage, habilityPercentage}{
-}
+blindMonster::blindMonster(int health, int strength, double hability)
+    : monster{health, strength, hability} {}
 
 void blindMonster::move() {
     // Déclaration des variables de coordonnées
@@ -24,5 +17,5 @@ void blindMonster::move() {
         Y = rand() % 3 - 1;
     } while(X == 0 && Y == 0); // Nouvelle génération si les deux sont nuls car le monstre doit bouger
     // Déplacement du monstre
-    MoveElement(X,Y);
+    character::move(X,Y);
 }

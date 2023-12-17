@@ -1,19 +1,27 @@
 //
 // Created by Daav on 18/11/2023.
 //
-#ifndef QUALITE_DE_PROG_PLAYER_H
-#define QUALITE_DE_PROG_PLAYER_H
+#ifndef QUALITE_DE_PROG_adventurer_H
+#define QUALITE_DE_PROG_adventurer_H
 
 #include "character.h"
-class sword;
-class armor;
+#include "sword.h"
+#include "armor.h"
+#include <string>
 
-class player : public character {
+using std::string;
+
+class adventurer : public character {
 public:
     /**
-      * @brief Constructeur par défaut
-      */
-    player();
+     * @brief Constructeur par valeurs
+     * @param swordSolidity - Solidité de l'épée
+     * @param armorSolidity - Solidité de l'armure
+     * @param coin - Nombre de pièce
+     * @param health - Points de vie
+     * @param strength - Points de force
+     */
+    adventurer(int swordSolidity = 90, int armorSolidity = 10, int coin = 0, int health = 100, int strength = 10);
 
     /**
       * @brief Fonction renvoyant le nombre de pièces
@@ -25,27 +33,27 @@ public:
       * @brief Réecriture de la méthode virtuelle permettant ainsi à un aventurier d'attaquer un personnage
       * @param[in] c - Le personnage à attaquer
       */
-    void attack(character &c) const override;
+    void attack(character &c) override;
     /**
       * @brief Réecriture de la méthode virtuelle permettant de gérer la réception d'une attaque par un aventurier
-      * @param[in] attackStrengthPoints - Points de force de l'attaque
+      * @param[in] attackStrength - Points de force de l'attaque
       */
-    void getAttacked(int attackStrengthPoints) override;
+    void hasBeenAttacked(int attackStrength) override;
 
     /**
      * @brief Fonction renvoyant le choix de déplacement de l'utilisateur
      * @return la valeur correspondant au choix de déplacement
      */
-    int moveChoice();
+    // int moveChoice();
     /**
       * @brief Réecriture de la méthode virtuelle permettant ainsi à un aventurer de se déplacer
       */
-    void move() override;
+    // void move() override;
 
     /**
       * @brief Méthode permettant à un aventurier de gagner un nombre de pièce
       */
-    void getCoins(int numberOfCoin);
+    void addCoins(int numberOfCoin);
 
 private:
     int d_coins;

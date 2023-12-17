@@ -10,25 +10,16 @@
 class blindMonster : public monster {
 public:
     /**
-      * @brief Constructeur par défaut
-      */
-    blindMonster();
-    /**
      * @brief Constructeur par valeurs
-     * @param habilityPercentage Son taux d'habilieté au coups critiques
+     * @param health Les points de vie du monstre
+     * @param strength Les points d'attaque du monstre
+     * @param hability Pourcentage d'habilieté du monstre
      */
-    blindMonster(int habilityPercentage);
-    /**
-     * @brief Constructeur par valeurs
-     * @param healthPoints Les points de vie du monstre
-     * @param strenghtPoints Les points d'attaque du monstre
-     * @param habilityPercentage Son taux d'habilieté au coups critiques
-     */
-    blindMonster(int healthPoints, int strenghtPoints, int habilityPercentage = 90);
+    blindMonster(int health = 70, int strength = 5, double hability = 90);
 
     /**
-      * @brief Réecriture de la méthode virtuelle permettant ainsi à un monstre aveugle de se déplacer
-      */
+     * @brief Réecriture de la méthode virtuelle permettant à un monstre aveugle de se déplacer
+     */
     void move() override;
 };
 

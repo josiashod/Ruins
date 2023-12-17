@@ -1,4 +1,4 @@
 #include "../header/sword.h"
 
-sword::sword(int solidity): object{solidity}
-{}
+sword::sword(int solidity): equipment{solidity}{
+}

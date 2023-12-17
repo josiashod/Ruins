@@ -1,12 +1,11 @@
 #ifndef __SWORD_H__
 #define __SWORD_H__
 
-#include "../header/object"
+#include "equipment.h"
 
-class sword: public object
-{
-    public:
-        sword(int solidity);
-}
+class sword: public equipment {
+public:
+    sword(int solidity);
+};
 
 #endif

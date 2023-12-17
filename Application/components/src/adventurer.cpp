@@ -3,20 +3,22 @@
 //
 
 #include <cstdlib>
-#include "../header/player.h"
+#include "../header/adventurer.h"
 
 using std::cout, std::cin;
 
-player::player() : character{'A', "Aventurier"}, d_coins{1}, d_sword{}, d_armor{} {}
+adventurer::adventurer(int swordSolidity, int armorSolidity, int coin, int health, int strength)
+        : character{health, strength}, d_coins{coin}, d_sword{swordSolidity},
+        d_armor{armorSolidity} {}
 
-int player::coins() const {
+int adventurer::coins() const {
     // Renvoi du nombre de pièces
     return d_coins;
 }
 
-void player::attack(character &c) const {
+void adventurer::attack(character &c) {
     // Initialisation de la force d'attaque
-    int attackStrength = d_strengthPoints + d_sword.solidityPoints();
+    int attackStrength = d_strength + d_sword.solidity();
 
     // Génération d'un nombre aléatoire entre 0 et 99 et vérification de l'infériorité de ce nombre à 80
     if ((rand() % 100) < 80)
@@ -24,33 +26,32 @@ void player::attack(character &c) const {
         attackStrength = static_cast<int>(attackStrength * 0.9);
 
     // Lancement de l'attaque sur le personnage c
-    c.getAttacked(attackStrength);
+    c.hasBeenAttacked(attackStrength);
 
     // Réduction des points de solidité de l'épée
-    d_sword.reduceSolidity();
+    d_sword.reduce(1);
 }
 
-void player::getAttacked(int attackStrengthPoints) {
+void adventurer::hasBeenAttacked(int attackStrengthPoints) {
     // Initialisation des dégâts reçus par l'armure
     int armorDamage = static_cast<int>(attackStrengthPoints * 0.75);
 
     // Vérification de la possitibilité d'infliger tout les dégâts
-    if(d_armor.solidityPoints() < armorDamage)
+    if(d_armor.solidity() < armorDamage)
         // Ajustement du nombre de dégâts
-        armorDamage = d_armor.solidityPoints();
+        armorDamage = d_armor.solidity();
     // Initialisation des dégâts reçus par l'aventurier
-    int playerDamage = attackStrengthPoints - armorDamage;
+    int adventurerDamage = attackStrengthPoints - armorDamage;
 
     // Réception des dégâts par l'armure
-    d_armor.getDamaged(armorDamage);
+    d_armor.reduce(armorDamage);
     // Réception des dégâts par l'aventurier
-    getDamaged(playerDamage);
+    getDamaged(adventurerDamage);
 }
 
-int moveChoice() {
+/*int player::moveChoice() {
     int choice {-1};
-    do
-    {
+    do {
         cout<<"Déplacement souhaité :\n";
         cout<<"(1) ↑ \n";
         cout<<"(2) ↓ \n";
@@ -69,26 +70,26 @@ int moveChoice() {
 void player::move() {
    int moveC = moveChoice();
     switch (moveC) {
-        case 1 : MoveElement(GameElement::getX(), getY() + 1);
+        case 1 : MoveElement(getX(), getY() + 1);
             break;
-        case 2 : d_position.moveOn(d_position.x(), d_position.y() - 1);
+        case 2 : MoveElement(getX(), getY() - 1);
             break;
-        case 3 : d_position.moveOn(d_position.x() + 1, d_position.y());
+        case 3 : MoveElement(getX() + 1, getY());
             break;
-        case 4 : d_position.moveOn(d_position.x() - 1, d_position.y());
+        case 4 : MoveElement(getX() - 1, getY());
             break;
-        case 5 : d_position.moveOn(d_position.x() - 1, d_position.y() + 1);
+        case 5 : MoveElement(getX() - 1, getY() + 1);
             break;
-        case 6 : d_position.moveOn(d_position.x() + 1, d_position.y() + 1);
+        case 6 : MoveElement(getX() + 1, getY() + 1);
             break;
-        case 7 : d_position.moveOn(d_position.x() - 1, d_position.y() - 1);
+        case 7 : MoveElement(getX() - 1, getY() - 1);
             break;
-        case 8 : d_position.moveOn(d_position.x() + 1, d_position.y() - 1);
+        case 8 : MoveElement(getX() + 1, getY() - 1);
             break;
     }
-}
+}*/
 
-void player::getCoins(int numberOfCoin) {
+void adventurer::addCoins(int numberOfCoin) {
     // Incrémentation du nombre de pièces
     d_coins += numberOfCoin;
 }
