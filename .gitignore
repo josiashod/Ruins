@@ -1,0 +1,21 @@
+# This file is used to ignore files which are generated
+# ----------------------------------------------------------------------------
+
+*~
+
+*.o
+*.obj
+
+*.DS_Store
+
+
+# Binaries
+# --------
+*.exe
+
+/build*
+CMakeLists*
+
+# CLion project files
+.idea
+cmake-build-*

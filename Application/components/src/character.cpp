@@ -4,40 +4,47 @@
 
 #include "../header/character.h"
 
-character::character(char c, const std::string &nature)
-    :GameElement{c, {}, nature}, d_healthPoints{100}, d_strengthPoints{10}{
-}
+character::character(int health, int strength)
+    : d_health{health}, d_strength{strength} {}
 
-character::character(char c, const std::string &nature, int healthPoints, int strenghtPoints)
-    :GameElement{c, {}, nature}, d_healthPoints{healthPoints}, d_strengthPoints{strenghtPoints}{
-}
-
-int character::healthPoints() const {
+int character::health() const {
     // Renvoi du nombre de points de vie
-    return d_healthPoints;
+    return d_health;
 }
 
-int character::strengthPoints() const {
+int character::strength() const {
     // Renvoi du nombre de points de force
-    return d_strengthPoints;
+    return d_strength;
+}
+
+coord character::position() const {
+    // Renvoi du point de coordonnées
+    return d_coord;
+}
+
+void character::move(int x, int y) {
+    // Changement des coordonnées du personnage
+    d_coord.moveOn(x,y);
 }
 
 void character::getDamaged(int damage) {
-    d_healthPoints -= damage;
-    if (isDead()) die();
+    // Réception des dégâts par le personnage
+    d_health -= damage;
+
+    // Faire mourir le personnage si son nombre de point de vie est inférieur ou égal à 0
+    if (isDead())
+        die();
 }
 
 void character::die() {
     // Mise à zéro des points de vie et de force
-    d_healthPoints = 0;
-    d_strengthPoints = 0;
-
-    // Le faire disparaître de la map
+    d_health = 0;
+    d_strength = 0;
 }
 
 bool character::isDead() const {
     // Vérification du nombre de points de vie
-    return d_healthPoints <= 0;
+    return d_health <= 0;
 }
 
 
