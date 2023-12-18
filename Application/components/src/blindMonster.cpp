@@ -8,7 +8,7 @@
 blindMonster::blindMonster(int health, int strength, double hability)
     : monster{health, strength, hability} {}
 
-void blindMonster::move() {
+void blindMonster::move(const adventurer &adventurer) {
     // Déclaration des variables de coordonnées
     int X, Y;
     // Génération d'un nombre aléatoire entre -1 et 1 pour le déplacement aléatoire
