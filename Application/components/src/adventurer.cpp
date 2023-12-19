@@ -29,6 +29,16 @@ void adventurer::attack(character &c) {
     // Lancement de l'attaque sur le personnage c
     c.hasBeenAttacked(attackStrength);
 
+    //Recupérer les points de force de l'enemie s'il est mort
+    if(c.isDead())
+    {
+        int enemyStrength = c.strength();
+
+        // un quart s’ajoute à ses points de force et les trois quart à ses points de vie
+        d_strength += static_cast<int>(enemyStrength * 0.25);
+        d_health += static_cast<int>(enemyStrength * 0.75);
+    }
+
     // Réduction des points de solidité de l'épée
     d_sword.reduce(1);
 }
