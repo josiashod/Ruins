@@ -5,7 +5,8 @@
 #include <cstdlib>
 #include "../header/adventurer.h"
 
-using std::cout, std::cin;
+using std::cout;
+using std::cin;
 
 adventurer::adventurer(int swordSolidity, int armorSolidity, int coin, int health, int strength)
         : character{health, strength}, d_coins{coin}, d_sword{swordSolidity},
