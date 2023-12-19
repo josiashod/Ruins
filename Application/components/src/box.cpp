@@ -47,11 +47,15 @@ int box::coins() const {
     return d_coins;
 }
 
+character* box::getCharacter() const {
+    return d_character;
+}
+
 bool box::putCharacter(character *c) {
     // attack the character in the box
     if(d_character)
     {
-        c.attack(*d_character);
+        c->attack(*d_character);
         // change the current character to the new one if it's dead
         if(d_character->isDead())
             d_character = c;

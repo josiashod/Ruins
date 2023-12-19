@@ -5,8 +5,8 @@
 #include <cstdlib>
 #include "../header/blindMonster.h"
 
-blindMonster::blindMonster(int health, int strength, double hability)
-    : monster{health, strength, hability} {}
+blindMonster::blindMonster(int health, int strength, double hability, std::string type)
+    : monster{health, strength, hability, type} {}
 
 void blindMonster::move(const adventurer &adventurer) {
     // Déclaration des variables de coordonnées
