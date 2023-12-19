@@ -1,0 +1,10 @@
+E E E E W W W W W W E E
+E E E E W M R R A W E E
+E E E E W C R B R W E E
+W W W W W B R R M W E E
+W M R R R R R R R W E E
+W R C R B R R R B C W E
+P R R R R R C R R W E E
+W R R W R R R M C W E E
+W B R W B C W W W W E E
+W W W W W W W E E E E E

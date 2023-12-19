@@ -21,7 +21,7 @@ public:
      * @param health - Points de vie
      * @param strength - Points de force
      */
-    adventurer(int swordSolidity = 90, int armorSolidity = 10, int coin = 0, int health = 100, int strength = 10);
+    adventurer(int swordSolidity = 90, int armorSolidity = 10, int coin = 0, int health = 100, int strength = 10, std::string type = "adventurer");
 
     /**
       * @brief Fonction renvoyant le nombre de pièces
