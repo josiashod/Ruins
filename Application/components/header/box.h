@@ -13,16 +13,16 @@ public:
     * @param coins : the number of coins in the current box
     * @param c : the pointer to the character in the box
     */
-    box(const std::string &type, int coins = 0, character* c = nullptr);
+    box(const std::string &type, int coins = 0, bool amulet = false, character* c = nullptr);
 
     /**
      * The list of the diffrents types of boxs
      */
      static const std::string BX_WALL;
-     static const std::string BX_EMPTY;
-     static const std::string BX_COINS;
+     static const std::string BX_ACCESSIBLE;
+    //  static const std::string BX_COINS;
      static const std::string BX_EXTERN;
-     static const std::string BX_AMULET;
+    //  static const std::string BX_AMULET;
 
     /**
      * @brief the type of the box
@@ -40,6 +40,22 @@ public:
      */
     bool accessibility() const;
 
+    /**
+     * @brief Check if the box has an amulet
+     * 
+     * @return true 
+     * @return false 
+     */
+    bool hasAmulet() const;
+
+    /**
+     * @brief Check if the box has an coins
+     * 
+     * @return true 
+     * @return false 
+     */
+    bool hasCoins() const;
+
     /*
      * @brief return the number of coins present in the box
      * 
@@ -51,8 +67,10 @@ public:
      * @brief Put a character(adventurer, monster, blindMonster, etc..) in the box
      * 
      * @param c : the character(adventurer, monster, blindMonster, etc..)
+     * @return true if the character has been correctly moved to the case
+     * false if not
      */
-    void putCharacter(character *c);
+    bool putCharacter(character *c);
 
     /**
      * @brief remove character from the current box
@@ -64,7 +82,7 @@ public:
      * @brief remove coins from the current box
      * 
      */
-    void removeCoin();
+    void removeCoins();
 
     /**
      * @brief remove amulet from the current box
@@ -72,14 +90,19 @@ public:
      */
     void removeAmulet();
 
+    /**
+     * @brief Check if the box type is valid
+     * 
+     * @return true 
+     * @return false 
+     */
+    bool isValidType() const;
+
 private:
     character *d_character;
     std::string d_type;
     bool d_accessibility, d_amulet;
     int d_coins;
-
-    void changeType(const std::string &type);
-
 };
 
 
