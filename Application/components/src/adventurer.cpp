@@ -17,6 +17,14 @@ int adventurer::coins() const {
     return d_coins;
 }
 
+armor adventurer::getArmor() const{
+    return d_armor;
+}
+
+sword adventurer::getSword() const{
+    return d_sword;
+}
+
 void adventurer::attack(character &c) {
     // Initialisation de la force d'attaque
     int attackStrength = d_strength + d_sword.solidity();
