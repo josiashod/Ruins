@@ -1,9 +1,9 @@
 #ifndef __SWORD_H__
 #define __SWORD_H__
 
-#include "object.h"
+#include "equipment.h"
 
-class sword: public object {
+class sword: public equipment {
 public:
     sword(int solidity);
 };

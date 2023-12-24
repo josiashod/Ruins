@@ -6,31 +6,18 @@
 #define QUALITE_DE_PROG_MONSTER_H
 
 #include "character.h"
+#include "adventurer.h"
 
 class monster : public character {
 public :
     /**
-     * @brief Constructeur par défaut
-     * @param c Le caractère représentant le monsre
-     * @param nature La chaine de caractère identifiant le type de monstre
-     */
-    monster(char c, const std::string &nature);
-    /**
-     * @brief Constructeur de monstre à partir d'un pourcentage d'habilité
-     * @param c Le caractère représentant le monsre
-     * @param nature La chaine de caractère identifiant le type de monstre
-     * @param habilityPercentage Son taux d'habilieté au coups critiques
-     */
-    monster(char c, const std::string &nature, int habilityPercentage);
-    /**
      * @brief Constructeur par valeurs
-     * @param c Le caractère représentant le monsre
-     * @param nature La chaine de caractère identifiant le type de monstre
-     * @param healthPoints Les points de vie du monstre
-     * @param strenghtPoints Les points d'attaque du monstre
-     * @param habilityPercentage Son taux d'habilieté au coups critiques
+     * @param health Les points de vie du monstre
+     * @param strength Les points d'attaque du monstre
+     * @param hability Son taux d'habilieté au coups critiques
+     * @param type Type monstre voyant
      */
-    monster(char c, const std::string &nature, int healthPoints, int strenghtPoints, int habilityPercentage = 90);
+    monster(int health = 70, int strength = 5, double hability = 90, std::string type = "monster");
     /**
       * @brief Destructeur par défaut
       */
@@ -40,7 +27,7 @@ public :
       * @brief Fonction renvoyant le pourcentage d'habilité
       * @return poucentage d'habilité
       */
-    int habilityPercentage() const;
+    int hability() const;
 
     /**
       * @brief Réecriture de la méthode virtuelle permettant ainsi à un monstre d'attaquer un personnage
@@ -51,10 +38,29 @@ public :
       * @brief Réecriture de la méthode virtuelle permettant de gérer la réception d'une attaque par un monstre
       * @param[in] attackStrengthPoints - Points de force de l'attaque
       */
-    void getAttacked(int attackStrengthPoints) override;
+    void hasBeenAttacked(int attackStrengthPoints) override;
 
+    /**
+      * @brief Méthode retournant si le joueur est suffisanement proche du monstre
+      * @param adventurer l'aventurier
+      * @return true si le joueur est proche
+      */
+    bool isClose(const adventurer &adventurer) const;
+
+    /**
+     * @brief Méthode retournant dans quelle direction se situe le joueur
+     * @param adventurer l'aventurier
+     * @return Un entier représentant la direction
+     */
+    int direction(const adventurer &adventurer) const;
+
+    /**
+     * @brief Méthode virtuelle permettant à un monstre de se déplacer en fonction de l'aventurier
+     */
+    virtual void move(const adventurer &adventurer);
 private:
-    int d_habilityPercentage;
+    /// Pourcentage d'habilité du monstre
+    double d_hability;
 };
 
 #endif //QUALITE_DE_PROG_MONSTER_H

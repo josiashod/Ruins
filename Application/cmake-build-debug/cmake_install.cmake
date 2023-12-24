@@ -1,4 +1,4 @@
-# Install script for directory: /Users/arthurmathis/Desktop/Ruins/Application
+# Install script for directory: /Users/arthurmathis/Desktop/Application
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/arthurmathis/Desktop/Ruins/Application/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/arthurmathis/Desktop/Application/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

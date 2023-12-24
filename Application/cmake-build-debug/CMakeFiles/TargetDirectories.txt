@@ -1,3 +1,3 @@
-/Users/arthurmathis/Desktop/Ruins/Application/cmake-build-debug/CMakeFiles/Application.dir
-/Users/arthurmathis/Desktop/Ruins/Application/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/arthurmathis/Desktop/Ruins/Application/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/arthurmathis/Desktop/Application/cmake-build-debug/CMakeFiles/Application.dir
+/Users/arthurmathis/Desktop/Application/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/arthurmathis/Desktop/Application/cmake-build-debug/CMakeFiles/rebuild_cache.dir

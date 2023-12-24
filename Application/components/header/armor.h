@@ -1,9 +1,9 @@
 #ifndef __ARMOR_H__
 #define __ARMOR_H__
 
-#include "object.h"
+#include "equipment.h"
 
-class armor: public object {
+class armor: public equipment {
 public:
     armor(int solidity);
 };

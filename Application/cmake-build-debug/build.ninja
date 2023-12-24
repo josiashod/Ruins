@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/arthurmathis/Desktop/Ruins/Application/cmake-build-debug/
+cmake_ninja_workdir = /Users/arthurmathis/Desktop/Application/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target Application
 
@@ -49,57 +49,105 @@ cmake_ninja_workdir = /Users/arthurmathis/Desktop/Ruins/Application/cmake-build-
 
 build cmake_object_order_depends_target_Application: phony || CMakeFiles/Application.dir
 
-build CMakeFiles/Application.dir/components/src/blindMonster.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Ruins/Application/components/src/blindMonster.cpp || cmake_object_order_depends_target_Application
-  DEP_FILE = CMakeFiles/Application.dir/components/src/blindMonster.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/Application.dir
-  OBJECT_FILE_DIR = CMakeFiles/Application.dir/components/src
-
-build CMakeFiles/Application.dir/components/src/character.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Ruins/Application/components/src/character.cpp || cmake_object_order_depends_target_Application
-  DEP_FILE = CMakeFiles/Application.dir/components/src/character.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/Application.dir
-  OBJECT_FILE_DIR = CMakeFiles/Application.dir/components/src
-
-build CMakeFiles/Application.dir/components/src/GameElement.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Ruins/Application/components/src/GameElement.cpp || cmake_object_order_depends_target_Application
-  DEP_FILE = CMakeFiles/Application.dir/components/src/GameElement.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/Application.dir
-  OBJECT_FILE_DIR = CMakeFiles/Application.dir/components/src
-
-build CMakeFiles/Application.dir/components/src/monster.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Ruins/Application/components/src/monster.cpp || cmake_object_order_depends_target_Application
-  DEP_FILE = CMakeFiles/Application.dir/components/src/monster.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/Application.dir
-  OBJECT_FILE_DIR = CMakeFiles/Application.dir/components/src
-
-build CMakeFiles/Application.dir/components/src/point.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Ruins/Application/components/src/point.cpp || cmake_object_order_depends_target_Application
-  DEP_FILE = CMakeFiles/Application.dir/components/src/point.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/Application.dir
-  OBJECT_FILE_DIR = CMakeFiles/Application.dir/components/src
-
-build CMakeFiles/Application.dir/tests/testGameELement.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Ruins/Application/tests/testGameELement.cpp || cmake_object_order_depends_target_Application
-  DEP_FILE = CMakeFiles/Application.dir/tests/testGameELement.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/Application.dir
-  OBJECT_FILE_DIR = CMakeFiles/Application.dir/tests
-
-build CMakeFiles/Application.dir/tests/testpoint.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Ruins/Application/tests/testpoint.cpp || cmake_object_order_depends_target_Application
-  DEP_FILE = CMakeFiles/Application.dir/tests/testpoint.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/Application.dir
-  OBJECT_FILE_DIR = CMakeFiles/Application.dir/tests
-
-build CMakeFiles/Application.dir/tests/testmonstre.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Ruins/Application/tests/testmonstre.cpp || cmake_object_order_depends_target_Application
-  DEP_FILE = CMakeFiles/Application.dir/tests/testmonstre.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/Application.dir
-  OBJECT_FILE_DIR = CMakeFiles/Application.dir/tests
-
-build CMakeFiles/Application.dir/tests/testing.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Ruins/Application/tests/testing.cpp || cmake_object_order_depends_target_Application
+build CMakeFiles/Application.dir/tests/testing.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/tests/testing.cpp || cmake_object_order_depends_target_Application
   DEP_FILE = CMakeFiles/Application.dir/tests/testing.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Application.dir
+  OBJECT_FILE_DIR = CMakeFiles/Application.dir/tests
+
+build CMakeFiles/Application.dir/components/src/adventurer.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/components/src/adventurer.cpp || cmake_object_order_depends_target_Application
+  DEP_FILE = CMakeFiles/Application.dir/components/src/adventurer.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Application.dir
+  OBJECT_FILE_DIR = CMakeFiles/Application.dir/components/src
+
+build CMakeFiles/Application.dir/components/src/armor.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/components/src/armor.cpp || cmake_object_order_depends_target_Application
+  DEP_FILE = CMakeFiles/Application.dir/components/src/armor.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Application.dir
+  OBJECT_FILE_DIR = CMakeFiles/Application.dir/components/src
+
+build CMakeFiles/Application.dir/components/src/blindMonster.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/components/src/blindMonster.cpp || cmake_object_order_depends_target_Application
+  DEP_FILE = CMakeFiles/Application.dir/components/src/blindMonster.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Application.dir
+  OBJECT_FILE_DIR = CMakeFiles/Application.dir/components/src
+
+build CMakeFiles/Application.dir/components/src/box.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/components/src/box.cpp || cmake_object_order_depends_target_Application
+  DEP_FILE = CMakeFiles/Application.dir/components/src/box.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Application.dir
+  OBJECT_FILE_DIR = CMakeFiles/Application.dir/components/src
+
+build CMakeFiles/Application.dir/components/src/castle.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/components/src/castle.cpp || cmake_object_order_depends_target_Application
+  DEP_FILE = CMakeFiles/Application.dir/components/src/castle.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Application.dir
+  OBJECT_FILE_DIR = CMakeFiles/Application.dir/components/src
+
+build CMakeFiles/Application.dir/components/src/character.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/components/src/character.cpp || cmake_object_order_depends_target_Application
+  DEP_FILE = CMakeFiles/Application.dir/components/src/character.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Application.dir
+  OBJECT_FILE_DIR = CMakeFiles/Application.dir/components/src
+
+build CMakeFiles/Application.dir/components/src/coord.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/components/src/coord.cpp || cmake_object_order_depends_target_Application
+  DEP_FILE = CMakeFiles/Application.dir/components/src/coord.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Application.dir
+  OBJECT_FILE_DIR = CMakeFiles/Application.dir/components/src
+
+build CMakeFiles/Application.dir/components/src/equipment.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/components/src/equipment.cpp || cmake_object_order_depends_target_Application
+  DEP_FILE = CMakeFiles/Application.dir/components/src/equipment.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Application.dir
+  OBJECT_FILE_DIR = CMakeFiles/Application.dir/components/src
+
+build CMakeFiles/Application.dir/components/src/monster.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/components/src/monster.cpp || cmake_object_order_depends_target_Application
+  DEP_FILE = CMakeFiles/Application.dir/components/src/monster.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Application.dir
+  OBJECT_FILE_DIR = CMakeFiles/Application.dir/components/src
+
+build CMakeFiles/Application.dir/components/src/sword.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/components/src/sword.cpp || cmake_object_order_depends_target_Application
+  DEP_FILE = CMakeFiles/Application.dir/components/src/sword.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Application.dir
+  OBJECT_FILE_DIR = CMakeFiles/Application.dir/components/src
+
+build CMakeFiles/Application.dir/tests/testobject.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/tests/testobject.cpp || cmake_object_order_depends_target_Application
+  DEP_FILE = CMakeFiles/Application.dir/tests/testobject.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Application.dir
+  OBJECT_FILE_DIR = CMakeFiles/Application.dir/tests
+
+build CMakeFiles/Application.dir/tests/testpoint.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/tests/testpoint.cpp || cmake_object_order_depends_target_Application
+  DEP_FILE = CMakeFiles/Application.dir/tests/testpoint.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Application.dir
+  OBJECT_FILE_DIR = CMakeFiles/Application.dir/tests
+
+build CMakeFiles/Application.dir/tests/test_box.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/tests/test_box.cpp || cmake_object_order_depends_target_Application
+  DEP_FILE = CMakeFiles/Application.dir/tests/test_box.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Application.dir
+  OBJECT_FILE_DIR = CMakeFiles/Application.dir/tests
+
+build CMakeFiles/Application.dir/tests/testadventurer.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/tests/testadventurer.cpp || cmake_object_order_depends_target_Application
+  DEP_FILE = CMakeFiles/Application.dir/tests/testadventurer.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Application.dir
+  OBJECT_FILE_DIR = CMakeFiles/Application.dir/tests
+
+build CMakeFiles/Application.dir/tests/testblindmonster.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/tests/testblindmonster.cpp || cmake_object_order_depends_target_Application
+  DEP_FILE = CMakeFiles/Application.dir/tests/testblindmonster.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Application.dir
+  OBJECT_FILE_DIR = CMakeFiles/Application.dir/tests
+
+build CMakeFiles/Application.dir/tests/testmonster.cpp.o: CXX_COMPILER__Application_unscanned_Debug /Users/arthurmathis/Desktop/Application/tests/testmonster.cpp || cmake_object_order_depends_target_Application
+  DEP_FILE = CMakeFiles/Application.dir/tests/testmonster.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/Application.dir
   OBJECT_FILE_DIR = CMakeFiles/Application.dir/tests
 
@@ -111,8 +159,8 @@ build CMakeFiles/Application.dir/tests/testing.cpp.o: CXX_COMPILER__Application_
 #############################################
 # Link the executable Application
 
-build Application: CXX_EXECUTABLE_LINKER__Application_Debug CMakeFiles/Application.dir/components/src/blindMonster.cpp.o CMakeFiles/Application.dir/components/src/character.cpp.o CMakeFiles/Application.dir/components/src/GameElement.cpp.o CMakeFiles/Application.dir/components/src/monster.cpp.o CMakeFiles/Application.dir/components/src/point.cpp.o CMakeFiles/Application.dir/tests/testGameELement.cpp.o CMakeFiles/Application.dir/tests/testpoint.cpp.o CMakeFiles/Application.dir/tests/testmonstre.cpp.o CMakeFiles/Application.dir/tests/testing.cpp.o
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
+build Application: CXX_EXECUTABLE_LINKER__Application_Debug CMakeFiles/Application.dir/tests/testing.cpp.o CMakeFiles/Application.dir/components/src/adventurer.cpp.o CMakeFiles/Application.dir/components/src/armor.cpp.o CMakeFiles/Application.dir/components/src/blindMonster.cpp.o CMakeFiles/Application.dir/components/src/box.cpp.o CMakeFiles/Application.dir/components/src/castle.cpp.o CMakeFiles/Application.dir/components/src/character.cpp.o CMakeFiles/Application.dir/components/src/coord.cpp.o CMakeFiles/Application.dir/components/src/equipment.cpp.o CMakeFiles/Application.dir/components/src/monster.cpp.o CMakeFiles/Application.dir/components/src/sword.cpp.o CMakeFiles/Application.dir/tests/testobject.cpp.o CMakeFiles/Application.dir/tests/testpoint.cpp.o CMakeFiles/Application.dir/tests/test_box.cpp.o CMakeFiles/Application.dir/tests/testadventurer.cpp.o CMakeFiles/Application.dir/tests/testblindmonster.cpp.o CMakeFiles/Application.dir/tests/testmonster.cpp.o
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/Application.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -124,7 +172,7 @@ build Application: CXX_EXECUTABLE_LINKER__Application_Debug CMakeFiles/Applicati
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/arthurmathis/Desktop/Ruins/Application/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/arthurmathis/Desktop/Application/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -135,7 +183,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/arthurmathis/Desktop/Ruins/Application/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/arthurmathis/Desktop/Ruins/Application -B/Users/arthurmathis/Desktop/Ruins/Application/cmake-build-debug
+  COMMAND = cd /Users/arthurmathis/Desktop/Application/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/arthurmathis/Desktop/Application -B/Users/arthurmathis/Desktop/Application/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -151,7 +199,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /Users/arthurmathis/Desktop/Ruins/Application/cmake-build-debug
+# Folder: /Users/arthurmathis/Desktop/Application/cmake-build-debug
 
 build all: phony Application
 
@@ -162,14 +210,14 @@ build all: phony Application
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /Users/arthurmathis/Desktop/Ruins/Application/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /Users/arthurmathis/Desktop/Application/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /Users/arthurmathis/Desktop/Ruins/Application/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
+build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /Users/arthurmathis/Desktop/Application/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
 
 
 #############################################

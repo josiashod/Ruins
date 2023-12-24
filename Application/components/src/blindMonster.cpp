@@ -5,17 +5,10 @@
 #include <cstdlib>
 #include "../header/blindMonster.h"
 
-blindMonster::blindMonster() : monster{'B', "Monstre Aveugle"}{
-}
+blindMonster::blindMonster(int health, int strength, double hability, std::string type)
+    : monster{health, strength, hability, type} {}
 
-blindMonster::blindMonster(int habilityPercentage) : monster{'B', "Monstre Aveugle", habilityPercentage}{
-}
-
-blindMonster::blindMonster(int healthPoints, int strenghtPoints, int habilityPercentage)
-    :monster{'B', "Monstre Aveugle", healthPoints, strenghtPoints, habilityPercentage}{
-}
-
-void blindMonster::move() {
+void blindMonster::move(const adventurer &adventurer) {
     // Déclaration des variables de coordonnées
     int X, Y;
     // Génération d'un nombre aléatoire entre -1 et 1 pour le déplacement aléatoire
@@ -24,5 +17,5 @@ void blindMonster::move() {
         Y = rand() % 3 - 1;
     } while(X == 0 && Y == 0); // Nouvelle génération si les deux sont nuls car le monstre doit bouger
     // Déplacement du monstre
-    MoveElement(X,Y);
+    character::move(X,Y);
 }
