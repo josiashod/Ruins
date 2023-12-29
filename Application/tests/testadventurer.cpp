@@ -158,18 +158,28 @@ TEST_SUITE("Test des méthodes de la classe adventurer") {
 
             SCENARIO("Vérification du taux de dégat encaisser par l'amure et par le player"){
                 GIVEN("Création d'un Aventurier et d'un monstre"){
+                    int attack = 10;
                     adventurer player{};
-                    monster monster{70, 50};
+                    monster monster{70, attack};
                     WHEN("Réalisation d'une attaque"){
-                        int solidity = player.getArmor().solidity();
+                        int armor = player.getArmor().solidity();
                         int life = player.health();
                         monster.attack(player);
                         GIVEN("Calculs des dégâts"){
-                            int normalAttack = static_cast<int>(monster.strength() * 0.75 * 0.9);
-                            int goodAttack = static_cast<int>(monster.strength() * 0.75);
-                            bool valid{
-                                
+                            int normalAttack = static_cast<int>(monster.strength() * 0.9);
+                            bool validArmor{
+                                player.getArmor().solidity() == armor - static_cast<int>(0.75 * normalAttack) ||
+                                player.getArmor().solidity() == armor - static_cast<int>(0.75 * attack)
                             };
+
+                            bool validPlayer{
+                                player.health() == life - static_cast<int>(armor - 0.75 * normalAttack) ||
+                                player.health() == life - static_cast<int>(armor - 0.75 * attack)
+                            };
+                            THEN("Vérification des dégâts"){
+                                REQUIRE_EQ(validArmor, true);
+                                REQUIRE_EQ(validPlayer, true);
+                            }
                         }
                     }
                 }
