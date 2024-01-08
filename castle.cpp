@@ -43,7 +43,11 @@ string castle::typeCode(const box &box) const {
     return code;
 }
 
+<<<<<<< HEAD:castle.cpp
 box castle::boxFromType(const string &type, std::shared_ptr<adventurer> &adventurer, vector<std::shared_ptr<monster>> &monsters, int i, int j) const {
+=======
+box castle::boxFromType(const string &type) const {
+>>>>>>> josh:Application/components/src/castle.cpp
     int coins = 0; // Initialisation du nombre de pièces
     bool amulet = false; // Initialisation de la présence d'une amulette
     character* c = nullptr; // Initialisation d'un pointeur de personnage à nullptr
