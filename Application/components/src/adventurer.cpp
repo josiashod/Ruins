@@ -8,8 +8,8 @@
 using std::cout;
 using std::cin;
 
-adventurer::adventurer(int swordSolidity, int armorSolidity, int coin, int health, int strength)
-        : character{health, strength}, d_coins{coin}, d_sword{swordSolidity},
+adventurer::adventurer(int swordSolidity, int armorSolidity, int coin, int health, int strength, std::string type)
+        : character{health, strength, type}, d_coins{coin}, d_sword{swordSolidity},
         d_armor{armorSolidity} {}
 
 int adventurer::coins() const {

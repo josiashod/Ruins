@@ -63,6 +63,13 @@ public:
      */
     int coins() const;
 
+    /*
+     * @brief return the number of coins present in the box
+     *
+     * @return int
+     */
+    character* getCharacter() const;
+
     /**
      * @brief Put a character(adventurer, monster, blindMonster, etc..) in the box
      * 

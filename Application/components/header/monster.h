@@ -13,10 +13,11 @@ public :
     /**
      * @brief Constructeur par valeurs
      * @param health Les points de vie du monstre
-     * @param strenght Les points d'attaque du monstre
+     * @param strength Les points d'attaque du monstre
      * @param hability Son taux d'habilieté au coups critiques
+     * @param type Type monstre voyant
      */
-    monster(int health = 70, int strenght = 5, double hability = 90);
+    monster(int health = 70, int strength = 5, double hability = 90, std::string type = "monster");
     /**
       * @brief Destructeur par défaut
       */

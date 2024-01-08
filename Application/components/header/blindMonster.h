@@ -14,8 +14,9 @@ public:
      * @param health Les points de vie du monstre
      * @param strength Les points d'attaque du monstre
      * @param hability Pourcentage d'habilieté du monstre
+     * @param type Type monstre aveugle
      */
-    blindMonster(int health = 70, int strength = 5, double hability = 90);
+    blindMonster(int health = 70, int strength = 5, double hability = 90, std::string type = "blindmonster");
 
     /**
      * @brief Réecriture de la méthode virtuelle permettant à un monstre aveugle de se déplacer

@@ -5,8 +5,8 @@
 #include <cstdlib>
 #include "../header/monster.h"
 
-monster::monster(int health, int strength, double hability)
-    : character{health, strength}, d_hability{hability}
+monster::monster(int health, int strength, double hability, std::string type)
+    : character{health, strength, type}, d_hability{hability}
 {}
 
 int monster::hability() const {
