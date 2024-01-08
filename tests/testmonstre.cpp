@@ -2,10 +2,10 @@
 // Created by Arthur Mathis on 20/11/2023.
 //
 #include "doctest.h"
-#include "../components/header/coord.h"
-#include "../components/header/adventurer.h"
-#include "../components/header/monster.h"
-#include "../components/header/blindMonster.h"
+#include "../coord.h"
+#include "../adventurer.h"
+#include "../monster.h"
+#include "../blindMonster.h"
 
 TEST_SUITE("Vérification de la class blindMonster"){
     SCENARIO("Vérification de la class character") {

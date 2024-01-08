@@ -1,5 +1,5 @@
 #include "doctest.h"
-#include "../components/header/equipment.h"
+#include "../equipment.h"
 
 TEST_CASE("[equipment] Constructions et modifications du points de solidité d'un objet") {
     SUBCASE("construction d'un equipment") {

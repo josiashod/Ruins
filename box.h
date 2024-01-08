@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "character.h"
+#include <memory>
 
 class box {
 public:
@@ -13,7 +14,7 @@ public:
     * @param coins : the number of coins in the current box
     * @param c : the pointer to the character in the box
     */
-    box(const std::string &type, int coins = 0, bool amulet = false, character* c = nullptr);
+    box(const std::string &type, int coins = 0, bool amulet = false, std::shared_ptr<character> c = nullptr);
 
     /**
      * The list of the diffrents types of boxs
@@ -68,7 +69,7 @@ public:
      *
      * @return int
      */
-    character* getCharacter() const;
+    std::shared_ptr<character> getCharacter() const;
 
     /**
      * @brief Put a character(adventurer, monster, blindMonster, etc..) in the box
@@ -77,7 +78,7 @@ public:
      * @return true if the character has been correctly moved to the case
      * false if not
      */
-    bool putCharacter(character *c);
+    bool putCharacter(std::shared_ptr<character> c);
 
     /**
      * @brief remove character from the current box
@@ -106,7 +107,7 @@ public:
     bool isValidType() const;
 
 private:
-    character *d_character;
+    std::shared_ptr<character> d_character;
     std::string d_type;
     bool d_accessibility, d_amulet;
     int d_coins;

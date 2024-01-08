@@ -1,4 +1,4 @@
-#include "removeCoinscoord.h"
+#include "coord.h"
 #include <cmath>
 
 /**

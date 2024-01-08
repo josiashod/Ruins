@@ -3,7 +3,7 @@
 //
 
 #include <cstdlib>
-#include "removeCoinsmonster.h"
+#include "monster.h"
 
 monster::monster(int health, int strength, double hability, std::string type)
     : character{health, strength, type}, d_hability{hability}
@@ -83,4 +83,9 @@ void monster::move(const adventurer &adventurer) {
                 break;
         }
     }
+}
+
+void monster::display(const display &d) const
+{
+    d.displayMonster();
 }

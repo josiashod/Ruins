@@ -1,4 +1,4 @@
-#include "removeCoinsarmor.h"
+#include "armor.h"
 
 armor::armor(int solidity): equipment{solidity} {
 }

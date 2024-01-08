@@ -6,6 +6,8 @@
 #define QUALITE_DE_PROG_CHARACTER_H
 
 #include "coord.h"
+#include "display.h"
+
 
 class character {
 public:
@@ -77,6 +79,8 @@ public:
      * @return true si le personnage est mort, false s'il est vivant
      */
     bool isDead() const;
+
+    virtual void display(const display &d) const = 0;
 
 protected:
     /// Points de vie et points de force

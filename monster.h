@@ -8,6 +8,7 @@
 #include "character.h"
 #include "adventurer.h"
 
+
 class monster : public character {
 public :
     /**
@@ -58,6 +59,8 @@ public :
      * @brief Méthode virtuelle permettant à un monstre de se déplacer en fonction de l'aventurier
      */
     virtual void move(const adventurer &adventurer);
+
+    void display(const display &d) const override;
 private:
     /// Pourcentage d'habilité du monstre
     double d_hability;

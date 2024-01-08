@@ -2,9 +2,9 @@
 // Created by Daav on 19/12/2023.
 //
 
-#include "removeCoinscastle.h"
-#include "removeCoinsmonster.h"
-#include "removeCoinsblindMonster.h"
+#include "castle.h"
+#include "blindMonster.h"
+
 
 string castle::typeCode(const box &box) const {
     // Initialisation d'une variable pour stocker le code
@@ -43,7 +43,7 @@ string castle::typeCode(const box &box) const {
     return code;
 }
 
-box castle::boxFromType(const string &type) const {
+box castle::boxFromType(const string &type, std::shared_ptr<adventurer> &adventurer, vector<std::shared_ptr<monster>> &monsters, int i, int j) const {
     int coins = 0; // Initialisation du nombre de pièces
     bool amulet = false; // Initialisation de la présence d'une amulette
     character* c = nullptr; // Initialisation d'un pointeur de personnage à nullptr
@@ -68,25 +68,29 @@ box castle::boxFromType(const string &type) const {
         return box(box::BX_ACCESSIBLE);
     } else if(type == "P") {
         // Si le type est P, on crée un nouvel aventurier par défaut
-        c = new adventurer();
+        adventurer->move(i,j);
         // Retourner une case accessible avec l'aventurier créé
-        return box(box::BX_ACCESSIBLE, 0, false, c);
+        return box(box::BX_ACCESSIBLE, 0, false, adventurer);
     } else if(type == "M") {
         // Si le type est M, on crée un nouveau monstre voyant par défaut
-        c = new monster();
+        std::shared_ptr<monster> m = std::make_shared<monster>();
+        m->character::move(i,j);
+        monsters.push_back(std::move(m));
         // Retourner une case accessible avec le monstre voyant créé
-        return box(box::BX_ACCESSIBLE, 0, false, c);
+        return box(box::BX_ACCESSIBLE, 0, false, m);
     } else if(type == "B") {
         // Si le type est B, on crée un nouveau monstre aveugle
-        c = new blindMonster();
+        std::shared_ptr<blindMonster> m = std::make_shared<blindMonster>();
+        m->character::move(i,j);
+        monsters.push_back(std::move(m));
         // Retourner une case accessible avec le monstre aveugle créé
-        return box(box::BX_ACCESSIBLE, 0, false, c);
+        return box(box::BX_ACCESSIBLE, 0, false, m);
     }
 }
 
-void castle::init() {
+void castle::init(std::shared_ptr<adventurer> &adventurer, vector<std::shared_ptr<monster>> &monsters) {
     // On charge la map de base
-    load("../defaultCastle.txt");
+    load(".defaultCastle.txt", adventurer, monsters);
 }
 
 void castle::save(const string &filename) {
@@ -111,7 +115,7 @@ void castle::save(const string &filename) {
         std::cerr << "Le fichier suivant n'a pas pu être sauvegardé : " << filename << std::endl;
 }
 
-void castle::load(const string &filename) {
+void castle::load(const string &filename, std::shared_ptr<adventurer> &adventurer, vector<std::shared_ptr<monster>> &monsters) {
     // Ouverture du fichier
     std::ifstream file(filename);
 
@@ -121,8 +125,10 @@ void castle::load(const string &filename) {
         d_boxes.clear();
 
         string line;
+        int i = 0;
         // On parcourt chaque ligne du fichier représentant une ligne de cases dans la grille du château
         while(std::getline(file, line)) {
+            int j = 0;
             // On crée un flux pour lire chaque code de case dans une ligne
             std::istringstream iss(line);
             // On stocke les cases d'une ligne de la grille
@@ -130,12 +136,15 @@ void castle::load(const string &filename) {
 
             string code;
             // On parcourt chaque code de case dans une ligne de la grille
-            while(iss >> code)
+            while(iss >> code) {
                 // On crée une case à partir du code et on l'ajoute à la ligne
-                row.push_back(boxFromType(code));
+                row.push_back(boxFromType(code, adventurer, monsters, i, j));
+                j++;
+            }
 
             // On ajoute la ligne complète à la grille du château
             d_boxes.push_back(row);
+            i++;
         }
 
         // Fermeture du fichier

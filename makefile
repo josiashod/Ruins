@@ -1,10 +1,11 @@
 CC = g++
 NAME = ruins
-SRC = $(wildcard Application/components/src/*.cpp)
-TEST_SRC = $(wildcard Application/tests/*.cpp)
+SRC = $(wildcard *.cpp)
+TEST_SRC = $(wildcard tests/*.cpp)
 OBJ = $(SRC:.cpp=.o)
 OBJ_TEST = $(TEST_SRC:.cpp=.o)
 RM = rm
+CFLAGS = -std=c++17
 
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $^ -o $(NAME)

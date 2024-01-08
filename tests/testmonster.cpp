@@ -3,9 +3,9 @@
 //
 
 #include "doctest.h"
-#include "../components/header/character.h"
-#include "../components/header/adventurer.h"
-#include "../components/header/monster.h"
+#include "../character.h"
+#include "../adventurer.h"
+#include "../monster.h"
 
 TEST_SUITE("Test des méthodes de la classe monster") {
     TEST_SUITE("Test des constructeurs") {

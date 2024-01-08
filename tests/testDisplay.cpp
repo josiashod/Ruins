@@ -1,5 +1,5 @@
 #include "doctest.h"
-#include "../components/header/display.h"
+#include "../display.h"
 
 TEST_CASE("[display] Tests des fonctions de la classe display")
 {

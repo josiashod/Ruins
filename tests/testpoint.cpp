@@ -1,5 +1,5 @@
 #include "doctest.h"
-#include "../components/header/coord.h"
+#include "../coord.h"
 
 /**
  * @brief Teste la construction des coords et la récupération des coordonnées avec les getters.
