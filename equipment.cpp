@@ -1,4 +1,4 @@
-#include "../header/equipment.h"
+#include "equipment.h"
 
 equipment::equipment(int solidity): d_solidity{solidity} {
 }

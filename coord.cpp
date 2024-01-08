@@ -1,4 +1,4 @@
-#include "../header/coord.h"
+#include "coord.h"
 #include <cmath>
 
 /**

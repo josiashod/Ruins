@@ -1,5 +1,5 @@
 #include "doctest.h"
-#include "../components/header/box.h"
+#include "../box.h"
 
 TEST_CASE("[box] Constructions et modifications d'un case") {
     SUBCASE("Création de différents type de case") {

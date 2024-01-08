@@ -1,4 +1,4 @@
-#include "../header/box.h"
+#include "box.h"
 #include <stdexcept>
 
 const std::string box::BX_WALL = "wall";
@@ -7,7 +7,7 @@ const std::string box::BX_ACCESSIBLE = "accessible";
 const std::string box::BX_EXTERN = "extern";
 // const std::string box::BX_AMULET = "amulet";
 
-box::box(const std::string &type, int coins, bool amulet, character *c) : d_type{type}, d_coins{0}, d_amulet{false}
+box::box(const std::string &type, int coins, bool amulet, std::shared_ptr<character> c) : d_type{type}, d_coins{0}, d_amulet{false}
 {
     if(!isValidType())
         throw std::invalid_argument("InvalidType: type must in defined must be BX_WALL, BX_ACCESSIBLE or BX_EXTERN");
@@ -47,11 +47,11 @@ int box::coins() const {
     return d_coins;
 }
 
-character* box::getCharacter() const {
+std::shared_ptr<character> box::getCharacter() const {
     return d_character;
 }
 
-bool box::putCharacter(character *c) {
+bool box::putCharacter(std::shared_ptr<character> c) {
     // attack the character in the box
     if(d_character)
     {

@@ -2,7 +2,7 @@
 // Created by Daav on 18/11/2023.
 //
 
-#include "../header/character.h"
+#include "character.h"
 
 const std::string character::CHAR_ADVENTURER = "adventurer";
 const std::string character::CHAR_MONSTER = "monster";

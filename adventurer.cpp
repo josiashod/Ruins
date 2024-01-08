@@ -3,7 +3,8 @@
 //
 
 #include <cstdlib>
-#include "../header/adventurer.h"
+#include "adventurer.h"
+#include "display.h"
 
 using std::cout;
 using std::cin;
@@ -103,4 +104,9 @@ void player::move() {
 void adventurer::addCoins(int numberOfCoin) {
     // Incrémentation du nombre de pièces
     d_coins += numberOfCoin;
+}
+
+void adventurer::display(const display &d) const
+{
+    d.displayAdventurer();
 }

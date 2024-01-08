@@ -2,10 +2,10 @@
 // Created by Daav on 23/12/2023.
 //
 #include "doctest.h"
-#include "../components/header/character.h"
-#include "../components/header/adventurer.h"
-#include "../components/header/monster.h"
-#include "../components/header/blindMonster.h"
+#include "../character.h"
+#include "../adventurer.h"
+#include "../monster.h"
+#include "../blindMonster.h"
 
 TEST_SUITE("Test des méthodes de la classe blindMonster") {
     TEST_SUITE("Test des constructeurs") {

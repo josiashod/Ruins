@@ -11,7 +11,11 @@
 #include <vector>
 #include <string>
 #include "box.h"
-using std::vector, std::string;
+#include "adventurer.h"
+#include "monster.h"
+#include <memory>
+using std::vector;
+using std::string;
 
 class castle {
 public:
@@ -23,7 +27,7 @@ public:
     /**
      * @brief Méthode qui initialise le château
      */
-    void init();
+    void init(std::shared_ptr<adventurer> &adventurer, vector<std::shared_ptr<monster>> &monsters);
 
     /**
      * @brief Méthode qui sauvegarde le terrain dans un fichier txt
@@ -35,12 +39,12 @@ public:
      * @brief Méthode qui charge le terrain à partir d'un fichier txt
      * @param filename Le nom du fichier à charger
      */
-    void load(const std::string &filename);
+    void load(const std::string &filename, std::shared_ptr<adventurer> &adventurer, vector<std::shared_ptr<monster>> &monsters);
 
-private:
     /// Grille représentant le château
     vector<vector<box>> d_boxes;
 
+private:
     /**
      * @brief Méthode qui convertit le type de la case en code
      * @param box La case dont le type doit être converti en code
@@ -53,7 +57,7 @@ private:
      * @param type Le code du type de la case à convertir
      * @return La case correspondant au type du code
      */
-    box boxFromType(const string &type) const;
+    box boxFromType(const string &type, std::shared_ptr<adventurer> &adventurer, vector<std::shared_ptr<monster>> &monsters, int i, int j) const;
 };
 
 
