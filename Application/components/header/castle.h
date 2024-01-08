@@ -37,10 +37,10 @@ public:
      */
     void load(const std::string &filename);
 
-private:
     /// Grille représentant le château
     vector<vector<box>> d_boxes;
 
+private:
     /**
      * @brief Méthode qui convertit le type de la case en code
      * @param box La case dont le type doit être converti en code
