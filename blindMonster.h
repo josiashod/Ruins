@@ -22,7 +22,7 @@ public:
      * @brief Réecriture de la méthode virtuelle permettant à un monstre aveugle de se déplacer
      */
     void move(const adventurer &adventurer) override;
-    void display(const display &d) const override;
+    void show(display &d) const override;
 };
 
 

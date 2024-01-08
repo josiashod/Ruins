@@ -60,7 +60,7 @@ public :
      */
     virtual void move(const adventurer &adventurer);
 
-    void display(const display &d) const override;
+    void show(display &d) const override;
 private:
     /// Pourcentage d'habilité du monstre
     double d_hability;

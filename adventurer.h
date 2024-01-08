@@ -56,7 +56,7 @@ public:
       * @brief Méthode permettant à un aventurier de gagner un nombre de pièce
       */
     void addCoins(int numberOfCoin);
-    void display(const display &d) const override;
+    void show(display &d) const override;
 
 private:
     int d_coins;

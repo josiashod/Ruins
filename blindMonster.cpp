@@ -21,7 +21,7 @@ void blindMonster::move(const adventurer &adventurer) {
     character::move(X,Y);
 }
 
-void blindMonster::display(const display &d) const
+void blindMonster::show(display &d) const
 {
     d.displayBlindMonster();
 }

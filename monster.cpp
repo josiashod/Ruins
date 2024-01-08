@@ -85,7 +85,7 @@ void monster::move(const adventurer &adventurer) {
     }
 }
 
-void monster::display(const display &d) const
+void monster::show(display &d) const
 {
     d.displayMonster();
 }

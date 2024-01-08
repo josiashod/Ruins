@@ -80,7 +80,7 @@ public:
      */
     bool isDead() const;
 
-    virtual void display(const display &d) const = 0;
+    virtual void show(display &d) const = 0;
 
 protected:
     /// Points de vie et points de force

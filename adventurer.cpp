@@ -106,7 +106,7 @@ void adventurer::addCoins(int numberOfCoin) {
     d_coins += numberOfCoin;
 }
 
-void adventurer::display(const display &d) const
+void adventurer::show(display &d) const
 {
     d.displayAdventurer();
 }
