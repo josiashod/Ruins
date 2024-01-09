@@ -42,7 +42,7 @@ void game::start() {
                 // break;
             case 3 : rules();
                 break;
-            case 4 : end();
+            case 4 : close();
                 break;
         }
         cout << d;
@@ -69,20 +69,25 @@ void game::gameMenu() {
             break;
         case 2 : repairSwordOrArmor();
             break;
-        case 3 : end();
+        case 3 : close();
             break;
     }
 }
 
 // !(dead || (amulet && position))
 // !dead
-void game::loop() {
+void game::loop()
+{
+    bool Result;
     while(!d_adventurer->isDead() && !(d_adventurer->amulet() && d_adventurer->position() == d_entrance)) {
         showCastle();
         gameMenu();
     }
-    cout << "🎊🎊🎊🎊🎊🎊 Vous avez gagné, félicitations 🎊🎊🎊🎊🎊🎊";
-    end();
+    if(d_adventurer->amulet() && d_adventurer->position() == d_entrance)
+        Result=true;
+    else
+        Result=false;
+    end(Result);
 }
 
 int game::moveChoiceAdv() const
@@ -180,9 +185,56 @@ void game::moveMonsters() {
     }
 }
 
-void game::end() {
-    cout << "À bientôt !" << std::endl;
+void game::end(bool res) {
+    int choice;
+    bool validChoice = false;
+
+    while (!validChoice)
+    {
+        // Afficher le menu principal avec le résultat
+        std::cout << "#######################################################\n"
+                     "##             ------ CASTLE GAME ------              ##\n"
+                     "##                                                    ##\n"
+                     "## \n \n \n";
+
+        if (res) {
+            std::cout << "         Félicitations ! Vous avez gagné ! :)\n";
+        } else {
+            std::cout << "         Dommage, vous avez perdu. :(\n";
+        }
+
+        std::cout << "\n##                                                    ##\n"
+                     "##             (1) Retour au Menu Principal             ##\n"
+                     "##             (2) Quitter                              ##\n"
+                     "##                                                    ##\n"
+                     "##                                                    ##\n"
+                     "########################################################\n";
+
+        // Demander à l'utilisateur de choisir une option
+        std::cout << "Choisissez une option : ";
+        std::cin >> choice;
+
+        // Traiter la sélection de l'utilisateur
+        switch (choice) {
+            case 1:
+                std::cout << "Retour au Menu Principal\n";
+                validChoice = true;  // La sélection est valide, sortir de la boucle
+                start();  // Appeler la méthode play pour relancer le jeu
+                break;
+            case 2:
+                std::cout << "Au revoir !\n";
+                close();  // Quitter la boucle et la fonction
+                return;
+            default:
+                std::cout << "Choix invalide. Veuillez sélectionner une option valide.\n";
+                break;
+        }
+    }
 }
+
+
+
+
 
 void game::player_info() const
 {
@@ -235,4 +287,9 @@ void game::showCastle() {
         cout << "+---";
     cout << '+' << std::endl;
     player_info();
+}
+
+void game::close()
+{
+cout<<"jeu fermer avec succes";
 }

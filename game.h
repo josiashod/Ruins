@@ -63,11 +63,12 @@ public:
     int gameChoice() const;
     void gameMenu();
     void moveAdventurer();
-    void end();
+    void end(bool res);
     void showCastle();
     void player_info() const;
     void repairSwordOrArmor();
     void updateMonsters();
+    void close();
 
     void moveMonsters();
 private:
