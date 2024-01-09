@@ -104,10 +104,9 @@ void monster::move(castle &castle, std::shared_ptr<adventurer> &adventurer, std:
         }
 
         if(newX >= 0 && newY >= 0 && newX < castle.d_boxes.size() && newY < castle.d_boxes[0].size()) {
-            if(castle.d_boxes[newX][newY].accessibility()) {
+            if(castle.d_boxes[newX][newY].accessibility() && castle.d_boxes[newX][newY].putCharacter(monster)) {
                 castle.d_boxes[position().x()][position().y()].removeCharacter();
                 character::move(newX, newY);
-                castle.d_boxes[newX][newY].putCharacter(monster);
             }
         }
     }
