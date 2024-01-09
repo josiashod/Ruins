@@ -64,6 +64,7 @@ public:
     void takeAmulet();
     void repairSword(int coinAmount);
     void repairArmor(int coinAmount);
+    void reset() override;
 
 private:
     int d_coins;

@@ -68,12 +68,15 @@ box castle::boxFromType(const string &type, std::shared_ptr<adventurer> &adventu
     } else if(type == "P") {
         // Si le type est P, on crée un nouvel aventurier par défaut
         adventurer->move(i,j);
+        // Réinitialiser l'aventurier
+        adventurer->reset();
         // Retourner une case accessible avec l'aventurier créé
         return box(box::BX_ACCESSIBLE, 0, false, adventurer);
     } else if(type == "M") {
         // Si le type est M, on crée un nouveau monstre voyant par défaut
         std::shared_ptr<monster> m = std::make_shared<monster>();
         m->character::move(i,j);
+        m->reset();
         monsters.push_back(std::move(m));
         // Retourner une case accessible avec le monstre voyant créé
         return box(box::BX_ACCESSIBLE, 0, false, monsters.back());
@@ -81,6 +84,7 @@ box castle::boxFromType(const string &type, std::shared_ptr<adventurer> &adventu
         // Si le type est B, on crée un nouveau monstre aveugle
         std::shared_ptr<blindMonster> m = std::make_shared<blindMonster>();
         m->character::move(i,j);
+        m->reset();
         monsters.push_back(std::move(m));
         // Retourner une case accessible avec le monstre aveugle créé
         return box(box::BX_ACCESSIBLE, 0, false, monsters.back());
@@ -111,7 +115,7 @@ void castle::save(const string &filename) {
         file.close();
     } else
         // Si le fichier n'a pas pu être ouvert, on envoie un message d'erreur
-        std::cerr << "Le fichier suivant n'a pas pu être sauvegardé : " << filename << std::endl;
+        std::cout << "Le fichier suivant n'a pas pu être sauvegardé : " << filename << std::endl;
 }
 
 bool castle::load(const string &filename, std::shared_ptr<adventurer> &adventurer, vector<std::shared_ptr<monster>> &monsters) {
@@ -151,7 +155,8 @@ bool castle::load(const string &filename, std::shared_ptr<adventurer> &adventure
         return true;
     } else {
         // Si le fichier n'a pas pu être ouvert, on envoie un message d'erreur
-        std::cerr << "Le fichier suivant n'a pas pu être chargé : " << filename << std::endl;
+        std::cout << "Le fichier suivant n'a pas pu être chargé : " << filename << std::endl;
+        std::cout << "Veuillez vérifier le nom du fichier." << std::endl << std::endl;
         return false;
     }
 }

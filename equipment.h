@@ -26,6 +26,8 @@ public:
         * @param nb nombre d'augmentation
         */
     void increase(int nb);
+
+    void setSolidity(int value);
 private:
     /// point de solidité
     int d_solidity;

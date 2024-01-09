@@ -82,6 +82,8 @@ public:
 
     virtual void show(display &d) const = 0;
 
+    virtual void reset() = 0;
+
 protected:
     /// Points de vie et points de force
     int d_health, d_strength;

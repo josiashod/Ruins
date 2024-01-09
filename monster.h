@@ -63,6 +63,8 @@ public :
     virtual void move(castle &castle, std::shared_ptr<adventurer> &adventurer, std::shared_ptr<monster> &monster);
 
     void show(display &d) const override;
+
+    void reset() override;
 private:
     /// Pourcentage d'habilité du monstre
     double d_hability;

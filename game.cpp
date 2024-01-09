@@ -44,7 +44,7 @@ void game::start() {
                 break;
             case 4 : rules();
                 break;
-            case 5 : end();
+            case 5 : close();
                 break;
         }
         cout << d;
@@ -71,20 +71,25 @@ void game::gameMenu() {
             break;
         case 2 : repairSwordOrArmor();
             break;
-        case 3 : end();
+        case 3 : close();
             break;
     }
 }
 
 // !(dead || (amulet && position))
 // !dead
-void game::loop() {
+void game::loop()
+{
+    bool result;
     while(!d_adventurer->isDead() && !(d_adventurer->amulet() && d_adventurer->position() == d_entrance)) {
         showCastle();
         gameMenu();
     }
-    cout << "🎊🎊🎊🎊🎊🎊 Vous avez gagné, félicitations 🎊🎊🎊🎊🎊🎊";
-    end();
+    if(d_adventurer->amulet() && d_adventurer->position() == d_entrance)
+        result = true;
+    else
+        result = false;
+    end(result);
 }
 
 int game::moveChoiceAdv() const
@@ -182,9 +187,48 @@ void game::moveMonsters() {
     }
 }
 
-void game::end() {
+void game::end(bool res) {
+    int choice;
+    bool validChoice = false;
     d_castle.init(d_adventurer, d_monsters);
-    cout << "À bientôt !" << std::endl;
+
+    while(!validChoice)
+    {
+        // Afficher le menu principal avec le résultat
+        std::cout << "#######################################################\n"
+                     "##             ------ CASTLE GAME ------             ##\n"
+                     "##                                                   ##\n";
+
+        if(res) {
+            std::cout << "##       Félicitations ! Vous avez gagné ! :)        ##\n";
+        } else {
+            std::cout << "##            Dommage, vous avez perdu. :(           ##\n";
+        }
+
+        std::cout << "##                                                   ##\n"
+                     "##            (1) Retour au Menu Principal           ##\n"
+                     "##            (2) Quitter                            ##\n"
+                     "##                                                   ##\n"
+                     "#######################################################\n";
+
+        // Demander à l'utilisateur de choisir une option
+        std::cout << "Choisissez une option : ";
+        std::cin >> choice;
+
+        // Traiter la sélection de l'utilisateur
+        switch(choice) {
+            case 1:
+                validChoice = true;  // La sélection est valide, sortir de la boucle
+                start();  // Appeler la méthode play pour relancer le jeu
+                break;
+            case 2:
+                close();  // Quitter la boucle et la fonction
+                return;
+            default:
+                std::cout << "Choix invalide. Veuillez sélectionner une option valide." << std::endl;
+                break;
+        }
+    }
 }
 
 void game::playerInfo() const
@@ -219,7 +263,7 @@ void game::edit() {
     cout << "Pour éditer le château, veuillez modifier le fichier defaultCastle.txt ou créer un nouveau fichier .txt en utilisant la légende suivante :" << std::endl << std::endl;
     cout << LEGEND;
     cout << std::endl;
-    cout << "Appuyez sur n'importe quelle touche pour retourner au menu principal >> ";
+    cout << "Retourner au menu principal (m) >> ";
     char choice;
     cin >> choice;
 }
@@ -258,12 +302,17 @@ void game::loadMap() {
     cin >> mapName;
     bool loaded = d_castle.load(mapName, d_adventurer, d_monsters);
     if(loaded) {
+        d_entrance = d_adventurer->position();
         cout << "La carte " << mapName << " a bien été chargée !" << std::endl;
-    } else {
-        cout << "Erreur, la carte '" << mapName << "n'a pas pu être chargée" << std::endl;
-        cout << "Veuillez vérifier le nom du fichier." << std::endl << std::endl;
     }
-    cout << "Appuyez sur n'importe quelle touche pour retourner au menu principal >> ";
+
+    cout << "Retourner au menu principal (m) >> ";
     char choice;
     cin >> choice;
+}
+
+void game::close()
+{
+    cout << "À bientôt !";
+    std::exit(0);
 }

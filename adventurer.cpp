@@ -137,3 +137,12 @@ void adventurer::repairArmor(int coinAmount) {
     d_coins -= coinAmount;
 }
 
+void adventurer::reset() {
+    d_health = 100;
+    d_strength = 10;
+    d_coins = 0;
+    d_amulet = false;
+    d_sword.setSolidity(90);
+    d_armor.setSolidity(10);
+}
+

@@ -116,3 +116,8 @@ void monster::show(display &d) const
 {
     d.displayMonster();
 }
+
+void monster::reset() {
+    d_health = 100;
+    d_strength = 10;
+}
