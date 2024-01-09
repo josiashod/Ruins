@@ -1,4 +1,5 @@
 #include "box.h"
+#include "adventurer.h"
 #include <stdexcept>
 
 const std::string box::BX_WALL = "wall";
@@ -51,7 +52,7 @@ std::shared_ptr<character> box::getCharacter() const {
     return d_character;
 }
 
-bool box::putCharacter(std::shared_ptr<character> c) {
+/*bool box::putCharacter(std::shared_ptr<character> c) {
     // attack the character in the box
     if(d_character)
     {
@@ -65,7 +66,55 @@ bool box::putCharacter(std::shared_ptr<character> c) {
     else
         d_character = c;
     return true;
+}*/
+
+bool box::putCharacter(std::shared_ptr<character> c) {
+    if(d_character) {
+        // Check if the current character is a monster and the new character is also a monster
+        if(d_character->type() == character::CHAR_MONSTER && c->type() == character::CHAR_MONSTER) {
+            // If both characters are monsters, do not allow insertion
+            return false;
+        }
+
+        // Attack the character in the box
+        c->attack(*d_character);
+        // Change the current character to the new one if it's dead
+        if(d_character->isDead()) {
+            // Check if the replaced character is an adventurer, if yes transfer coins and amulet if present
+            auto adventurerPtr = std::dynamic_pointer_cast<adventurer>(d_character);
+            if(adventurerPtr) {
+                if(hasCoins()) {
+                    adventurerPtr->addCoins(d_coins);
+                    removeCoins();
+                }
+                if(hasAmulet()) {
+                    adventurerPtr->takeAmulet();
+                    removeAmulet();
+                }
+            }
+            d_character = c;
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        d_character = c;
+        // Check if the replaced character is an adventurer, if yes, pick up coins or amulet if present
+        auto adventurerPtr = std::dynamic_pointer_cast<adventurer>(c);
+        if(adventurerPtr) {
+            if(hasCoins()) {
+                adventurerPtr->addCoins(d_coins);
+                removeCoins();
+            }
+            if(hasAmulet()) {
+                adventurerPtr->takeAmulet();
+                removeAmulet();
+            }
+        }
+        return true;
+    }
 }
+
 
 void box::removeCharacter() {
     d_character = nullptr;

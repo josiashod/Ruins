@@ -20,17 +20,20 @@ int game::mainChoice() const {
 }
 
 void game::mainMenu() {
-    int d = mainChoice();
-    switch (d) {
-        case 1 : loop();
-            break;
-        // case 2 : d_castle.edit(); d = mainChoice();
-            // break;
-        case 3 : rules();
-            break;
-        case 4 : end();
-            break;
-    }
+    int choice;
+    do {
+        choice = mainChoice();
+        switch(choice) {
+            case 1: loop();
+                break;
+                // case 2 : d_castle.edit();
+                // break;
+            case 3: rules();
+                break;
+            case 4: end();
+                break;
+        }
+    } while(choice != 4);
 }
 
 int game::gameChoice() const {
