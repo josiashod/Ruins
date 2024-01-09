@@ -97,3 +97,25 @@ bool box::isValidType() const
     }
     return false;
 }
+
+void box::show(display &d) const {
+    if (d_type == BX_WALL) {
+        d.displayWall();
+    } else if (d_type == BX_EXTERN) {
+        d.displayExternCase();
+    } else if (d_type == BX_ACCESSIBLE) {
+        if (d_amulet) {
+            d.displayAmulet();
+        } else if (d_coins > 0) {
+            d.displayCoin();
+        } else if (d_character != nullptr) {
+            // Affichage du personnage selon son type
+            d_character->show(d);
+        } else {
+            d.displayEmptyCase(); // Case vide
+        }
+    } else {
+        d.displayEmptyCase();
+    }
+}
+

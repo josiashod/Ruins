@@ -5,7 +5,6 @@
 #include "castle.h"
 #include "blindMonster.h"
 
-
 string castle::typeCode(const box &box) const {
     // Initialisation d'une variable pour stocker le code
     string code;
@@ -77,20 +76,20 @@ box castle::boxFromType(const string &type, std::shared_ptr<adventurer> &adventu
         m->character::move(i,j);
         monsters.push_back(std::move(m));
         // Retourner une case accessible avec le monstre voyant créé
-        return box(box::BX_ACCESSIBLE, 0, false, m);
+        return box(box::BX_ACCESSIBLE, 0, false, monsters.back());
     } else if(type == "B") {
         // Si le type est B, on crée un nouveau monstre aveugle
         std::shared_ptr<blindMonster> m = std::make_shared<blindMonster>();
         m->character::move(i,j);
         monsters.push_back(std::move(m));
         // Retourner une case accessible avec le monstre aveugle créé
-        return box(box::BX_ACCESSIBLE, 0, false, m);
+        return box(box::BX_ACCESSIBLE, 0, false, monsters.back());
     }
 }
 
 void castle::init(std::shared_ptr<adventurer> &adventurer, vector<std::shared_ptr<monster>> &monsters) {
     // On charge la map de base
-    load(".defaultCastle.txt", adventurer, monsters);
+    load("./defaultCastle.txt", adventurer, monsters);
 }
 
 void castle::save(const string &filename) {

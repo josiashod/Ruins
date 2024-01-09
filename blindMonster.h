@@ -21,7 +21,7 @@ public:
     /**
      * @brief Réecriture de la méthode virtuelle permettant à un monstre aveugle de se déplacer
      */
-    void move(const adventurer &adventurer) override;
+    void move(castle &castle, std::shared_ptr<adventurer> &adventurer, std::shared_ptr<monster> &monster) override;
     void show(display &d) const override;
 };
 

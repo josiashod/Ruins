@@ -106,6 +106,7 @@ public:
      */
     bool isValidType() const;
 
+    void show(display &d) const;
 private:
     std::shared_ptr<character> d_character;
     std::string d_type;

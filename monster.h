@@ -7,8 +7,10 @@
 
 #include "character.h"
 #include "adventurer.h"
+#include "monster.h"
+#include <memory>
 
-
+class castle;
 class monster : public character {
 public :
     /**
@@ -46,19 +48,19 @@ public :
       * @param adventurer l'aventurier
       * @return true si le joueur est proche
       */
-    bool isClose(const adventurer &adventurer) const;
+    bool isClose(std::shared_ptr<adventurer> &adventurer) const;
 
     /**
      * @brief Méthode retournant dans quelle direction se situe le joueur
      * @param adventurer l'aventurier
      * @return Un entier représentant la direction
      */
-    int direction(const adventurer &adventurer) const;
+    int direction(std::shared_ptr<adventurer> &adventurer) const;
 
     /**
      * @brief Méthode virtuelle permettant à un monstre de se déplacer en fonction de l'aventurier
      */
-    virtual void move(const adventurer &adventurer);
+    virtual void move(castle &castle, std::shared_ptr<adventurer> &adventurer, std::shared_ptr<monster> &monster);
 
     void show(display &d) const override;
 private:
