@@ -50,6 +50,8 @@ public :
       */
     bool isClose(std::shared_ptr<adventurer> &adventurer) const;
 
+    bool isNearInfo(std::shared_ptr<adventurer> &adventurer) const;
+
     /**
      * @brief Méthode retournant dans quelle direction se situe le joueur
      * @param adventurer l'aventurier
@@ -65,6 +67,8 @@ public :
     void show(display &d) const override;
 
     void reset() override;
+
+    void info();
 private:
     /// Pourcentage d'habilité du monstre
     double d_hability;

@@ -233,10 +233,10 @@ void game::end(bool res) {
 
 void game::playerInfo() const
 {
-    cout << "----- INFO ----" << std::endl;
-    cout << "💓 : " << d_adventurer->health() << " 💪 :" << d_adventurer->strength() << std::endl;
-    cout << "🪙 : " << d_adventurer->coins() << " 🧿 :" << d_adventurer->amulet() << std::endl;
-    cout << "🗡 : " << d_adventurer->getSword().solidity() << " 🛡 :" << d_adventurer->getArmor().solidity() << std::endl;
+    cout << "----- INFO AVENTURIER ----" << std::endl;
+    cout << "💓: " << d_adventurer->health() << " 💪: " << d_adventurer->strength() << std::endl;
+    cout << "🪙: " << d_adventurer->coins() << " 🧿: " << d_adventurer->amulet() << std::endl;
+    cout << "🗡: " << d_adventurer->getSword().solidity() << " 🛡:" << d_adventurer->getArmor().solidity() << std::endl;
 
     // 🗡 🪙 🧿 🛡
 }
@@ -268,6 +268,29 @@ void game::edit() {
     cin >> choice;
 }
 
+void game::monsterInfo() {
+    bool monsterNear = false;
+    int index = 0;
+
+    for(const auto& m : d_monsters) {
+        if(m->isNearInfo(d_adventurer)) {
+            monsterNear = true;
+            break;
+        }
+        index++;
+    }
+
+    if (monsterNear) {
+        cout << "----- INFO MONSTRES -----" << std::endl;
+
+        for (int i = index; i < d_monsters.size(); i++) {
+            if(d_monsters[i]->isNearInfo(d_adventurer)) {
+                d_monsters[i]->info();
+                cout << "-------------------------" << std::endl;
+            }
+        }
+    }
+}
 
 void game::showCastle() {
     clrscr();
@@ -293,6 +316,7 @@ void game::showCastle() {
         cout << "+---";
     cout << '+' << std::endl;
     playerInfo();
+    monsterInfo();
 }
 
 void game::loadMap() {

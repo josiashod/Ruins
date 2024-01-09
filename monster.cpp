@@ -40,6 +40,13 @@ bool monster::isClose(std::shared_ptr<adventurer> &adventurer) const {
     return distance < 8;
 }
 
+bool monster::isNearInfo(std::shared_ptr<adventurer> &adventurer) const {
+    // Calcul de la distance entre le monstre et l'aventurier
+    int distance = position().distance(adventurer->position());
+    // Renvoi de vrai si la distance est égale à 1
+    return distance == 1;
+}
+
 int monster::direction(std::shared_ptr<adventurer> &adventurer) const
 {
     if(position().y() > adventurer->position().y())
@@ -121,3 +128,9 @@ void monster::reset() {
     d_health = 100;
     d_strength = 10;
 }
+
+void monster::info() {
+    std::cout << "Type : " << type() << std::endl;
+    std::cout << "💓: " << health() << " 💪: " << strength() << " 🧠: " << hability() << std::endl;
+}
+

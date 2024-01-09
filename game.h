@@ -91,6 +91,7 @@ public:
     void updateMonsters();
     void loadMap();
     void close();
+    void monsterInfo();
 
     void moveMonsters();
 private:
