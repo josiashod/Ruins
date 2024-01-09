@@ -24,6 +24,7 @@ public:
     void moveAdventurer();
     void end();
     void showCastle();
+    void repairSwordOrArmor();
 
     void moveMonsters();
 private:

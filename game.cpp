@@ -38,12 +38,11 @@ int game::gameChoice() const {
     do {
         cout << "Vous souhaitez : ";
         cout << "(1) VOUS DÉPLACER \n";
-        cout << "(2) RÉPARER VOTRE ARMURE \n";
-        cout << "(3) RÉPARER VOTRE ÉPÉE \n";
-        cout << "(4) QUITTER (vous perderez votre avancement) \n";
+        cout << "(2) RÉPARER VOTRE ARMURE OU VOTRE ÉPÉE \n";
+        cout << "(3) QUITTER (vous perderez votre avancement) \n";
         cout << "Votre choix : ";
         cin >> choice;
-    } while(choice < 1 || choice > 4);
+    } while(choice < 1 || choice > 3);
     return choice;
 }
 
@@ -52,11 +51,9 @@ void game::gameMenu() {
     switch (d) {
         case 1 : moveAdventurer();
             break;
-        // case 2 : d_adventurer->repareArmor();
-            // break;
-        // case 3 : d_adventurer->repareSword();
-            // break;
-        case 4 : end();
+        case 2 : repairSwordOrArmor();
+            break;
+        case 3 : end();
             break;
     }
 }
@@ -120,6 +117,35 @@ void game::moveAdventurer() {
         }
         cout << "Déplacement impossible";
     } while(moveA > 0 && moveA <= 8);
+}
+
+void game::repairSwordOrArmor() {
+    int coinAmount;
+    do {
+        cout << "Combien de pièces souhaitez-vous utiliser pour réparer (pour l'épée ou l'armure) ? ";
+        cin >> coinAmount;
+
+        if(coinAmount <= 0 || coinAmount > d_adventurer->coins()) {
+            cout << "Nombre de pièces invalide. Veuillez saisir un nombre positif et inférieur ou égal à votre solde de pièces." << std::endl;
+        }
+    } while (coinAmount <= 0 || coinAmount > d_adventurer->coins());
+
+    int choice;
+    do {
+        cout << "Que voulez-vous réparer ?" << std::endl;
+        cout << "(1) L'épée" << std::endl;
+        cout << "(2) L'armure" << std::endl;
+        cout << "Votre choix : ";
+        cin >> choice;
+    } while (choice != 1 && choice != 2);
+
+    if(choice == 1) {
+        d_adventurer->repairSword(coinAmount);
+        cout << "L'épée a bien été réparée.";
+    } else {
+        d_adventurer->repairArmor(coinAmount);
+        cout << "L'armure a bien été réparée.";
+    }
 }
 
 void game::moveMonsters() {
