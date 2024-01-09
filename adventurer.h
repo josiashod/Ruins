@@ -31,6 +31,8 @@ public:
       */
     int coins() const;
 
+    bool amulet() const;
+
     /**
       * @brief Réecriture de la méthode virtuelle permettant ainsi à un aventurier d'attaquer un personnage
       * @param[in] c - Le personnage à attaquer
@@ -56,10 +58,13 @@ public:
       * @brief Méthode permettant à un aventurier de gagner un nombre de pièce
       */
     void addCoins(int numberOfCoin);
-    void display(const display &d) const override;
+    void show(display &d) const override;
+
+    void takeAmulet();
 
 private:
     int d_coins;
+    bool d_amulet;
     sword d_sword;
     armor d_armor;
 };

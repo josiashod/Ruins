@@ -14,17 +14,24 @@ using std::cout;
 class game {
 public:
     game();
-    void start();
-    void end();
+    int mainChoice() const;
+    void mainMenu();
+    void rules();
     int moveChoiceAdv() const;
-    void moveAdventurer();
-    void moveMonsters();
-    void showCastle();
     void loop();
+    int gameChoice() const;
+    void gameMenu();
+    void moveAdventurer();
+    void end();
+    void showCastle();
+
+    void moveMonsters();
 private:
     std::shared_ptr<adventurer> d_adventurer;
     vector<std::shared_ptr<monster>> d_monsters;
+    display d;
     castle d_castle;
+    coord d_entrance;
 };
 
 

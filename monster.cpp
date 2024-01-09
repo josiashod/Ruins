@@ -4,6 +4,7 @@
 
 #include <cstdlib>
 #include "monster.h"
+#include "castle.h"
 
 monster::monster(int health, int strength, double hability, std::string type)
     : character{health, strength, type}, d_hability{hability}
@@ -32,36 +33,36 @@ void monster::hasBeenAttacked(int attackStrengthPoints) {
     getDamaged(monsterDamage);
 }
 
-bool monster::isClose(const adventurer &adventurer) const {
+bool monster::isClose(std::shared_ptr<adventurer> &adventurer) const {
     // Calcul de la distance entre le monstre et l'aventurier
-    int distance = position().distance(adventurer.position());
+    int distance = position().distance(adventurer->position());
     // Renvoi de vrai si la distance est inférieur à 8
     return distance < 8;
 }
 
-int monster::direction(const adventurer &adventurer) const 
+int monster::direction(std::shared_ptr<adventurer> &adventurer) const
 {
-    if(position().y() > adventurer.position().y())
+    if(position().y() > adventurer->position().y())
     {
-        if(position().x() > adventurer.position().x()) return 5;
-        if(position().x() < adventurer.position().x()) return 6;
+        if(position().x() > adventurer->position().x()) return 5;
+        if(position().x() < adventurer->position().x()) return 6;
         return 1;
     }
-    else if(position().y() < adventurer.position().y())
+    else if(position().y() < adventurer->position().y())
     {
-        if(position().x() > adventurer.position().x()) return 7;
-        if(position().x() < adventurer.position().x()) return 8;
+        if(position().x() > adventurer->position().x()) return 7;
+        if(position().x() < adventurer->position().x()) return 8;
         return 2;
     }
     else
     {
-        if(position().x() > adventurer.position().x()) return 4;
-        // if(position().x() < d_adventurer.position().x()) return 3;
+        if(position().x() > adventurer->position().x()) return 4;
+        // if(position().x() < d_adventurer->position().x()) return 3;
     }
     return 3;
 }
 
-void monster::move(const adventurer &adventurer) {
+/*void monster::move(std::shared_ptr<adventurer> &adventurer) {
     if(isClose(adventurer)) {
         int d = direction(adventurer);
         switch (d) {
@@ -83,9 +84,37 @@ void monster::move(const adventurer &adventurer) {
                 break;
         }
     }
+}*/
+
+void monster::move(castle &castle, std::shared_ptr<adventurer> &adventurer, std::shared_ptr<monster> &monster) {
+    if(isClose(adventurer)) {
+        int d = direction(adventurer);
+        int newX = position().x();
+        int newY = position().y();
+
+        switch(d) {
+            case 1: newY += 1; break;
+            case 2: newY -= 1; break;
+            case 3: newX += 1; break;
+            case 4: newX -= 1; break;
+            case 5: newX -= 1; newY += 1; break;
+            case 6: newX += 1; newY += 1; break;
+            case 7: newX -= 1; newY -= 1; break;
+            case 8: newX += 1; newY -= 1; break;
+        }
+
+        if(newX >= 0 && newY >= 0 && newX < castle.d_boxes.size() && newY < castle.d_boxes[0].size()) {
+            if(castle.d_boxes[newX][newY].accessibility()) {
+                castle.d_boxes[position().x()][position().y()].removeCharacter();
+                character::move(newX, newY);
+                castle.d_boxes[newX][newY].putCharacter(monster);
+            }
+        }
+    }
 }
 
-void monster::display(const display &d) const
+
+void monster::show(display &d) const
 {
     d.displayMonster();
 }

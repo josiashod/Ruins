@@ -9,7 +9,7 @@ public:
     void displayAdventurer();
     void displayMonster();
     void displayBlindMonster();
-    void displayCase();
+    void displayAmulet();
     void displayWall();
     void displayEmptyCase();
     void displayExternCase();

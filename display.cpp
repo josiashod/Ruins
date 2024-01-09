@@ -3,7 +3,7 @@
 
 void display::displayAdventurer()
 {
-    std::cout<<"A";
+    std::cout<<"P";
 }
 
 void display::displayMonster()
@@ -16,6 +16,9 @@ void display::displayBlindMonster()
     std::cout<<"m";
 }
 
+void display::displayAmulet() {
+    std::cout << "A";
+}
 
 void display::displayWall()
 {

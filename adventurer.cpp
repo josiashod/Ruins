@@ -11,11 +11,15 @@ using std::cin;
 
 adventurer::adventurer(int swordSolidity, int armorSolidity, int coin, int health, int strength, std::string type)
         : character{health, strength, type}, d_coins{coin}, d_sword{swordSolidity},
-        d_armor{armorSolidity} {}
+        d_armor{armorSolidity}, d_amulet{false} {}
 
 int adventurer::coins() const {
     // Renvoi du nombre de pièces
     return d_coins;
+}
+
+bool adventurer::amulet() const {
+    return d_amulet;
 }
 
 void adventurer::attack(character &c) {
@@ -106,7 +110,11 @@ void adventurer::addCoins(int numberOfCoin) {
     d_coins += numberOfCoin;
 }
 
-void adventurer::display(const display &d) const
+void adventurer::show(display &d) const
 {
     d.displayAdventurer();
+}
+
+void adventurer::takeAmulet() {
+    d_amulet = true;
 }
