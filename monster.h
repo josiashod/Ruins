@@ -20,7 +20,7 @@ public :
      * @param hability Son taux d'habilieté au coups critiques
      * @param type Type monstre voyant
      */
-    monster(int health = 70, int strength = 5, double hability = 90, std::string type = "monster");
+    monster(int health = 100, int strength = 10, double hability = 90, std::string type = "monster");
     /**
       * @brief Destructeur par défaut
       */

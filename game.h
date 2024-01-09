@@ -25,6 +25,29 @@ using std::cout;
 ########################################################\n\
 "
 
+#define RULES "\
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\
+@                    ------ RÈGLES ------                    @\n\
+@                                                            @\n\
+@    Le jeu se deroule par tours. Durant chaque tour,        @\n\
+@    vous vous deplacez en choisissant une direction         @\n\
+@    si vous êtes sur un tas de pieces de monnaie,           @\n\
+@    vous les ramassés. Aussi, chaque monstre se deplace,    @\n\
+@    à chaque tour, si un monstre se deplace sur vous alors  @\n\
+@    il vous attaque. Dans le cas contraire vous l'attaquer  @\n\
+@    En vous deplacant sur lui.                              @\n\
+@    À chaque attaque recu vos equipements perdent des       @\n\
+@    points de solidité.                                     @\n\
+@    Une piece d'or repare un point de solidite de l'epee    @\n\
+@    ou de l'armure.                                         @\n\
+@    Vous gagnez la partie lorsque vous sortez du chateau    @\n\
+@    L'amulette.                                             @\n\
+@                                                            @\n\
+@                        BONNE CHANCE                        @\n\
+@                                                            @\n\
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\
+"
+
 #define PLAYER_MENU "\
 (1): ↑ (2): ↓ (3): → (4): ← (5): ↖ (6): ↗ (7): ↙ (8): ↘ \n\
 "
@@ -43,6 +66,8 @@ public:
     void end();
     void showCastle();
     void player_info() const;
+    void repairSwordOrArmor();
+    void updateMonsters();
 
     void moveMonsters();
 private:

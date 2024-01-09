@@ -61,6 +61,8 @@ public:
     void show(display &d) const override;
 
     void takeAmulet();
+    void repairSword(int coinAmount);
+    void repairArmor(int coinAmount);
 
 private:
     int d_coins;

@@ -118,3 +118,14 @@ void adventurer::show(display &d) const
 void adventurer::takeAmulet() {
     d_amulet = true;
 }
+
+void adventurer::repairSword(int coinAmount) {
+    d_sword.increase(coinAmount);
+    d_coins -= coinAmount;
+}
+
+void adventurer::repairArmor(int coinAmount) {
+    d_armor.increase(coinAmount);
+    d_coins -= coinAmount;
+}
+
