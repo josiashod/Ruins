@@ -114,7 +114,7 @@ void castle::save(const string &filename) {
         std::cerr << "Le fichier suivant n'a pas pu être sauvegardé : " << filename << std::endl;
 }
 
-void castle::load(const string &filename, std::shared_ptr<adventurer> &adventurer, vector<std::shared_ptr<monster>> &monsters) {
+bool castle::load(const string &filename, std::shared_ptr<adventurer> &adventurer, vector<std::shared_ptr<monster>> &monsters) {
     // Ouverture du fichier
     std::ifstream file(filename);
 
@@ -148,7 +148,10 @@ void castle::load(const string &filename, std::shared_ptr<adventurer> &adventure
 
         // Fermeture du fichier
         file.close();
-    } else
+        return true;
+    } else {
         // Si le fichier n'a pas pu être ouvert, on envoie un message d'erreur
         std::cerr << "Le fichier suivant n'a pas pu être chargé : " << filename << std::endl;
+        return false;
+    }
 }

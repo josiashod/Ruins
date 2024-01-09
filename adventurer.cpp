@@ -18,6 +18,14 @@ int adventurer::coins() const {
     return d_coins;
 }
 
+sword adventurer::getSword() const {
+    return d_sword;
+}
+
+armor adventurer::getArmor() const {
+    return d_armor;
+}
+
 bool adventurer::amulet() const {
     return d_amulet;
 }

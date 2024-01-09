@@ -17,9 +17,10 @@ using std::cout;
 ##              -------- MENU ---------               ##\n\
 ##                                                    ##\n\
 ##             (1) JOUER                              ##\n\
-##             (2) ÉDITER LE CHÂTEAU                  ##\n\
-##             (3) RÈGLES DU JEU                      ##\n\
-##             (4) QUITTER                            ##\n\
+##             (2) CHARGER UN CHÂTEAU                 ##\n\
+##             (3) ÉDITER LE CHÂTEAU                  ##\n\
+##             (4) RÈGLES DU JEU                      ##\n\
+##             (5) QUITTER                            ##\n\
 ##                                                    ##\n\
 ##                                                    ##\n\
 ########################################################\n\
@@ -48,6 +49,25 @@ using std::cout;
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\
 "
 
+#define LEGEND "\
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\
+@            ------ LÉGENDE ------            @\n\
+@                                             @\n\
+@    W : Mur                                  @\n\
+@    E : Case externe                         @\n\
+@    C : Pièces (ex. C10 pour 10)             @\n\
+@    Attention : Chaque case 'C' doit être    @\n\
+@    doit être accompagnée d'un nombre        @\n\
+@    représentant les pièces présentes        @\n\
+@    sur la case.                             @\n\
+@    A : Amulette                             @\n\
+@    P : Aventurier (Un seul obligatoire)     @\n\
+@    M : Monstre                              @\n\
+@    B : Monstre aveugle                      @\n\
+@                                             @\n\
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\
+"
+
 #define PLAYER_MENU "\
 (1): ↑ (2): ↓ (3): → (4): ← (5): ↖ (6): ↗ (7): ↙ (8): ↘ \n\
 "
@@ -64,10 +84,12 @@ public:
     void gameMenu();
     void moveAdventurer();
     void end();
+    void edit();
     void showCastle();
-    void player_info() const;
+    void playerInfo() const;
     void repairSwordOrArmor();
     void updateMonsters();
+    void loadMap();
 
     void moveMonsters();
 private:

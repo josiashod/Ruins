@@ -30,7 +30,8 @@ public:
       * @return nombre de pièces
       */
     int coins() const;
-
+    sword getSword() const;
+    armor getArmor() const;
     bool amulet() const;
 
     /**

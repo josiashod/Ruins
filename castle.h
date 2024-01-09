@@ -39,7 +39,7 @@ public:
      * @brief Méthode qui charge le terrain à partir d'un fichier txt
      * @param filename Le nom du fichier à charger
      */
-    void load(const std::string &filename, std::shared_ptr<adventurer> &adventurer, vector<std::shared_ptr<monster>> &monsters);
+    bool load(const std::string &filename, std::shared_ptr<adventurer> &adventurer, vector<std::shared_ptr<monster>> &monsters);
 
     /// Grille représentant le château
     vector<vector<box>> d_boxes;

@@ -27,7 +27,7 @@ int game::mainChoice() const
         cout << MAIN_MENU;
         cout << ">> ";
         cin >> choice;
-    } while(choice < 1 || choice > 4);
+    } while(choice < 1 || choice > 5);
     return choice;
 }
 
@@ -38,16 +38,18 @@ void game::start() {
         switch (d) {
             case 1 : loop();
                 break;
-            // case 2 : d_castle.edit(); d = mainChoice();
-                // break;
-            case 3 : rules();
+            case 2 : loadMap();
                 break;
-            case 4 : end();
+            case 3 : edit();
+                break;
+            case 4 : rules();
+                break;
+            case 5 : end();
                 break;
         }
         cout << d;
         d = 0;
-    } while(d != 4);
+    } while(d != 5);
 }
 
 int game::gameChoice() const {
@@ -181,15 +183,16 @@ void game::moveMonsters() {
 }
 
 void game::end() {
+    d_castle.init(d_adventurer, d_monsters);
     cout << "À bientôt !" << std::endl;
 }
 
-void game::player_info() const
+void game::playerInfo() const
 {
     cout << "----- INFO ----" << std::endl;
     cout << "💓 : " << d_adventurer->health() << " 💪 :" << d_adventurer->strength() << std::endl;
     cout << "🪙 : " << d_adventurer->coins() << " 🧿 :" << d_adventurer->amulet() << std::endl;
-    cout << "🗡 : " << d_adventurer->coins() << " 🛡 :" << d_adventurer->amulet() << std::endl;
+    cout << "🗡 : " << d_adventurer->getSword().solidity() << " 🛡 :" << d_adventurer->getArmor().solidity() << std::endl;
 
     // 🗡 🪙 🧿 🛡
 }
@@ -210,6 +213,17 @@ void game::rules() {
     cout << "Continuer (c) >> ";
     cin >> choice;
 }
+
+void game::edit() {
+    clrscr();
+    cout << "Pour éditer le château, veuillez modifier le fichier defaultCastle.txt ou créer un nouveau fichier .txt en utilisant la légende suivante :" << std::endl << std::endl;
+    cout << LEGEND;
+    cout << std::endl;
+    cout << "Appuyez sur n'importe quelle touche pour retourner au menu principal >> ";
+    char choice;
+    cin >> choice;
+}
+
 
 void game::showCastle() {
     clrscr();
@@ -234,5 +248,22 @@ void game::showCastle() {
     for(int i = 0; i < width; ++i)
         cout << "+---";
     cout << '+' << std::endl;
-    player_info();
+    playerInfo();
+}
+
+void game::loadMap() {
+    clrscr();
+    string mapName;
+    cout << "Entrez le nom de la carte à charger (par exemple, 'map2.txt') : ";
+    cin >> mapName;
+    bool loaded = d_castle.load(mapName, d_adventurer, d_monsters);
+    if(loaded) {
+        cout << "La carte " << mapName << " a bien été chargée !" << std::endl;
+    } else {
+        cout << "Erreur, la carte '" << mapName << "n'a pas pu être chargée" << std::endl;
+        cout << "Veuillez vérifier le nom du fichier." << std::endl << std::endl;
+    }
+    cout << "Appuyez sur n'importe quelle touche pour retourner au menu principal >> ";
+    char choice;
+    cin >> choice;
 }
