@@ -146,7 +146,7 @@ void game::repairSwordOrArmor() {
         if(coinAmount <= 0 || coinAmount > d_adventurer->coins()) {
             cout << "Nombre de pièces invalide. Veuillez saisir un nombre positif et inférieur ou égal à votre solde de pièces." << std::endl;
         }
-    } while (coinAmount <= 0 || coinAmount > d_adventurer->coins());
+    } while(coinAmount <= 0 || coinAmount > d_adventurer->coins());
 
     int choice;
     do {
@@ -155,7 +155,7 @@ void game::repairSwordOrArmor() {
         cout << "(2) L'armure" << std::endl;
         cout << "Votre choix : ";
         cin >> choice;
-    } while (choice != 1 && choice != 2);
+    } while(choice != 1 && choice != 2);
 
     if(choice == 1) {
         d_adventurer->repairSword(coinAmount);
@@ -274,16 +274,19 @@ void game::monsterInfo() {
 
     for(const auto& m : d_monsters) {
         if(m->isNearInfo(d_adventurer)) {
+            cout << "----- INFO MONSTRES -----" << std::endl;
+            m->info();
+            cout << "-------------------------" << std::endl;
             monsterNear = true;
             break;
         }
         index++;
     }
 
-    if (monsterNear) {
-        cout << "----- INFO MONSTRES -----" << std::endl;
+    if(monsterNear) {
+        // cout << "----- INFO MONSTRES -----" << std::endl;
 
-        for (int i = index; i < d_monsters.size(); i++) {
+        for (int i = index + 1; i < d_monsters.size(); i++) {
             if(d_monsters[i]->isNearInfo(d_adventurer)) {
                 d_monsters[i]->info();
                 cout << "-------------------------" << std::endl;
