@@ -84,6 +84,8 @@ public:
 
     virtual void reset() = 0;
 
+    virtual void info() const = 0 ;
+
 protected:
     /// Points de vie et points de force
     int d_health, d_strength;

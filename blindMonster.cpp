@@ -56,10 +56,15 @@ void blindMonster::move(castle &castle, std::shared_ptr<adventurer> &adventurer,
         // Vérifier si la nouvelle case est à l'intérieur des limites du château
         if(newX >= 0 && newY >= 0 && newX < castle.d_boxes.size() && newY < castle.d_boxes[0].size()) {
             // Vérifier si la nouvelle case est accessible et que le monstre peut y accéder
-            if(castle.d_boxes[newX][newY].accessibility() && castle.d_boxes[newX][newY].putCharacter(monster)) {
-                castle.d_boxes[position().x()][position().y()].removeCharacter();
-                character::move(newX, newY);
-                return;  // Sortir de la méthode si le déplacement est réussi
+            if(castle.d_boxes[newX][newY].accessibility()) {
+                int status = castle.d_boxes[newX][newY].putCharacter(monster);
+                
+                if(status == box::BX_MOVE_ON_ATTACK || status == box::BX_MOVE)
+                {
+                    castle.d_boxes[position().x()][position().y()].removeCharacter();
+                    character::move(newX, newY);
+                    break;
+                }
             }
         }
     }

@@ -146,3 +146,12 @@ void adventurer::reset() {
     d_armor.setSolidity(10);
 }
 
+void adventurer::info() const
+{
+    cout << "----- INFO AVENTURIER ----" << std::endl;
+    cout << "💓: " << health() << " 💪: " << strength() << std::endl;
+    cout << "🪙: " << coins() << " 🧿: " << amulet() << std::endl;
+    cout << "🗡: " << d_sword.solidity() << " 🛡:" << d_armor.solidity() << std::endl;
+
+    // 🗡 🪙 🧿 🛡
+}

@@ -14,6 +14,13 @@ void clrscr()
 	#endif
 }
 
+void askcontinue()
+{
+    char choice;
+    cout << "OK (c) >> ";
+    cin >> choice;
+}
+
 game::game() : d_adventurer{std::make_shared<adventurer>()}, d_monsters{} {
     d_castle.init(d_adventurer, d_monsters);
     d_entrance = d_adventurer->position();
@@ -124,46 +131,72 @@ void game::moveAdventurer() {
         }
 
         if(lig >= 0 && col >= 0 && lig < d_castle.d_boxes.size() && col < d_castle.d_boxes[0].size()) {
-            if(d_castle.d_boxes[lig][col].accessibility() && d_castle.d_boxes[lig][col].putCharacter(d_adventurer))
+            if(d_castle.d_boxes[lig][col].accessibility())
             {
-                d_castle.d_boxes[d_adventurer->position().x()][d_adventurer->position().y()].removeCharacter();
-                d_adventurer->move(lig, col);
-                updateMonsters();
-                moveMonsters();
-                return;
+                int status = d_castle.d_boxes[lig][col].putCharacter(d_adventurer);
+
+                if(status == box::BX_AVOID)
+                    cout << "Déplacement impossible" << std::endl;
+                else if(status == box::BX_ATTACK)
+                {
+                    cout << "Vous avez attaqué un monstre" << std::endl;
+                    askcontinue();
+                    break;
+                }
+                else
+                {
+                    if(status == box::BX_MOVE_ON_ATTACK)
+                    {
+                        cout << "Vous avez tué un monstre" << std::endl;
+                        askcontinue();
+                    }
+                    d_castle.d_boxes[d_adventurer->position().x()][d_adventurer->position().y()].removeCharacter();
+                    d_adventurer->move(lig, col);
+                    updateMonsters();
+                    moveMonsters();
+                    break;
+                }
             }
+            else
+            cout << "Déplacement impossible" << std::endl;
         }
-        cout << "Déplacement impossible" << std::endl;
     } while(moveA > 0 && moveA <= 8);
 }
 
 void game::repairSwordOrArmor() {
     int coinAmount;
-    do {
-        cout << "Combien de pièces souhaitez-vous utiliser pour réparer (pour l'épée ou l'armure) ? ";
-        cin >> coinAmount;
+    if(d_adventurer->coins())
+    {
+        do {
+            cout << "Combien de pièces souhaitez-vous utiliser pour réparer (pour l'épée ou l'armure) ? ";
+            cin >> coinAmount;
 
-        if(coinAmount <= 0 || coinAmount > d_adventurer->coins()) {
-            cout << "Nombre de pièces invalide. Veuillez saisir un nombre positif et inférieur ou égal à votre solde de pièces." << std::endl;
+            if(coinAmount <= 0 || coinAmount > d_adventurer->coins()) {
+                cout << "Nombre de pièces invalide. Veuillez saisir un nombre positif et inférieur ou égal à votre solde de pièces." << std::endl;
+            }
+        } while(coinAmount <= 0 || coinAmount > d_adventurer->coins());
+
+        int choice;
+        do {
+            cout << "Que voulez-vous réparer ?" << std::endl;
+            cout << "(1) L'épée" << std::endl;
+            cout << "(2) L'armure" << std::endl;
+            cout << "Votre choix : ";
+            cin >> choice;
+        } while(choice != 1 && choice != 2);
+
+        if(choice == 1) {
+            d_adventurer->repairSword(coinAmount);
+            cout << "L'épée a bien été réparée.";
+        } else {
+            d_adventurer->repairArmor(coinAmount);
+            cout << "L'armure a bien été réparée.";
         }
-    } while(coinAmount <= 0 || coinAmount > d_adventurer->coins());
-
-    int choice;
-    do {
-        cout << "Que voulez-vous réparer ?" << std::endl;
-        cout << "(1) L'épée" << std::endl;
-        cout << "(2) L'armure" << std::endl;
-        cout << "Votre choix : ";
-        cin >> choice;
-    } while(choice != 1 && choice != 2);
-
-    if(choice == 1) {
-        d_adventurer->repairSword(coinAmount);
-        cout << "L'épée a bien été réparée.";
-    } else {
-        d_adventurer->repairArmor(coinAmount);
-        cout << "L'armure a bien été réparée.";
     }
+    else
+        cout << "Vous n'avez pas suffisamment de piece" << std::endl;
+
+    askcontinue();
 }
 
 // Delete the dead monsters
@@ -190,6 +223,10 @@ void game::moveMonsters() {
 void game::end(bool res) {
     int choice;
     bool validChoice = false;
+
+    clrscr();
+    d_adventurer->info();
+
     d_castle.init(d_adventurer, d_monsters);
 
     while(!validChoice)
@@ -231,19 +268,8 @@ void game::end(bool res) {
     }
 }
 
-void game::playerInfo() const
-{
-    cout << "----- INFO AVENTURIER ----" << std::endl;
-    cout << "💓: " << d_adventurer->health() << " 💪: " << d_adventurer->strength() << std::endl;
-    cout << "🪙: " << d_adventurer->coins() << " 🧿: " << d_adventurer->amulet() << std::endl;
-    cout << "🗡: " << d_adventurer->getSword().solidity() << " 🛡:" << d_adventurer->getArmor().solidity() << std::endl;
-
-    // 🗡 🪙 🧿 🛡
-}
-
 void game::rules() {
     clrscr();
-    char choice;
     // cout << ":\n";
     // cout << "- l'utilisateur deplace l'aventurier; si l'aventurier est sur un tas de pieces de monnaie, il les ramasse.\n";
     // cout << "- chaque monstre se deplace; si un monstre se deplace sur l'aventurier alors il l'attaque.\n";
@@ -254,8 +280,8 @@ void game::rules() {
     // cout << "  - Les points repares sont pris a partir des pieces d'or dans la bourse de l'aventurier.\n";
     // cout << "- le jeu se termine soit quand l'aventurier est mort, soit quand il est a la sortie du chateau avec l'amulette.\n";
     cout << RULES;
-    cout << "Continuer (c) >> ";
-    cin >> choice;
+    askcontinue();
+
 }
 
 void game::edit() {
@@ -263,9 +289,8 @@ void game::edit() {
     cout << "Pour éditer le château, veuillez modifier le fichier defaultCastle.txt ou créer un nouveau fichier .txt en utilisant la légende suivante :" << std::endl << std::endl;
     cout << LEGEND;
     cout << std::endl;
-    cout << "Retourner au menu principal (m) >> ";
-    char choice;
-    cin >> choice;
+    askcontinue();
+
 }
 
 void game::monsterInfo() {
@@ -312,13 +337,12 @@ void game::showCastle() {
             cout << " ";
         }
         cout << " +";
-        cout << std::endl;
     }
-    cout << " ";
+    cout << std::endl << " ";
     for(int i = 0; i < width; ++i)
         cout << "+---";
     cout << '+' << std::endl;
-    playerInfo();
+    d_adventurer->info();
     monsterInfo();
 }
 
@@ -333,13 +357,12 @@ void game::loadMap() {
         cout << "La carte " << mapName << " a bien été chargée !" << std::endl;
     }
 
-    cout << "Retourner au menu principal (m) >> ";
-    char choice;
-    cin >> choice;
+    askcontinue();
+
 }
 
 void game::close()
 {
-    cout << "À bientôt !";
+    cout << "À bientôt !" << std::endl;
     std::exit(0);
 }

@@ -86,7 +86,7 @@ public:
     void edit();
     void end(bool res);
     void showCastle();
-    void playerInfo() const;
+    // void playerInfo() const;
     void repairSwordOrArmor();
     void updateMonsters();
     void loadMap();

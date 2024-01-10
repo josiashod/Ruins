@@ -68,7 +68,7 @@ public :
 
     void reset() override;
 
-    void info();
+    void info() const override;
 private:
     /// Pourcentage d'habilité du monstre
     double d_hability;

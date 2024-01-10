@@ -25,6 +25,12 @@ public:
      static const std::string BX_EXTERN;
     //  static const std::string BX_AMULET;
 
+    static constexpr int BX_AVOID  = 0;
+    static constexpr int BX_MOVE   = 1;
+    static constexpr int BX_ATTACK = 2;
+    static constexpr int BX_MOVE_ON_ATTACK = 3;
+
+
     /**
      * @brief the type of the box
      * 
@@ -75,10 +81,10 @@ public:
      * @brief Put a character(adventurer, monster, blindMonster, etc..) in the box
      * 
      * @param c : the character(adventurer, monster, blindMonster, etc..)
-     * @return true if the character has been correctly moved to the case
-     * false if not
+     * @return BX_MOVE if the character has been correctly moved to the case
+     * BX_AVOID if not and BX_ATTACK if the character made an attack
      */
-    bool putCharacter(std::shared_ptr<character> c);
+    int putCharacter(std::shared_ptr<character> c);
 
     /**
      * @brief remove character from the current box

@@ -68,39 +68,26 @@ std::shared_ptr<character> box::getCharacter() const {
     return true;
 }*/
 
-bool box::putCharacter(std::shared_ptr<character> c) {
-    bool took = false;
+int box::putCharacter(std::shared_ptr<character> c) {
+    int status = box::BX_AVOID;
     if(d_character) {
         // // Check if the current character is a monster and the new character is also a monster
         if(d_character->type() != c->type())
         {
             // Attack the character in the box
             c->attack(*d_character);
-            // Change the current character to the new one if it's dead
-            if(d_character->isDead()) 
-                // // Check if the replaced character is an adventurer, if yes transfer coins and amulet if present
-                // auto adventurerPtr = std::dynamic_pointer_cast<adventurer>(d_character);
-                // if(adventurerPtr) {
-                //     if(hasCoins()) {
-                //         adventurerPtr->addCoins(d_coins);
-                //         removeCoins();
-                //     }
-                //     if(hasAmulet()) {
-                //         adventurerPtr->takeAmulet();
-                //         removeAmulet();
-                //     }
-                // }
-                // d_character = c;
-                took = true;
+            if(d_character->isDead())
+                status = box::BX_MOVE_ON_ATTACK;
+            else
+                status = box::BX_ATTACK;
         }
         // If both characters are monsters, do not allow insertion
-        else
-            took = false;
+        // do nothing
     }
     else
-        took = true;
+        status = box::BX_MOVE;
 
-    if(took)
+    if(status == box::BX_MOVE_ON_ATTACK || status == box::BX_MOVE)
     {
         d_character = c;
         // Check if the replaced character is an adventurer, if yes, pick up coins or amulet if present
@@ -117,7 +104,7 @@ bool box::putCharacter(std::shared_ptr<character> c) {
         }
     }
 
-    return took;
+    return status;
 }
 
 
@@ -160,11 +147,11 @@ void box::show(display &d) const {
     } else if (d_type == BX_ACCESSIBLE) {
         if (d_amulet) {
             d.displayAmulet();
-        } else if (d_coins > 0) {
-            d.displayCoin();
         } else if (d_character != nullptr) {
             // Affichage du personnage selon son type
             d_character->show(d);
+        } else if (d_coins > 0){
+            d.displayCoin();
         } else {
             d.displayEmptyCase(); // Case vide
         }

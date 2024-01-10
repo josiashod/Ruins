@@ -65,6 +65,7 @@ public:
     void repairSword(int coinAmount);
     void repairArmor(int coinAmount);
     void reset() override;
+    void info() const override;
 
 private:
     int d_coins;
