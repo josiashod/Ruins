@@ -1,0 +1,12 @@
+<map id="adventurer.h" name="adventurer.h">
+<area shape="rect" id="node1" title=" " alt="" coords="262,5,354,31"/>
+<area shape="rect" id="node2" href="$character_8h.html" title=" " alt="" coords="115,79,202,104"/>
+<area shape="rect" id="node6" href="$display_8h.html" title=" " alt="" coords="196,225,271,251"/>
+<area shape="rect" id="node7" title=" " alt="" coords="243,299,298,324"/>
+<area shape="rect" id="node8" href="$sword_8h.html" title=" " alt="" coords="345,79,412,104"/>
+<area shape="rect" id="node10" href="$armor_8h.html" title=" " alt="" coords="436,79,503,104"/>
+<area shape="rect" id="node3" href="$coord_8h.html" title=" " alt="" coords="9,152,74,177"/>
+<area shape="rect" id="node5" href="$display_console_8h.html" title=" " alt="" coords="98,152,219,177"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,225,77,251"/>
+<area shape="rect" id="node9" href="$equipment_8h.html" title=" " alt="" coords="384,152,477,177"/>
+</map>

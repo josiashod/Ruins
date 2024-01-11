@@ -1,0 +1,19 @@
+<map id="castle.h" name="castle.h">
+<area shape="rect" id="node1" title=" " alt="" coords="302,5,370,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="150,372,222,397"/>
+<area shape="rect" id="node3" title=" " alt="" coords="44,79,110,104"/>
+<area shape="rect" id="node4" title=" " alt="" coords="134,79,204,104"/>
+<area shape="rect" id="node5" title=" " alt="" coords="228,79,284,104"/>
+<area shape="rect" id="node6" title=" " alt="" coords="496,445,551,471"/>
+<area shape="rect" id="node7" href="$box_8h.html" title=" " alt="" coords="308,79,363,104"/>
+<area shape="rect" id="node12" title=" " alt="" coords="369,152,438,177"/>
+<area shape="rect" id="node13" href="$adventurer_8h.html" title=" " alt="" coords="514,152,606,177"/>
+<area shape="rect" id="node17" href="$monster_8h.html" title=" " alt="" coords="438,79,518,104"/>
+<area shape="rect" id="node8" href="$character_8h.html" title=" " alt="" coords="331,225,418,251"/>
+<area shape="rect" id="node9" href="$coord_8h.html" title=" " alt="" coords="224,299,290,324"/>
+<area shape="rect" id="node10" href="$display_console_8h.html" title=" " alt="" coords="314,299,435,324"/>
+<area shape="rect" id="node11" href="$display_8h.html" title=" " alt="" coords="412,372,486,397"/>
+<area shape="rect" id="node14" href="$sword_8h.html" title=" " alt="" coords="561,225,628,251"/>
+<area shape="rect" id="node16" href="$armor_8h.html" title=" " alt="" coords="652,225,718,251"/>
+<area shape="rect" id="node15" href="$equipment_8h.html" title=" " alt="" coords="593,299,686,324"/>
+</map>
