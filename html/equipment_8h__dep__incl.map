@@ -1,0 +1,20 @@
+<map id="equipment.h" name="equipment.h">
+<area shape="rect" id="node1" title=" " alt="" coords="219,5,312,31"/>
+<area shape="rect" id="node2" href="$armor_8h.html" title=" " alt="" coords="232,79,299,104"/>
+<area shape="rect" id="node16" href="$equipment_8cpp.html" title=" " alt="" coords="323,79,429,104"/>
+<area shape="rect" id="node17" href="$sword_8h.html" title=" " alt="" coords="141,79,208,104"/>
+<area shape="rect" id="node3" href="$adventurer_8h.html" title=" " alt="" coords="174,152,266,177"/>
+<area shape="rect" id="node15" href="$armor_8cpp.html" title=" " alt="" coords="291,152,371,177"/>
+<area shape="rect" id="node4" href="$adventurer_8cpp.html" title=" " alt="" coords="5,225,112,251"/>
+<area shape="rect" id="node5" href="$box_8cpp.html" title=" " alt="" coords="137,225,205,251"/>
+<area shape="rect" id="node6" href="$castle_8h.html" title=" " alt="" coords="307,299,375,324"/>
+<area shape="rect" id="node13" href="$monster_8h.html" title=" " alt="" coords="229,225,309,251"/>
+<area shape="rect" id="node7" href="$blind_monster_8cpp.html" title=" " alt="" coords="462,372,583,397"/>
+<area shape="rect" id="node8" href="$castle_8cpp.html" title=" " alt="" coords="355,372,437,397"/>
+<area shape="rect" id="node9" href="$game_8h.html" title=" " alt="" coords="146,372,211,397"/>
+<area shape="rect" id="node12" href="$monster_8cpp.html" title=" " alt="" coords="235,372,330,397"/>
+<area shape="rect" id="node10" href="$game_8cpp.html" title=" " alt="" coords="89,445,167,471"/>
+<area shape="rect" id="node11" href="$main_8cpp.html" title=" " alt="" coords="192,445,267,471"/>
+<area shape="rect" id="node14" href="$blind_monster_8h.html" title=" " alt="" coords="400,299,507,324"/>
+<area shape="rect" id="node18" href="$sword_8cpp.html" title=" " alt="" coords="69,152,150,177"/>
+</map>

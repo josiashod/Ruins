@@ -1,0 +1,11 @@
+<map id="monster.h" name="monster.h">
+<area shape="rect" id="node1" title=" " alt="" coords="229,6,309,31"/>
+<area shape="rect" id="node2" href="$blind_monster_8h.html" title=" " alt="" coords="67,79,174,105"/>
+<area shape="rect" id="node5" href="$castle_8h.html" title=" " alt="" coords="199,79,267,105"/>
+<area shape="rect" id="node6" href="$game_8h.html" title=" " alt="" coords="259,153,324,178"/>
+<area shape="rect" id="node9" href="$monster_8cpp.html" title=" " alt="" coords="348,153,443,178"/>
+<area shape="rect" id="node3" href="$blind_monster_8cpp.html" title=" " alt="" coords="5,153,127,178"/>
+<area shape="rect" id="node4" href="$castle_8cpp.html" title=" " alt="" coords="151,153,234,178"/>
+<area shape="rect" id="node7" href="$game_8cpp.html" title=" " alt="" coords="201,226,280,251"/>
+<area shape="rect" id="node8" href="$main_8cpp.html" title=" " alt="" coords="305,226,379,251"/>
+</map>
