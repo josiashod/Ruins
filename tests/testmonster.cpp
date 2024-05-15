@@ -6,7 +6,10 @@
 #include "../character.h"
 #include "../adventurer.h"
 #include "../monster.h"
+<<<<<<< HEAD
 #include "../castle.h"
+=======
+>>>>>>> origin/josh
 
 TEST_SUITE("Test des méthodes de la classe monster") {
     TEST_SUITE("Test des constructeurs") {
@@ -28,9 +31,15 @@ TEST_SUITE("Test des méthodes de la classe monster") {
             GIVEN("Initialisation d'un monster") {
                 monster monster{};
                 THEN("Vérification des données") {
+<<<<<<< HEAD
                     REQUIRE_EQ(monster.health(), monster::DEFAULT_HEALTH);
                     REQUIRE_EQ(monster.strength(), monster::DEFAULT_STRENGTH);
                     REQUIRE_EQ(monster.hability(), monster::DEFAULT_HABILITY);
+=======
+                    REQUIRE_EQ(monster.health(), 70);
+                    REQUIRE_EQ(monster.strength(), 5);
+                    REQUIRE_EQ(monster.hability(), 90);
+>>>>>>> origin/josh
                     REQUIRE_EQ(monster.type(), "monster");
                 }
             }
@@ -38,6 +47,7 @@ TEST_SUITE("Test des méthodes de la classe monster") {
     }
 
     TEST_SUITE("Test des méthodes d'attaque, de réception d'attaque et de mort") {
+<<<<<<< HEAD
         TEST_SUITE("Test de la méthode attack") {
             SCENARIO("Test de la mise à mort d'un aventurier") {
                 GIVEN("Création d'un Aventurier et d'un monstre") {
@@ -83,6 +93,17 @@ TEST_SUITE("Test des méthodes de la classe monster") {
                                 REQUIRE_EQ(validPlayer, true);
                             }
                         }
+=======
+        SCENARIO("Test de la méthode attack sur un monstre") {
+            GIVEN("Initialisation de deux monsters") {
+                monster monster1{}, monster2{};
+                WHEN("Réalisation de l'attaque") {
+                    monster1.attack(monster2);
+                    THEN("Vérification de l'attaque") {
+                        bool valid {monster2.health() == 100 - monster1.strength() ||
+                                    monster2.health() == 100 - 0.9 * monster1.strength()};
+                        REQUIRE_EQ(valid, true);
+>>>>>>> origin/josh
                     }
                 }
             }
@@ -108,7 +129,11 @@ TEST_SUITE("Test des méthodes de la classe monster") {
                     int degats = 20;
                     monster.hasBeenAttacked(degats);
                     THEN("Vérification des données") {
+<<<<<<< HEAD
                         REQUIRE_EQ(monster.health(), monster::DEFAULT_HEALTH - degats);
+=======
+                        REQUIRE_EQ(monster.health(), 100 - degats);
+>>>>>>> origin/josh
                     }
                 }
             }
@@ -128,6 +153,7 @@ TEST_SUITE("Test des méthodes de la classe monster") {
         }
     }
 
+<<<<<<< HEAD
     SCENARIO("Test de la méthode reset pour monster") {
         GIVEN("Initialisation d'un monstre avec des valeurs") {
             int health = 75, strength = 20;
@@ -171,21 +197,45 @@ TEST_SUITE("Test des méthodes de la classe monster") {
                 THEN("Vérification de la position") {
                     coord point{1, 1};
                     REQUIRE_EQ(monster.position(), point);
+=======
+    TEST_SUITE("Test des méthodes de déplacements") {
+        SCENARIO("Test de la méthode move de character") {
+            GIVEN("Initialisation d'un monster") {
+                monster monster{};
+                WHEN("Positionnement du monster") {
+                    monster.character::move(1, 1);
+                    THEN("Vérification de la position") {
+                        coord point{1, 1};
+                        REQUIRE_EQ(monster.position(), point);
+                    }
+>>>>>>> origin/josh
                 }
             }
         }
 
         SCENARIO("Test de validation de la fonction isClose") {
+<<<<<<< HEAD
             WHEN("Positionnement du player et du monstre") {
                 player->move(1, 1);
                 monster.character::move(0,0);
                 THEN("Vérification de la fonction") {
                     REQUIRE_EQ(monster.isClose(player), true);
+=======
+            GIVEN("Initialisation d'un monster et d'un adventurer") {
+                adventurer player{};
+                monster monster{};
+                WHEN("Positionnement du player") {
+                    player.move(1, 1);
+                    THEN("Vérification de la fonction") {
+                        REQUIRE_EQ(monster.isClose(player), true);
+                    }
+>>>>>>> origin/josh
                 }
             }
         }
 
         SCENARIO("Test de non validation de la fonction isClose") {
+<<<<<<< HEAD
             WHEN("Positionnement du player et du monstre") {
                 player->move(12, 13);
                 monster.character::move(0, 0);
@@ -211,10 +261,21 @@ TEST_SUITE("Test des méthodes de la classe monster") {
                 monster.character::move(0, 0);
                 THEN("Vérification de la fonction") {
                     REQUIRE_EQ(monster.isNearInfo(player), false);
+=======
+            GIVEN("Initialisation d'un monster et d'un adventurer") {
+                adventurer player{};
+                monster monster{};
+                WHEN("Positionnement du player") {
+                    player.move(12, 13);
+                    THEN("Vérification de la fonction") {
+                        REQUIRE_EQ(monster.isClose(player), false);
+                    }
+>>>>>>> origin/josh
                 }
             }
         }
 
+<<<<<<< HEAD
 
         coord expectedPoint{0, 0};
         SCENARIO("Vérification du calcul de déplacement direction 1") {
@@ -230,12 +291,30 @@ TEST_SUITE("Test des méthodes de la classe monster") {
                         THEN("Vérification de la position après déplacement vers le haut") {
                             REQUIRE_EQ(newX, expectedPoint.x());
                             REQUIRE_EQ(newY, expectedPoint.y());
+=======
+        SCENARIO("Vérification du déplacement direction 1") {
+            GIVEN("Initialisation d'un monster et d'un adventurer") {
+                adventurer player{};
+                monster monster{};
+                WHEN("Positionnement du player et du monster") {
+                    player.move(1, 0);
+                    monster.character::move(1, 1);
+                    THEN("Vérification de la fonction direction") {
+                        REQUIRE_EQ(monster.direction(player), 1);
+                        WHEN("Déplacement du monstre") {
+                            monster.move(player);
+                            THEN("Vérification de la position") {
+                                coord point{1, 2};
+                                REQUIRE_EQ(monster.position(), point);
+                            }
+>>>>>>> origin/josh
                         }
                     }
                 }
             }
         }
 
+<<<<<<< HEAD
         SCENARIO("Vérification du calcul de déplacement direction 2") {
             WHEN("Positionnement du player et du monster") {
                 player->move(0, 0);
@@ -249,12 +328,30 @@ TEST_SUITE("Test des méthodes de la classe monster") {
                         THEN("Vérification de la position après déplacement vers le bas") {
                             REQUIRE_EQ(newX, expectedPoint.x());
                             REQUIRE_EQ(newY, expectedPoint.y());
+=======
+        SCENARIO("Vérification du déplacement direction 2") {
+            GIVEN("Initialisation d'un monster et d'un adventurer") {
+                adventurer player{};
+                monster monster{};
+                WHEN("Positionnement du player et du monster") {
+                    player.move(1, 2);
+                    monster.character::move(1, 1);
+                    THEN("Vérification de la fonction direction") {
+                        REQUIRE_EQ(monster.direction(player), 2);
+                        WHEN("Déplacement du monstre") {
+                            monster.move(player);
+                            THEN("Vérification de la position") {
+                                coord point{1, 0};
+                                REQUIRE_EQ(monster.position(), point);
+                            }
+>>>>>>> origin/josh
                         }
                     }
                 }
             }
         }
 
+<<<<<<< HEAD
         SCENARIO("Vérification du calcul de déplacement direction 3") {
             WHEN("Positionnement du player et du monster") {
                 player->move(0, 0);
@@ -268,12 +365,30 @@ TEST_SUITE("Test des méthodes de la classe monster") {
                         THEN("Vérification de la position après déplacement vers la droite") {
                             REQUIRE_EQ(newX, expectedPoint.x());
                             REQUIRE_EQ(newY, expectedPoint.y());
+=======
+        SCENARIO("Vérification du déplacement direction 3") {
+            GIVEN("Initialisation d'un monster et d'un adventurer") {
+                adventurer player{};
+                monster monster{};
+                WHEN("Positionnement du player et du monster") {
+                    player.move(2, 1);
+                    monster.character::move(1, 1);
+                    THEN("Vérification de la fonction direction") {
+                        REQUIRE_EQ(monster.direction(player), 3);
+                        WHEN("Déplacement du monstre") {
+                            monster.move(player);
+                            THEN("Vérification de la position") {
+                                coord point{2, 1};
+                                REQUIRE_EQ(monster.position(), point);
+                            }
+>>>>>>> origin/josh
                         }
                     }
                 }
             }
         }
 
+<<<<<<< HEAD
         SCENARIO("Vérification du calcul de déplacement direction 4") {
             WHEN("Positionnement du player et du monster") {
                 player->move(0, 0);
@@ -287,12 +402,30 @@ TEST_SUITE("Test des méthodes de la classe monster") {
                         THEN("Vérification de la position après déplacement vers la gauche") {
                             REQUIRE_EQ(newX, expectedPoint.x());
                             REQUIRE_EQ(newY, expectedPoint.y());
+=======
+        SCENARIO("Vérification du déplacement direction 4") {
+            GIVEN("Initialisation d'un monster et d'un adventurer") {
+                adventurer player{};
+                monster monster{};
+                WHEN("Positionnement du player et du monster") {
+                    player.move(0, 1);
+                    monster.character::move(1, 1);
+                    THEN("Vérification de la fonction direction") {
+                        REQUIRE_EQ(monster.direction(player), 4);
+                        WHEN("Déplacement du monstre") {
+                            monster.move(player);
+                            THEN("Vérification de la position") {
+                                coord point{0, 1};
+                                REQUIRE_EQ(monster.position(), point);
+                            }
+>>>>>>> origin/josh
                         }
                     }
                 }
             }
         }
 
+<<<<<<< HEAD
         SCENARIO("Vérification du calcul de déplacement direction 5") {
             WHEN("Positionnement du player et du monster") {
                 player->move(0, 0);
@@ -306,12 +439,30 @@ TEST_SUITE("Test des méthodes de la classe monster") {
                         THEN("Vérification de la position après déplacement vers en haut à gauche") {
                             REQUIRE_EQ(newX, expectedPoint.x());
                             REQUIRE_EQ(newY, expectedPoint.y());
+=======
+        SCENARIO("Vérification du déplacement direction 5") {
+            GIVEN("Initialisation d'un monster et d'un adventurer") {
+                adventurer player{};
+                monster monster{};
+                WHEN("Positionnement du player et du monster") {
+                    player.move(0, 0);
+                    monster.character::move(1, 1);
+                    THEN("Vérification de la fonction direction") {
+                        REQUIRE_EQ(monster.direction(player), 5);
+                        WHEN("Déplacement du monstre") {
+                            monster.move(player);
+                            THEN("Vérification de la position") {
+                                coord point{0, 2};
+                                REQUIRE_EQ(monster.position(), point);
+                            }
+>>>>>>> origin/josh
                         }
                     }
                 }
             }
         }
 
+<<<<<<< HEAD
         SCENARIO("Vérification du calcul de déplacement direction 6") {
             WHEN("Positionnement du player et du monster") {
                 player->move(0, 0);
@@ -325,12 +476,30 @@ TEST_SUITE("Test des méthodes de la classe monster") {
                         THEN("Vérification de la position après déplacement vers en haut à droite") {
                             REQUIRE_EQ(newX, expectedPoint.x());
                             REQUIRE_EQ(newY, expectedPoint.y());
+=======
+        SCENARIO("Vérification du déplacement direction 6") {
+            GIVEN("Initialisation d'un monster et d'un adventurer") {
+                adventurer player{};
+                monster monster{};
+                WHEN("Positionnement du player et du monster") {
+                    player.move(2, 0);
+                    monster.character::move(1, 1);
+                    THEN("Vérification de la fonction direction") {
+                        REQUIRE_EQ(monster.direction(player), 6);
+                        WHEN("Déplacement du monstre") {
+                            monster.move(player);
+                            THEN("Vérification de la position") {
+                                coord point{2, 2};
+                                REQUIRE_EQ(monster.position(), point);
+                            }
+>>>>>>> origin/josh
                         }
                     }
                 }
             }
         }
 
+<<<<<<< HEAD
         SCENARIO("Vérification du calcul de déplacement direction 7") {
             WHEN("Positionnement du player et du monster") {
                 player->move(0, 0);
@@ -344,12 +513,30 @@ TEST_SUITE("Test des méthodes de la classe monster") {
                         THEN("Vérification de la position après déplacement vers en bas à gauche") {
                             REQUIRE_EQ(newX, expectedPoint.x());
                             REQUIRE_EQ(newY, expectedPoint.y());
+=======
+        SCENARIO("Vérification du déplacement direction 7") {
+            GIVEN("Initialisation d'un monster et d'un adventurer") {
+                adventurer player{};
+                monster monster{};
+                WHEN("Positionnement du player et du monster") {
+                    player.move(0, 2);
+                    monster.character::move(1, 1);
+                    THEN("Vérification de la fonction direction") {
+                        REQUIRE_EQ(monster.direction(player), 7);
+                        WHEN("Déplacement du monstre") {
+                            monster.move(player);
+                            THEN("Vérification de la position") {
+                                coord point{0, 0};
+                                REQUIRE_EQ(monster.position(), point);
+                            }
+>>>>>>> origin/josh
                         }
                     }
                 }
             }
         }
 
+<<<<<<< HEAD
         SCENARIO("Vérification du calcul de déplacement direction 8") {
             WHEN("Positionnement du player et du monster") {
                 player->move(0, 0);
@@ -363,6 +550,23 @@ TEST_SUITE("Test des méthodes de la classe monster") {
                         THEN("Vérification de la position après déplacement vers en bas à droite") {
                             REQUIRE_EQ(newX, expectedPoint.x());
                             REQUIRE_EQ(newY, expectedPoint.y());
+=======
+        SCENARIO("Vérification du déplacement direction 8") {
+            GIVEN("Initialisation d'un monster et d'un adventurer") {
+                adventurer player{};
+                monster monster{};
+                WHEN("Positionnement du player et du monster") {
+                    player.move(2, 2);
+                    monster.character::move(1, 1);
+                    THEN("Vérification de la fonction direction") {
+                        REQUIRE_EQ(monster.direction(player), 8);
+                        WHEN("Déplacement du monstre") {
+                            monster.move(player);
+                            THEN("Vérification de la position") {
+                                coord point{2, 0};
+                                REQUIRE_EQ(monster.position(), point);
+                            }
+>>>>>>> origin/josh
                         }
                     }
                 }

@@ -2,7 +2,10 @@
 // Created by Daav on 22/12/2023.
 //
 
+<<<<<<< HEAD
 #include <sstream>
+=======
+>>>>>>> origin/josh
 #include "doctest.h"
 #include "../character.h"
 #include "../adventurer.h"
@@ -37,6 +40,7 @@ TEST_SUITE("Test des méthodes de la classe adventurer") {
         }
     }
 
+<<<<<<< HEAD
     SCENARIO("Test de la récupération de l'épée") {
         GIVEN("Initialisation d'un aventurier") {
             adventurer player{};
@@ -61,6 +65,8 @@ TEST_SUITE("Test des méthodes de la classe adventurer") {
         }
     }
 
+=======
+>>>>>>> origin/josh
     SCENARIO("Test de l'ajout de pièces") {
         GIVEN("Initialisation d'un aventurier") {
             adventurer player{};
@@ -74,6 +80,7 @@ TEST_SUITE("Test des méthodes de la classe adventurer") {
         }
     }
 
+<<<<<<< HEAD
     SCENARIO("Test de la méthode reset") {
         GIVEN("Initialisation d'un aventurier avec des valeurs") {
             int swordSolidity = 60, armorSolidity = 30, coins = 8, health = 75, strength = 20;
@@ -165,6 +172,8 @@ TEST_SUITE("Test des méthodes de la classe adventurer") {
         }
     }
 
+=======
+>>>>>>> origin/josh
     TEST_SUITE("Test des méthodes d'attaque, de réception d'attaque et de mort") {
         SCENARIO("Test de la méthode getDamaged") {
             GIVEN("Initialisation d'un aventurier") {
@@ -173,6 +182,7 @@ TEST_SUITE("Test des méthodes de la classe adventurer") {
                     int degats = 20;
                     player.getDamaged(degats);
                     THEN("Vérification des données") {
+<<<<<<< HEAD
                         REQUIRE_EQ(player.health(), adventurer::DEFAULT_HEALTH - degats);
                     }
                 }
@@ -259,6 +269,9 @@ TEST_SUITE("Test des méthodes de la classe adventurer") {
                                 REQUIRE_EQ(player.health(), adventurer::DEFAULT_HEALTH - expectedAdventurerDamage);
                             }
                         }
+=======
+                        REQUIRE_EQ(player.health(), 100 - degats);
+>>>>>>> origin/josh
                     }
                 }
             }

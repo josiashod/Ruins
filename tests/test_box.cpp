@@ -1,11 +1,19 @@
 #include "doctest.h"
 #include "../box.h"
+<<<<<<< HEAD
 #include "../adventurer.h"
 #include "../monster.h"
 
 TEST_CASE("[box] Constructions et modifications d'un case") {
     SUBCASE("Création de différents type de case") {
         SUBCASE("Création d'un mur") {
+=======
+
+TEST_CASE("[box] Constructions et modifications d'un case") {
+    SUBCASE("Création de différents type de case") {
+        SUBCASE("Création d'un mur")
+        {
+>>>>>>> origin/josh
             box b{box::BX_WALL};
 
             REQUIRE_EQ(b.type(), box::BX_WALL);
@@ -15,7 +23,12 @@ TEST_CASE("[box] Constructions et modifications d'un case") {
             REQUIRE_EQ(b.coins(), 0);
         }
 
+<<<<<<< HEAD
         SUBCASE("Création d'un mur avec des pieces") {
+=======
+        SUBCASE("Création d'un mur avec des pieces")
+        {
+>>>>>>> origin/josh
             int coins = 10;
             box b{box::BX_WALL, coins};
 
@@ -26,7 +39,12 @@ TEST_CASE("[box] Constructions et modifications d'un case") {
             REQUIRE_NE(b.coins(), coins);
         }
 
+<<<<<<< HEAD
         SUBCASE("Création d'un mur avec une amulette") {
+=======
+        SUBCASE("Création d'un mur avec une amulette")
+        {
+>>>>>>> origin/josh
             box b{box::BX_WALL, 0, true};
 
             REQUIRE_EQ(b.type(), box::BX_WALL);
@@ -36,7 +54,12 @@ TEST_CASE("[box] Constructions et modifications d'un case") {
             REQUIRE_EQ(b.coins(), 0);
         }
 
+<<<<<<< HEAD
         SUBCASE("Création d'un mur avec une amulette et des pieces") {
+=======
+        SUBCASE("Création d'un mur avec une amulette et des pieces")
+        {
+>>>>>>> origin/josh
             int coins = 10;
             box b{box::BX_WALL, coins, true};
 
@@ -47,7 +70,12 @@ TEST_CASE("[box] Constructions et modifications d'un case") {
             REQUIRE_NE(b.coins(), coins);
         }
 
+<<<<<<< HEAD
         SUBCASE("Création d'une case extern") {
+=======
+        SUBCASE("Création d'une case extern")
+        {
+>>>>>>> origin/josh
             box b{box::BX_EXTERN};
 
             REQUIRE_EQ(b.type(), box::BX_EXTERN);
@@ -56,7 +84,12 @@ TEST_CASE("[box] Constructions et modifications d'un case") {
             REQUIRE_EQ(b.hasCoins(), false);
         }
 
+<<<<<<< HEAD
         SUBCASE("Création d'une case vide") {
+=======
+        SUBCASE("Création d'une case vide")
+        {
+>>>>>>> origin/josh
             box b{box::BX_ACCESSIBLE};
 
             REQUIRE_EQ(b.type(), box::BX_ACCESSIBLE);
@@ -65,7 +98,12 @@ TEST_CASE("[box] Constructions et modifications d'un case") {
             REQUIRE_EQ(b.hasCoins(), false);
         }
 
+<<<<<<< HEAD
         SUBCASE("Création d'une case avec des pieces") {
+=======
+        SUBCASE("Création d'une case avec des pieces")
+        {
+>>>>>>> origin/josh
             int coins = 10;
             box b{box::BX_ACCESSIBLE, coins};
 
@@ -76,7 +114,12 @@ TEST_CASE("[box] Constructions et modifications d'un case") {
             REQUIRE_EQ(b.coins(), coins);
         }
 
+<<<<<<< HEAD
         SUBCASE("Création d'une case avec une amulette") {
+=======
+        SUBCASE("Création d'une case avec une amulette")
+        {
+>>>>>>> origin/josh
             box b{box::BX_ACCESSIBLE, 0, true};
 
             REQUIRE_EQ(b.type(), box::BX_ACCESSIBLE);
@@ -86,7 +129,12 @@ TEST_CASE("[box] Constructions et modifications d'un case") {
             REQUIRE_EQ(b.coins(), 0);
         }
 
+<<<<<<< HEAD
         SUBCASE("Création d'une case avec des pieces et une amulette") {
+=======
+        SUBCASE("Création d'une case avec des pieces et une amulette")
+        {
+>>>>>>> origin/josh
             int coins = 10;
             box b{box::BX_ACCESSIBLE, coins, true};
 
@@ -98,8 +146,15 @@ TEST_CASE("[box] Constructions et modifications d'un case") {
         }
     }
 
+<<<<<<< HEAD
     SUBCASE("Manipulation du contenu d'une case") {
         SUBCASE("Suppression d'une amulette") {
+=======
+    SUBCASE("Manipulation du contenu d'une case")
+    {
+        SUBCASE("Suppression d'une amulette")
+        {
+>>>>>>> origin/josh
             box b{box::BX_ACCESSIBLE, 0, true};
 
             REQUIRE_EQ(b.type(), box::BX_ACCESSIBLE);
@@ -109,7 +164,12 @@ TEST_CASE("[box] Constructions et modifications d'un case") {
             REQUIRE_EQ(b.hasAmulet(), false);
         }
 
+<<<<<<< HEAD
         SUBCASE("Suppression de pieces") {
+=======
+        SUBCASE("Suppression de pieces")
+        {
+>>>>>>> origin/josh
             int coins = 10;
             box b{box::BX_ACCESSIBLE, coins};
 
@@ -121,6 +181,7 @@ TEST_CASE("[box] Constructions et modifications d'un case") {
             REQUIRE_EQ(b.hasCoins(), false);
             REQUIRE_NE(b.coins(), coins);
         }
+<<<<<<< HEAD
         SUBCASE("Test de la méthode putCharacter")
         {
             SUBCASE("Case vide avec aventurier")
@@ -203,3 +264,7 @@ TEST_CASE("[box] Constructions et modifications d'un case") {
         }
     }
 }
+=======
+    }
+}
+>>>>>>> origin/josh

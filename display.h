@@ -3,47 +3,27 @@
 
 #include <string>
 
-class display {
+class display
+{
 public:
-    /**
-     * @brief Affiche la représentation graphique d'un aventurier.
-     */
-    virtual void displayAdventurer() const = 0;
-
-    /**
-     * @brief Affiche la représentation graphique d'un monstre.
-     */
-    virtual void displayMonster() const = 0;
-
-    /**
-     * @brief Affiche la représentation graphique d'un monstre aveugle.
-     */
-    virtual void displayBlindMonster() const = 0;
-
-    /**
-     * @brief Affiche la représentation graphique d'un amulette.
-     */
-    virtual void displayAmulet() const = 0;
-
-    /**
-     * @brief Affiche la représentation graphique d'un mur.
-     */
-    virtual void displayWall() const = 0;
-
-    /**
-     * @brief Affiche la représentation graphique d'une case vide.
-     */
-    virtual void displayEmptyCase() const = 0;
-
-    /**
-     * @brief Affiche la représentation graphique d'une case externe.
-     */
-    virtual void displayExternCase() const = 0;
-
-    /**
-     * @brief Affiche la représentation graphique d'une pièce de monnaie.
-     */
-    virtual void displayCoin() const = 0;
+    void displayAdventurer();
+    void displayMonster();
+    void displayBlindMonster();
+    void displayAmulet();
+    void displayWall();
+    void displayEmptyCase();
+    void displayExternCase();
+    void displayCoin();
+private:
+    // colors
+    static const std::string BLACK;
+    static const std::string RED;
+    static const std::string GREEN;
+    static const std::string YELLOW;
+    static const std::string WHITE;
+    static const std::string PURPLE;
+    static const std::string CYAN;
 };
 
-#endif // PROJET_DISPLAY_H
+
+#endif //PROJET_DISPLAY_H

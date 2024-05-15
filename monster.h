@@ -13,15 +13,6 @@
 class castle;
 class monster : public character {
 public :
-    /// Constantes par défaut
-    static constexpr int DEFAULT_HEALTH = 100;
-    static constexpr int DEFAULT_STRENGTH = 10;
-    static constexpr double DEFAULT_HABILITY = 90;
-
-    /// Constantes de décision
-    static constexpr int INFO_DISTANCE = 1;
-    static constexpr int MOVE_TO_PLAYER_DISTANCE = 8;
-
     /**
      * @brief Constructeur par valeurs
      * @param health Les points de vie du monstre
@@ -29,7 +20,7 @@ public :
      * @param hability Son taux d'habilieté au coups critiques
      * @param type Type monstre voyant
      */
-    monster(int health = DEFAULT_HEALTH, int strength = DEFAULT_STRENGTH, double hability = DEFAULT_HABILITY, std::string type = "monster");
+    monster(int health = 100, int strength = 10, double hability = 90, std::string type = "monster");
     /**
       * @brief Destructeur par défaut
       */
@@ -48,21 +39,17 @@ public :
     void attack(character &c) override;
     /**
       * @brief Réecriture de la méthode virtuelle permettant de gérer la réception d'une attaque par un monstre
-      * @param attackStrengthPoints - Points de force de l'attaque
+      * @param[in] attackStrengthPoints - Points de force de l'attaque
       */
     void hasBeenAttacked(int attackStrengthPoints) override;
 
     /**
       * @brief Méthode retournant si le joueur est suffisanement proche du monstre
       * @param adventurer l'aventurier
-      * @return true si le joueur est proche (par rapport à MOVE_TO_PLAYER_DISTANCE)
+      * @return true si le joueur est proche
       */
     bool isClose(std::shared_ptr<adventurer> &adventurer) const;
-    /**
-      * @brief Méthode retournant si le joueur est proche pour afficher les infos
-      * @param adventurer l'aventurier
-      * @return true si le joueur est proche (par rapport à INFO_DISTANCE)
-      */
+
     bool isNearInfo(std::shared_ptr<adventurer> &adventurer) const;
 
     /**
@@ -73,37 +60,14 @@ public :
     int direction(std::shared_ptr<adventurer> &adventurer) const;
 
     /**
-     * @brief Calcule la nouvelle position du monstre voyant en fonction de la direction.
-     *
-     * @param direction Direction du déplacement.
-     * @param newX Nouvelle coordonnée x.
-     * @param newY Nouvelle coordonnée y.
-     */
-    void calculateNewPositionNotBlind(int direction, int &newX, int &newY);
-
-    /**
      * @brief Méthode virtuelle permettant à un monstre de se déplacer en fonction de l'aventurier
-     *
-     * @param castle Château.
-     * @param adventurer Aventurier.
-     * @param monster Le monstre lui même.
      */
     virtual void move(castle &castle, std::shared_ptr<adventurer> &adventurer, std::shared_ptr<monster> &monster);
 
-    /**
-     * @brief Affiche le monstre dans l'interface graphique.
-     * @param d - L'objet de type display responsable de l'affichage.
-     */
     void show(display &d) const override;
 
-    /**
-      * @brief Réinitialise les attributs du monstre à leurs valeurs par défaut.
-      */
     void reset() override;
 
-    /**
-     * @brief Affiche les informations sur le monstre.
-     */
     void info() const override;
 private:
     /// Pourcentage d'habilité du monstre

@@ -14,6 +14,7 @@ adventurer::adventurer(int swordSolidity, int armorSolidity, int coin, int healt
         d_armor{armorSolidity}, d_amulet{false} {}
 
 int adventurer::coins() const {
+    // Renvoi du nombre de pièces
     return d_coins;
 }
 
@@ -30,23 +31,28 @@ bool adventurer::amulet() const {
 }
 
 void adventurer::attack(character &c) {
+    // Initialisation de la force d'attaque
     int attackStrength = d_strength + d_sword.solidity();
 
-    // Génération d'un nombre aléatoire entre 0 et 99 et vérification de l'infériorité de ce nombre à la probabilité de multiplication de la puissance
-    if ((rand() % 100) < DEFAULT_ATTACKPROBABILITY)
+    // Génération d'un nombre aléatoire entre 0 et 99 et vérification de l'infériorité de ce nombre à 80
+    if ((rand() % 100) < 80)
+        // Si la probabilité générée est inférieure à 80, on multiplie la force d'attaque par 0,9
         attackStrength = static_cast<int>(attackStrength * 0.9);
 
     // Lancement de l'attaque sur le personnage c
     c.hasBeenAttacked(attackStrength);
 
+    //Recupérer les points de force de l'enemie s'il est mort
     if(c.isDead())
     {
         int enemyStrength = c.strength();
 
+        // un quart s’ajoute à ses points de force et les trois quart à ses points de vie
         d_strength += static_cast<int>(enemyStrength * 0.25);
         d_health += static_cast<int>(enemyStrength * 0.75);
     }
 
+    // Réduction des points de solidité de l'épée
     d_sword.reduce(1);
 }
 

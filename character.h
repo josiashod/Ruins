@@ -6,7 +6,7 @@
 #define QUALITE_DE_PROG_CHARACTER_H
 
 #include "coord.h"
-#include "displayConsole.h"
+#include "display.h"
 
 
 class character {
@@ -60,19 +60,14 @@ public:
 
     /**
       * @brief Méthode virtuelle permettant à un personnage d'en attaquer un autre
-      * @param c - Le personnage à attaquer
+      * @param[in] c - Le personnage à attaquer
       */
     virtual void attack(character &c) = 0;
     /**
       * @brief Méthode virtuelle permettant de gérer la réception d'une attaque sur un personnage
-      * @param attackStrength - Points de force de l'attaque
+      * @param[in] attackStrength - Points de force de l'attaque
       */
     virtual void hasBeenAttacked(int attackStrength) = 0;
-    /**
-      * @brief Fonction permettant de vérifier si un personnage est mort
-      * @return true si le personnage est mort, false s'il est vivant
-      */
-    bool isDead() const;
     /**
       * @brief Méthode permettant de gérer les dégâts infligés lors d'une attaque sur un personnage
       * @param[in] damage - Nombre de dégâts reçus
@@ -80,20 +75,17 @@ public:
     void getDamaged(int damage);
 
     /**
-     * @brief Méthode virtuelle permettant d'afficher le personnage dans l'interface graphique.
-     * @param d - L'objet de classe display pour l'affichage.
+     * @brief Fonction permettant de vérifier si un personnage est mort
+     * @return true si le personnage est mort, false s'il est vivant
      */
+    bool isDead() const;
+
     virtual void show(display &d) const = 0;
 
-    /**
-     * @brief Méthode virtuelle permettant de réinitialiser les paramètres du personnage.
-     */
     virtual void reset() = 0;
 
-    /**
-     * @brief Méthode virtuelle affichant des informations spécifiques du personnage.
-     */
     virtual void info() const = 0 ;
+
 protected:
     /// Points de vie et points de force
     int d_health, d_strength;
