@@ -52,33 +52,10 @@ std::shared_ptr<character> box::getCharacter() const {
     return d_character;
 }
 
-<<<<<<< HEAD
-int box::putCharacter(std::shared_ptr<character> c) {
-    int status = box::BX_AVOID;
-    if(d_character) {
-        // Check if the current character hasn't the same type
-=======
-/*bool box::putCharacter(std::shared_ptr<character> c) {
-    // attack the character in the box
-    if(d_character)
-    {
-        c->attack(*d_character);
-        // change the current character to the new one if it's dead
-        if(d_character->isDead())
-            d_character = c;
-        else
-            return false;
-    }
-    else
-        d_character = c;
-    return true;
-}*/
-
 int box::putCharacter(std::shared_ptr<character> c) {
     int status = box::BX_AVOID;
     if(d_character) {
         // // Check if the current character is a monster and the new character is also a monster
->>>>>>> origin/josh
         if(d_character->type() != c->type())
         {
             // Attack the character in the box
@@ -88,11 +65,7 @@ int box::putCharacter(std::shared_ptr<character> c) {
             else
                 status = box::BX_ATTACK;
         }
-<<<<<<< HEAD
         // If both characters are the same, do not allow insertion
-=======
-        // If both characters are monsters, do not allow insertion
->>>>>>> origin/josh
         // do nothing
     }
     else
@@ -137,13 +110,9 @@ bool box::isValidType() const
     std::string types[]= {
         box::BX_WALL,
         box::BX_ACCESSIBLE,
-<<<<<<< HEAD
-        box::BX_EXTERN,
-=======
         // box::BX_COINS,
         box::BX_EXTERN,
         // box::BX_AMULET,
->>>>>>> origin/josh
     };
 
     for(auto type: types)
@@ -168,12 +137,7 @@ void box::show(display &d) const {
         } else if (d_coins > 0){
             d.displayCoin();
         } else {
-<<<<<<< HEAD
-            // Case vide
-            d.displayEmptyCase();
-=======
             d.displayEmptyCase(); // Case vide
->>>>>>> origin/josh
         }
     } else {
         d.displayEmptyCase();
